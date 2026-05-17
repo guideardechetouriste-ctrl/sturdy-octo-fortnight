@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explora Guide - Randonnées en Ardèche</title>
     <style>
-        /* Styles Généraux de la page */
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
@@ -14,7 +13,7 @@
             color: #333;
         }
         header {
-            background-color: #ff3344; /* Rouge dynamique */
+            background-color: #ff3344;
             color: white;
             padding: 40px 20px;
             text-align: center;
@@ -22,7 +21,6 @@
         header h1 { margin: 0; font-size: 2.5em; }
         header p { margin: 10px 0 0; font-size: 1.2em; opacity: 0.9; }
         
-        /* Style du Formulaire (Design Épuré / Pinterest) */
         .contact-section {
             max-width: 600px;
             margin: 50px auto;
@@ -31,69 +29,19 @@
             border-radius: 16px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
         }
-        .contact-section h2 {
-            color: #1a1a1a;
-            margin-bottom: 10px;
-            font-size: 24px;
+        .contact-section h2 { color: #1a1a1a; margin-bottom: 10px; font-size: 24px; }
+        .contact-section p { color: #666; margin-bottom: 25px; font-size: 14px; line-height: 1.5; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 13px; color: #333; }
+        .form-group input, .form-group textarea {
+            width: 100%; padding: 12px; border: 1px solid #e0e0e0; border-radius: 8px; font-size: 14px; box-sizing: border-box; background-color: #fafafa;
         }
-        .contact-section p {
-            color: #666;
-            margin-bottom: 25px;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            font-size: 13px;
-            color: #333;
-        }
-        .form-group input, 
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 14px;
-            transition: border-color 0.3s;
-            box-sizing: border-box;
-            background-color: #fafafa;
-        }
-        .form-group input:focus, 
-        .form-group textarea:focus {
-            border-color: #ff3344;
-            outline: none;
-            background-color: #fff;
-        }
+        .form-group input:focus, .form-group textarea:focus { border-color: #ff3344; outline: none; background-color: #fff; }
         .submit-btn {
-            background-color: #ff3344;
-            color: white;
-            padding: 14px 20px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            width: 100%;
-            transition: background 0.3s, transform 0.1s;
+            background-color: #ff3344; color: white; padding: 14px 20px; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; width: 100%; transition: background 0.3s;
         }
-        .submit-btn:hover {
-            background-color: #e02233;
-        }
-        .submit-btn:active {
-            transform: scale(0.98);
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 12px;
-            color: #999;
-            margin-top: 50px;
-        }
+        .submit-btn:hover { background-color: #e02233; }
+        footer { text-align: center; padding: 20px; font-size: 12px; color: #999; margin-top: 50px; }
     </style>
 </head>
 <body>
@@ -130,7 +78,6 @@
             </div>
 
             <input type="text" name="_gotcha" style="display:none">
-
             <button type="submit" class="submit-btn">Envoyer le message</button>
         </form>
     </section>
