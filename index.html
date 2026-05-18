@@ -312,4 +312,257 @@
         .terroir h2 {
             font-size: 2.5rem;
             color: var(--dark-green);
-            margin-
+            margin-bottom: 20px;
+        }
+
+        .terroir-text {
+            max-width: 600px;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        /* --- TARIFS SECTION --- */
+        .tarifs {
+            padding: 80px 10%;
+            background-color: var(--light-green);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .tarifs h2 {
+            font-size: 2.3rem;
+            margin-bottom: 15px;
+        }
+
+        .tarifs h2 em {
+            font-weight: 300;
+        }
+
+        /* --- CONTACT SECTION --- */
+        .contact {
+            padding: 100px 10%;
+            background-color: var(--dark-green);
+            color: var(--white);
+            display: flex;
+            gap: 60px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-subtitle {
+            color: var(--gold);
+            margin-bottom: 30px;
+        }
+
+        .contact-details {
+            list-style: none;
+            margin-top: 40px;
+        }
+
+        .contact-details li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .icon-box {
+            width: 24px;
+            height: 24px;
+            background-color: rgba(235, 219, 176, 0.1);
+            border-radius: 50%;
+        }
+
+        .contact-form-container {
+            flex: 1.2;
+            background-color: rgba(255,255,255,0.04);
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        .form-control {
+            width: 100%;
+            background-color: rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 12px;
+            color: var(--white);
+            font-family: inherit;
+            font-size: 1rem;
+            border-radius: 4px;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .form-submit {
+            background-color: var(--light-green);
+            color: var(--white);
+            border: none;
+            padding: 14px 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .form-submit:hover {
+            background-color: #3f6844;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #122214;
+            padding: 40px 10%;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer-logo {
+            color: var(--white);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .footer-logo span {
+            color: var(--gold);
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin-top: 15px;
+            display: inline-block;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">Pierre François <span>Passager</span></div>
+        <ul class="nav-links">
+            <li><a href="#presentation">Qui suis-je</a></li>
+            <li><a href="#offres">Prestations</a></li>
+            <li><a href="#terroir">L'Ardèche</a></li>
+            <li><a href="#contact" class="btn-nav">Réserver</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-tag">Guide Local &bull; Ardèche</div>
+            <h1>Pierre François <span>Passager</span></h1>
+            <div class="hero-subtitle">Votre guide en Ardèche</div>
+            <div class="hero-badge">Guide Touristique & Terroir &bull; Ardèche 07</div>
+            <p class="hero-text">Né et élevé en Ardèche, je connais ce territoire dans ses moindres recoins. Gorges, villages de pierre, cascades secrètes, garrigue et vignobles... Je vous fais découvrir la vraie Ardèche, celle qui ne se trouve dans aucun guide.</p>
+            <a href="#contact" class="btn-primary">Réserver une visite</a>
+        </div>
+    </section>
+
+    <section id="presentation" class="presentation">
+        <div class="pres-image">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Pierre François Passager">
+            <div class="pres-badge">
+                <span>07</span>Ardèche
+            </div>
+        </div>
+        <div class="pres-content">
+            <span class="section-tag">Mon Histoire</span>
+            <h2>Un Ardéchois <em>dans l'âme</em></h2>
+            <p>Passionné par les grands espaces et l'histoire locale de notre département, j'ai créé Explora Guide pour partager la richesse de notre terroir avec les voyageurs, familles et groupes de passage.</p>
+            <p>Mon but est de vous offrir une immersion authentique : loin des circuits touristiques bondés, nous irons à la rencontre des artisans, des paysages préservés et des récits qui font l'identité de l'Ardèche.</p>
+            <div class="features-grid">
+                <div class="feature-item">Visites Historiques</div>
+                <div class="feature-item">Balades Nature</div>
+                <div class="feature-item">Découverte Terroir</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="offres" class="offres">
+        <h2>Ce que je vous <em>propose</em></h2>
+        <div class="offers-placeholder"></div>
+    </section>
+
+    <section id="terroir" class="terroir">
+        <h2>Les incontournables <em>de l'Ardèche</em></h2>
+        <p class="terroir-text">Du Pont d'Arc aux villages de caractère comme Balazuc ou Vogüé, découvrez un territoire aux mille facettes, entre nature sauvage et pierres chargées d'histoire.</p>
+    </section>
+
+    <section class="tarifs">
+        <h2>Des prix <em>justes et transparents</em></h2>
+        <p>Prestations sur mesure pour groupes, familles ou individuels. Contactez-moi pour un devis personnalisé.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-info">
+            <h2>Parlons de votre <em>aventure</em></h2>
+            <p class="contact-subtitle">Une demande de renseignement, un projet de visite de groupe ? Remplissez ce formulaire et je vous répondrai dans les plus brefs délais.</p>
+            <ul class="contact-details">
+                <li><div class="icon-box"></div> Gorges de l'Ardèche & Villages de Caractère</li>
+                <li><div class="icon-box"></div> Activité Déclarée : Guidage & Animation Nature</li>
+                <li><div class="icon-box"></div> guide.ardeche.touriste@gmail.com</li>
+                <li><div class="icon-box"></div> Sans encadrement sportif réglementé</li>
+            </ul>
+        </div>
+        <div class="contact-form-container">
+            <form action="https://formspree.io/f/xanykgzo" method="POST">
+                <div class="form-group">
+                    <label for="name">Votre Nom</label>
+                    <input type="text" name="name" id="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse E-mail</label>
+                    <input type="email" name="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Votre projet de visite</label>
+                    <textarea name="message" id="message" rows="5" class="form-control" placeholder="Nombre de personnes, dates souhaitées, type de visites..." required></textarea>
+                </div>
+                <input type="hidden" name="_subject" value="Nouvelle demande de guide - Pierre François Passager" />
+                <button type="submit" class="form-submit">Envoyer ma demande</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">Pierre François <span>Passager</span></div>
+        <p>Guidage Touristique &bull; Ardèche 07 &bull; &copy; 2026</p>
+        <p><a href="legal.html">Mentions Légales</a></p>
+    </footer>
+
+</body>
+</html>
