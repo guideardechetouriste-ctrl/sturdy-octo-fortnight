@@ -1,568 +1,313 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pierre François Passager - Explora Guide Ardèche</title>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --dark-green: #1b331e;
-            --mid-green: #2c4c30;
-            --light-green: #528558;
-            --soft-bg: #f4f7f4;
-            --gold: #ebdbb0;
-            --text-dark: #2c3e2b;
-            --white: #ffffff;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Josefin Sans', sans-serif;
-            color: var(--text-dark);
-            background-color: var(--soft-bg);
-            line-height: 1.6;
-        }
-
-        /* --- NAV BAR --- */
-        nav {
-            background-color: var(--dark-green);
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .nav-logo {
-            color: var(--white);
-            font-size: 1.4rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        .nav-logo span {
-            color: var(--gold);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-            font-size: 0.95rem;
-        }
-
-        .nav-links a:hover {
-            color: var(--gold);
-        }
-
-        .btn-nav {
-            background-color: var(--light-green);
-            color: var(--white) !important;
-            padding: 8px 16px;
-            border-radius: 4px;
-            transition: background-color 0.3s !important;
-        }
-
-        .btn-nav:hover {
-            background-color: #3f6844;
-            color: var(--white) !important;
-        }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            background-color: var(--dark-green);
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
-            padding: 60px 10%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0;
-            height: 100%;
-            width: 45%;
-            background: url('https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=1000&q=80') center/cover no-repeat;
-            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
-            z-index: 1;
-        }
-
-        .hero-content {
-            max-width: 55%;
-            color: var(--white);
-            position: relative;
-            z-index: 2;
-            padding-right: 40px;
-        }
-
-        .hero-tag {
-            color: var(--gold);
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .hero-tag::before {
-            content: '✦';
-            color: var(--gold);
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            line-height: 1.1;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .hero h1 span {
-            display: block;
-            color: var(--white);
-            font-weight: 300;
-        }
-
-        .hero-subtitle {
-            font-size: 1.8rem;
-            color: var(--gold);
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            border: 1px solid rgba(235, 219, 176, 0.4);
-            padding: 4px 12px;
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 30px;
-            color: var(--gold);
-        }
-
-        .hero-text {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin-bottom: 35px;
-            max-width: 500px;
-        }
-
-        .btn-primary {
-            display: inline-block;
-            background-color: transparent;
-            color: var(--gold);
-            border: 2px solid var(--gold);
-            padding: 12px 28px;
-            font-weight: 700;
-            text-decoration: none;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--gold);
-            color: var(--dark-green);
-        }
-
-        /* --- PRESENTATION SECTION --- */
-        .presentation {
-            padding: 100px 10%;
-            display: flex;
-            gap: 80px;
-            align-items: center;
-            background-color: var(--white);
-        }
-
-        .pres-image {
-            flex: 1;
-            position: relative;
-        }
-
-        .pres-image img {
-            width: 100%;
-            max-width: 450px;
-            border-radius: 8px;
-            box-shadow: 20px 20px 0 var(--soft-bg);
-        }
-
-        .pres-badge {
-            position: absolute;
-            top: -20px;
-            right: 20px;
-            background-color: var(--dark-green);
-            color: var(--gold);
-            padding: 15px;
-            text-align: center;
-            border-radius: 4px;
-            font-weight: 700;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .pres-badge span {
-            display: block;
-            font-size: 1.8rem;
-            line-height: 1;
-        }
-
-        .pres-content {
-            flex: 1.2;
-        }
-
-        .section-tag {
-            color: var(--light-green);
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .presentation h2 {
-            font-size: 2.5rem;
-            color: var(--dark-green);
-            line-height: 1.2;
-            margin-bottom: 25px;
-        }
-
-        .presentation h2 em {
-            font-weight: 300;
-        }
-
-        .presentation p {
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-            color: #555;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin-top: 35px;
-        }
-
-        .feature-item {
-            border: 1px solid #eaeaea;
-            padding: 15px;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-align: center;
-            background-color: var(--soft-bg);
-        }
-
-        /* --- OFFRES SECTION --- */
-        .offres {
-            padding: 100px 10%;
-            background-color: var(--dark-green);
-            color: var(--white);
-        }
-
-        .offres h2 {
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-        }
-
-        .offres h2 em {
-            color: var(--gold);
-            font-style: italic;
-            font-weight: 400;
-        }
-
-        .offers-placeholder {
-            width: 100%;
-            height: 400px;
-            background-color: rgba(255,255,255,0.03);
-            border: 2px dashed rgba(235, 219, 176, 0.2);
-            border-radius: 8px;
-        }
-
-        /* --- TERROIR SECTION --- */
-        .terroir {
-            padding: 100px 10%;
-            background-color: var(--white);
-        }
-
-        .terroir h2 {
-            font-size: 2.5rem;
-            color: var(--dark-green);
-            margin-bottom: 20px;
-        }
-
-        .terroir-text {
-            max-width: 600px;
-            color: #555;
-            margin-bottom: 40px;
-        }
-
-        /* --- TARIFS SECTION --- */
-        .tarifs {
-            padding: 80px 10%;
-            background-color: var(--light-green);
-            color: var(--white);
-            text-align: center;
-        }
-
-        .tarifs h2 {
-            font-size: 2.3rem;
-            margin-bottom: 15px;
-        }
-
-        .tarifs h2 em {
-            font-weight: 300;
-        }
-
-        /* --- CONTACT SECTION --- */
-        .contact {
-            padding: 100px 10%;
-            background-color: var(--dark-green);
-            color: var(--white);
-            display: flex;
-            gap: 60px;
-        }
-
-        .contact-info {
-            flex: 1;
-        }
-
-        .contact-info h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .contact-subtitle {
-            color: var(--gold);
-            margin-bottom: 30px;
-        }
-
-        .contact-details {
-            list-style: none;
-            margin-top: 40px;
-        }
-
-        .contact-details li {
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .icon-box {
-            width: 24px;
-            height: 24px;
-            background-color: rgba(235, 219, 176, 0.1);
-            border-radius: 50%;
-        }
-
-        .contact-form-container {
-            flex: 1.2;
-            background-color: rgba(255,255,255,0.04);
-            padding: 40px;
-            border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: var(--gold);
-        }
-
-        .form-control {
-            width: 100%;
-            background-color: rgba(0,0,0,0.2);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 12px;
-            color: var(--white);
-            font-family: inherit;
-            font-size: 1rem;
-            border-radius: 4px;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--gold);
-        }
-
-        .form-submit {
-            background-color: var(--light-green);
-            color: var(--white);
-            border: none;
-            padding: 14px 30px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            width: 100%;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        .form-submit:hover {
-            background-color: #3f6844;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background-color: #122214;
-            padding: 40px 10%;
-            text-align: center;
-            color: rgba(255,255,255,0.6);
-            font-size: 0.9rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .footer-logo {
-            color: var(--white);
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .footer-logo span {
-            color: var(--gold);
-        }
-
-        footer a {
-            color: var(--gold);
-            text-decoration: none;
-            font-size: 0.85rem;
-            margin-top: 15px;
-            display: inline-block;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <div class="nav-logo">Pierre François <span>Passager</span></div>
-        <ul class="nav-links">
-            <li><a href="#presentation">Qui suis-je</a></li>
-            <li><a href="#offres">Prestations</a></li>
-            <li><a href="#terroir">L'Ardèche</a></li>
-            <li><a href="#contact" class="btn-nav">Réserver</a></li>
-        </ul>
-    </nav>
-
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-tag">Guide Local &bull; Ardèche</div>
-            <h1>Pierre François <span>Passager</span></h1>
-            <div class="hero-subtitle">Votre guide en Ardèche</div>
-            <div class="hero-badge">Guide Touristique & Terroir &bull; Ardèche 07</div>
-            <p class="hero-text">Né et élevé en Ardèche, je connais ce territoire dans ses moindres recoins. Gorges, villages de pierre, cascades secrètes, garrigue et vignobles... Je vous fais découvrir la vraie Ardèche, celle qui ne se trouve dans aucun guide.</p>
-            <a href="#contact" class="btn-primary">Réserver une visite</a>
-        </div>
-    </section>
-
-    <section id="presentation" class="presentation">
-        <div class="pres-image">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Pierre François Passager">
-            <div class="pres-badge">
-                <span>07</span>Ardèche
-            </div>
-        </div>
-        <div class="pres-content">
-            <span class="section-tag">Mon Histoire</span>
-            <h2>Un Ardéchois <em>dans l'âme</em></h2>
-            <p>Passionné par les grands espaces et l'histoire locale de notre département, j'ai créé Explora Guide pour partager la richesse de notre terroir avec les voyageurs, familles et groupes de passage.</p>
-            <p>Mon but est de vous offrir une immersion authentique : loin des circuits touristiques bondés, nous irons à la rencontre des artisans, des paysages préservés et des récits qui font l'identité de l'Ardèche.</p>
-            <div class="features-grid">
-                <div class="feature-item">Visites Historiques</div>
-                <div class="feature-item">Balades Nature</div>
-                <div class="feature-item">Découverte Terroir</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="offres" class="offres">
-        <h2>Ce que je vous <em>propose</em></h2>
-        <div class="offers-placeholder"></div>
-    </section>
-
-    <section id="terroir" class="terroir">
-        <h2>Les incontournables <em>de l'Ardèche</em></h2>
-        <p class="terroir-text">Du Pont d'Arc aux villages de caractère comme Balazuc ou Vogüé, découvrez un territoire aux mille facettes, entre nature sauvage et pierres chargées d'histoire.</p>
-    </section>
-
-    <section class="tarifs">
-        <h2>Des prix <em>justes et transparents</em></h2>
-        <p>Prestations sur mesure pour groupes, familles ou individuels. Contactez-moi pour un devis personnalisé.</p>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="contact-info">
-            <h2>Parlons de votre <em>aventure</em></h2>
-            <p class="contact-subtitle">Une demande de renseignement, un projet de visite de groupe ? Remplissez ce formulaire et je vous répondrai dans les plus brefs délais.</p>
-            <ul class="contact-details">
-                <li><div class="icon-box"></div> Gorges de l'Ardèche & Villages de Caractère</li>
-                <li><div class="icon-box"></div> Activité Déclarée : Guidage & Animation Nature</li>
-                <li><div class="icon-box"></div> guide.ardeche.touriste@gmail.com</li>
-                <li><div class="icon-box"></div> Sans encadrement sportif réglementé</li>
-            </ul>
-        </div>
-        <div class="contact-form-container">
-            <form action="https://formspree.io/f/xanykgzo" method="POST">
-                <div class="form-group">
-                    <label for="name">Votre Nom</label>
-                    <input type="text" name="name" id="name" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Adresse E-mail</label>
-                    <input type="email" name="email" id="email" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Votre projet de visite</label>
-                    <textarea name="message" id="message" rows="5" class="form-control" placeholder="Nombre de personnes, dates souhaitées, type de visites..." required></textarea>
-                </div>
-                <input type="hidden" name="_subject" value="Nouvelle demande de guide - Pierre François Passager" />
-                <button type="submit" class="form-submit">Envoyer ma demande</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-logo">Pierre François <span>Passager</span></div>
-        <p>Guidage Touristique &bull; Ardèche 07 &bull; &copy; 2026</p>
-        <p><a href="legal.html">Mentions Légales</a></p>
-    </footer>
-
-</body>
-</html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pierre François Passager – Guide Touristique Ardèche</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400;600&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --stone:   #a8c8a0;
+      --earth:   #3a7d44;
+      --dark:    #0f2d16;
+      --deep:    #163d20;
+      --cream:   #f4faf4;
+      --river:   #2e7d52;
+      --river-light: #6abf8a;
+      --accent:  #2e8b57;
+      --gold:    #4caf76;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      background: var(--cream);
+      color: var(--dark);
+      overflow-x: hidden;
+      cursor: default;
+    }
+
+    /* ── NOISE OVERLAY ── */
+    body::before {
+      content:'';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: .35;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 3rem;
+      background: rgba(26,16,8,.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(200,184,154,.15);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: var(--stone);
+      letter-spacing: .08em;
+    }
+    .nav-logo span { color: var(--gold); font-style: italic; }
+    .nav-links { display: flex; gap: 2.2rem; }
+    .nav-links a {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--stone);
+      text-decoration: none;
+      transition: color .25s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: .6rem 1.4rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .25s;
+    }
+    .nav-cta:hover { background: #8c2018; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-left {
+      background: var(--deep);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8rem 4rem 4rem 5rem;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-left::after {
+      content: '';
+      position: absolute;
+      right: -60px;
+      top: 0; bottom: 0;
+      width: 120px;
+      background: var(--deep);
+      clip-path: polygon(0 0, 40% 0, 100% 50%, 40% 100%, 0 100%);
+      z-index: 3;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      animation: fadeUp .8s ease both;
+    }
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 700;
+      color: var(--cream);
+      line-height: 1.05;
+      margin-bottom: .6rem;
+      animation: fadeUp .8s .15s ease both;
+    }
+    .hero-name em {
+      display: block;
+      font-style: italic;
+      color: var(--stone);
+      font-size: .65em;
+      font-weight: 400;
+    }
+    .hero-title {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: .85rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--river-light);
+      margin-bottom: 2.2rem;
+      animation: fadeUp .8s .3s ease both;
+    }
+    .hero-desc {
+      font-size: 1.15rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: rgba(247,237,224,.75);
+      max-width: 420px;
+      margin-bottom: 2.8rem;
+      animation: fadeUp .8s .45s ease both;
+    }
+    .hero-btn {
+      display: inline-block;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      background: transparent;
+      border: 1.5px solid var(--gold);
+      color: var(--gold);
+      padding: .9rem 2.2rem;
+      text-decoration: none;
+      transition: background .25s, color .25s;
+      animation: fadeUp .8s .6s ease both;
+    }
+    .hero-btn:hover { background: var(--gold); color: var(--dark); }
+
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: sepia(15%) contrast(1.05);
+    }
+    .hero-right::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(43,26,8,.45) 0%, transparent 60%);
+      z-index: 1;
+    }
+    .hero-badge {
+      position: absolute;
+      bottom: 3rem;
+      left: 2rem;
+      z-index: 2;
+      background: rgba(26,16,8,.82);
+      border: 1px solid var(--gold);
+      padding: 1rem 1.5rem;
+      backdrop-filter: blur(8px);
+      animation: fadeUp .8s .9s ease both;
+    }
+    .hero-badge p {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: .65rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+    .hero-badge strong {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin-top: .15rem;
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .5rem;
+      z-index: 10;
+      animation: fadeUp 1s 1.2s ease both;
+    }
+    .scroll-hint span {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: .6rem;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: var(--stone);
+      animation: scrollLine 2s infinite;
+    }
+    @keyframes scrollLine {
+      0%   { transform: scaleY(0); transform-origin: top; }
+      50%  { transform: scaleY(1); transform-origin: top; }
+      51%  { transform: scaleY(1); transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity:0; transform: translateY(30px); }
+      to   { opacity:1; transform: translateY(0); }
+    }
+
+    /* ── SECTION COMMON ── */
+    section { position: relative; }
+    .section-label {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .8rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+    }
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: var(--gold);
+      margin-bottom: 2rem;
+    }
+
+    /* ── À PROPOS ── */
+    .about {
+      background: var(--cream);
+      padding: 7rem 5rem;
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .about-visual {
+      position: relative;
+    }
+    .about-photo-wrap {
+      position: relative;
+      padding-bottom: 4rem;
+      padding-right: 4rem;
+    }
+    .about-photo-wrap img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      filter: sepia(10%);
+    }
+    .about-frame {
