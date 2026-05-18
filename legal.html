@@ -7,58 +7,69 @@
     <style>
         /* Styles Généraux */
         body { 
-            font-family: 'Helvetica Neue', Arial, sans-serif; 
+            font-family: 'Josefin Sans', 'Helvetica Neue', Arial, sans-serif; 
             line-height: 1.6; 
             margin: 0;
             padding: 0;
-            color: #333; 
-            background-color: #fafafa; 
+            color: #2c3e2b; /* Vert très foncé pour le texte */
+            background-color: #f4f7f4; /* Fond vert très clair et doux */
         }
         
-        /* Bandeau de Marque Explora Guide */
+        /* Bandeau d'Identité Explora Guide */
         .brand-header {
-            background-color: #ff3344; /* Rouge dynamique de ta charte */
-            color: white;
-            padding: 30px 20px;
+            background-color: #1b331e; /* Vert forêt profond identique à ton site */
+            color: #ebdbb0; /* Couleur dorée/sable pour les textes */
+            padding: 40px 20px;
             text-align: center;
             margin-bottom: 40px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
         .brand-header h1 { 
             margin: 0; 
-            font-size: 2.2em;
-            letter-spacing: 0.5px;
+            font-size: 2.4em;
+            letter-spacing: 1px;
+            font-weight: bold;
         }
         .brand-header p { 
-            margin: 5px 0 0; 
+            margin: 8px 0 0; 
             font-size: 1.1em; 
-            opacity: 0.9; 
+            opacity: 0.9;
+            letter-spacing: 0.5px;
         }
 
-        /* Conteneur du contenu légal */
+        /* Conteneur */
         .container {
             max-width: 800px; 
             margin: 0 auto 60px; 
-            padding: 0 20px;
+            padding: 0 24px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding-top: 30px;
+            padding-bottom: 40px;
         }
         
         h2 { 
-            color: #1a1a1a; 
-            border-bottom: 2px solid #ff3344; 
+            color: #1b331e; 
+            border-bottom: 2px solid #528558; /* Ligne d'accentuation verte */
             padding-bottom: 8px; 
-            margin-top: 40px;
-            font-size: 1.5em;
+            margin-top: 45px;
+            font-size: 1.4em;
         }
         ul { 
             padding-left: 20px; 
             list-style-type: square;
         }
         li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+        }
+        strong {
+            color: #1b331e;
         }
         a { 
-            color: #ff3344; 
+            color: #528558; 
             text-decoration: none; 
+            font-weight: bold;
         }
         a:hover {
             text-decoration: underline;
@@ -67,7 +78,7 @@
             display: inline-block; 
             margin-bottom: 25px; 
             font-weight: bold; 
-            color: #ff3344;
+            color: #528558;
         }
     </style>
 </head>
@@ -75,7 +86,7 @@
 
     <header class="brand-header">
         <h1>Explora Guide</h1>
-        <p>Randonnées & Découvertes en Ardèche</p>
+        <p>Pierre François Passager &bull; Votre guide en Ardèche</p>
     </header>
 
     <div class="container">
