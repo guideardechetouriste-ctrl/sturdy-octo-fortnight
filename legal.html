@@ -3,85 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentions Légales et CGV - Explora Guide</title>
+    <title>Mentions Légales - Explora Guide</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #2d3748;
-            background-color: #f7fafc;
+        /* Styles Généraux */
+        body { 
+            font-family: 'Helvetica Neue', Arial, sans-serif; 
+            line-height: 1.6; 
             margin: 0;
-            padding: 40px 20px;
+            padding: 0;
+            color: #333; 
+            background-color: #fafafa; 
         }
+        
+        /* Bandeau de Marque Explora Guide */
+        .brand-header {
+            background-color: #ff3344; /* Rouge dynamique de ta charte */
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .brand-header h1 { 
+            margin: 0; 
+            font-size: 2.2em;
+            letter-spacing: 0.5px;
+        }
+        .brand-header p { 
+            margin: 5px 0 0; 
+            font-size: 1.1em; 
+            opacity: 0.9; 
+        }
+
+        /* Conteneur du contenu légal */
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            max-width: 800px; 
+            margin: 0 auto 60px; 
+            padding: 0 20px;
         }
-        h1 {
-            color: #1a4d3a;
-            border-bottom: 2px solid #2f855a;
-            padding-bottom: 10px;
-            font-size: 24pt;
+        
+        h2 { 
+            color: #1a1a1a; 
+            border-bottom: 2px solid #ff3344; 
+            padding-bottom: 8px; 
+            margin-top: 40px;
+            font-size: 1.5em;
         }
-        h2 {
-            color: #2f855a;
-            margin-top: 30px;
-            font-size: 16pt;
+        ul { 
+            padding-left: 20px; 
+            list-style-type: square;
         }
-        p, li {
-            font-size: 11pt;
-            text-align: justify;
+        li {
+            margin-bottom: 8px;
         }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #2f855a;
-            text-decoration: none;
-            font-weight: bold;
+        a { 
+            color: #ff3344; 
+            text-decoration: none; 
         }
-        .back-link:hover {
+        a:hover {
             text-decoration: underline;
+        }
+        .back-link { 
+            display: inline-block; 
+            margin-bottom: 25px; 
+            font-weight: bold; 
+            color: #ff3344;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <a href="index.html" class="back-link">← Retour au site</a>
-    
-    <h1>Mentions Légales & Conditions Générales de Vente (CGV)</h1>
-    
-    <section>
-        <h2>1. Mentions Légales</h2>
-        <p><strong>Éditeur du site :</strong> L'entreprise individuelle <strong>EXPLORA GUIDE</strong>, représentée par Pierre François Passager.</p>
-        <p><strong>Statut juridique :</strong> Entrepreneur Individuel (Micro-entreprise).</p>
-        <p><strong>Lieu d'activité :</strong> Privas, Ardèche (07), France.</p>
-        <p><strong>Contact :</strong> Téléphone : 07 48 16 98 03</p>
-        <p><strong>Hébergeur :</strong> GitHub Inc., 88 Colin P. Kelly Jr. St, San Francisco, CA 94107, États-Unis. Site hébergé via GitHub Pages.</p>
-        <p><strong>Numéro SIRET :</strong> [En cours d'immatriculation / À compléter dès réception]</p>
-    </section>
+    <header class="brand-header">
+        <h1>Explora Guide</h1>
+        <p>Randonnées & Découvertes en Ardèche</p>
+    </header>
 
-    <section>
-        <h2>2. Conditions Générales de Vente (CGV)</h2>
-        <p><strong>Objet :</strong> Les présentes CGV régissent les prestations de services de guidage touristique, de randonnée et d'accompagnement proposées par EXPLORA GUIDE en Ardèche.</p>
+    <div class="container">
         
-        <h3>Réservations et Tarifs</h3>
-        <p>Les réservations s'effectuent par téléphone, WhatsApp ou via le formulaire du site web. Les tarifs sont indiqués en Euros (€) et sont nets (TVA non applicable, article 293 B du CGI).</p>
-        
-        <h3>Conditions d'Annulation et Météo</h3>
-        <p>Les activités de plein air sont soumises aux conditions météorologiques. EXPLORA GUIDE se réserve le droit d'annuler ou de reporter une sortie si la sécurité des participants est engagée (orages, alertes météo crues, etc.). En cas d'annulation par le guide, la prestation est intégralement remboursée ou reportée. En cas d'annulation par le client moins de 48 heures avant le départ, aucun remboursement ne sera effectué, sauf cas de force majeure justifié.</p>
-        
-        <h3>Responsabilité et Sécurité</h3>
-        <p>Chaque participant doit être couvert par une assurance responsabilité civile personnelle. Les mineurs doivent obligatoirement être accompagnés par un adulte majeur. Les participants s'engagent à respecter les consignes de sécurité données par le guide et à être munis d'un équipement adapté (chaussures de marche, eau, protection solaire).</p>
-        
-        <h3>Litiges</h3>
-        <p>En cas de litige, une solution amiable sera recherchée avant toute action légale. À défaut, les tribunaux français compétents seront saisis.</p>
-    </section>
-</div>
+        <a href="index.html" class="back-link">&larr; Retour au site principal</a>
+
+        <p><em>En vigueur au 18 mai 2026.</em></p>
+        <p>Conformément aux dispositions des Articles 6-III et 19 de la Loi n°2004-575 du 21 juin 2004 pour la Confiance dans l’économie numérique (L.C.E.N.), il est porté à la connaissance des utilisateurs du site de la marque <strong>Explora Guide</strong> les présentes mentions légales.</p>
+
+        <h2>1. Éditeur du site & Propriétaire de la marque</h2>
+        <p>L'édition du site et la direction de la publication est assurée par l'exploitant de l'entreprise individuelle sous la marque Explora Guide :</p>
+        <ul>
+            <li><strong>Nom & Prénom :</strong> PASSAGER Pierre-François</li>
+            <li><strong>Statut juridique :</strong> Entrepreneur Individuel (Régime Micro-entreprise)</li>
+            <li><strong>Siège social :</strong> 126 CHEMIN de Chalamon, 07000 Saint-Priest, FRANCE</li>
+            <li><strong>Adresse de correspondance :</strong> guide.ardeche.touriste@gmail.com</li>
+            <li><strong>Numéro d'identification unique (SIREN) :</strong> 105 071 948</li>
+        </ul>
+
+        <h2>2. Hébergeur du site</h2>
+        <p>Le site internet est propulsé et hébergé publiquement par la société :</p>
+        <ul>
+            <li><strong>Raison sociale :</strong> GitHub Inc.</li>
+            <li><strong>Siège social :</strong> 88 Colin P. Kelly Jr. St, San Francisco, CA 94107, États-Unis</li>
+            <li><strong>Site de l'hébergeur :</strong> <a href="https://pages.github.com" target="_blank" rel="noopener">https://pages.github.com</a></li>
+        </ul>
+
+        <h2>3. Collecte et Traitement des Données</h2>
+        <p>Le site Explora Guide propose un formulaire de contact permettant l'envoi de messages. Les informations recueillies (Nom, adresse e-mail, sujet, contenu du message) sont acheminées et centralisées par l'infrastructure technique sécurisée de la société <strong>Formspree Inc.</strong></p>
+        <p>Ces données sont collectées dans l'unique but de répondre aux demandes d'informations ou de réservations de circuits de randonnée. Elles ne sont en aucun cas vendues, échangées ou transmises à des tiers.</p>
+        <p>Conformément à la réglementation européenne (RGPD) et à la législation française en vigueur, vous disposez d’un droit permanent d’accès, de rectification et de suppression de vos données personnelles. Pour exercer ce droit, il vous suffit de formuler votre demande par e-mail à l'adresse officielle : <a href="mailto:guide.ardeche.touriste@gmail.com">guide.ardeche.touriste@gmail.com</a>.</p>
+
+    </div>
 
 </body>
 </html>
