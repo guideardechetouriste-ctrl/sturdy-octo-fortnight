@@ -418,6 +418,159 @@ footer { background: #080f0a; border-top: 1px solid rgba(212,168,67,0.15); paddi
 [data-reveal] { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
 [data-reveal].visible { opacity: 1; transform: translateY(0); }
 
+/* ─── MOTEUR DE RÉSERVATION ─── */
+.formule-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(212,168,67,0.08);
+  border: 1px solid rgba(212,168,67,0.08);
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+.formule-card {
+  background: #0d1410;
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s;
+  position: relative;
+  border: 2px solid transparent;
+}
+.formule-card:hover { background: #162019; }
+.formule-card.active {
+  background: #162019;
+  border-color: #d4a843;
+}
+.formule-badge-best {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #d4a843;
+  color: #0d1410;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  white-space: nowrap;
+}
+.formule-icon { font-size: 2rem; margin-bottom: 0.6rem; }
+.formule-name {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8aab90;
+  margin-bottom: 0.5rem;
+}
+.formule-card.active .formule-name { color: #d4a843; }
+.formule-prix {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: #f0ece0;
+  line-height: 1;
+}
+.formule-prix span { font-size: 0.85rem; color: #8aab90; font-family: 'Josefin Sans', sans-serif; }
+.formule-prix-old {
+  font-size: 0.75rem;
+  color: #4a7558;
+  text-decoration: line-through;
+  margin-top: 0.2rem;
+}
+
+/* Formulaire réservation */
+.resa-form {
+  background: rgba(22,32,25,0.6);
+  border: 1px solid rgba(212,168,67,0.12);
+  padding: 2rem;
+  max-width: 860px;
+}
+.resa-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.resa-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.resa-field-group { display: flex; flex-direction: column; gap: 0.4rem; }
+.resa-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #d4a843;
+}
+.resa-input {
+  background: rgba(13,20,16,0.8);
+  border: 1px solid rgba(212,168,67,0.15);
+  color: #f0ece0;
+  padding: 0.8rem 1rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.88rem;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.resa-input:focus { border-color: rgba(212,168,67,0.5); background: rgba(22,32,25,0.6); }
+.resa-input::placeholder { color: rgba(138,171,144,0.4); }
+select.resa-input { cursor: pointer; }
+.resa-textarea { resize: vertical; min-height: 90px; }
+.resa-formule-recap {
+  margin-top: 1.25rem;
+  font-size: 0.78rem;
+  color: #8aab90;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid #d4a843;
+  background: rgba(212,168,67,0.05);
+}
+.resa-formule-recap strong { color: #d4a843; }
+.resa-submit {
+  width: 100%;
+  margin-top: 1.25rem;
+  padding: 1.1rem;
+  background: #d4a843;
+  border: 1px solid #d4b85a;
+  color: #0d1410;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+.resa-submit:hover { background: #d4b85a; transform: translateY(-1px); }
+.resa-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+.resa-note {
+  margin-top: 0.75rem;
+  font-size: 0.7rem;
+  color: #6a9275;
+  text-align: center;
+  line-height: 1.6;
+}
+.resa-success {
+  display: none;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(74,117,88,0.2);
+  border: 1px solid rgba(74,117,88,0.4);
+  color: #8aab90;
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+/* Responsive moteur de résa */
+@media (max-width: 768px) {
+  .formule-grid { grid-template-columns: 1fr 1fr; gap: 1px; }
+  .formule-card { padding: 1.25rem 0.75rem; }
+  .formule-prix { font-size: 1.7rem; }
+  .resa-form { padding: 1.25rem; }
+  .resa-fields { grid-template-columns: 1fr; }
+  .resa-row { grid-template-columns: 1fr; }
+}
+
 /* ─── HAMBURGER MENU ─── */
 .hamburger {
   display: none;
@@ -1093,74 +1246,103 @@ footer { background: #080f0a; border-top: 1px solid rgba(212,168,67,0.15); paddi
   </div>
 </section>
 
-<!-- TARIFS -->
+<!-- TARIFS + MOTEUR DE RÉSERVATION -->
 <section class="section" id="pricing">
   <div data-reveal>
-    <div class="section-label">Tarifs</div>
-    <h2 class="section-title">Des prix <em>clairs</em>, sans surprise</h2>
+    <div class="section-label">Tarifs & Réservation</div>
+    <h2 class="section-title">Choisissez votre<br><em>formule & réservez</em></h2>
   </div>
   <div class="launch-banner" data-reveal>🎉 Offre de lancement — Juin 2025 — 20% de réduction sur toutes les formules — Places limitées</div>
-  <div class="pricing-grid" data-reveal>
-    <div class="pricing-card">
-      <div class="pricing-label">Découverte</div>
-      <div class="pricing-name">Demi-journée</div>
-      <div class="price-block">
-        <span class="price-original">50 € / pers.</span>
-        <span class="price-promo">40 €<span class="price-unit"> / pers.</span></span>
-        <span class="price-save">−20 % ce mois-ci</span>
-      </div>
-      <div style="font-size:.72rem;color:#3a6b4e;margin-top:.4rem;">Groupe : à partir de 150 € (jusqu'à 8 pers.)</div>
-      <div class="pricing-divider"></div>
-      <ul class="pricing-features">
-        <li>3 à 4 heures de découverte guidée</li>
-        <li>Jusqu'à 8 personnes</li>
-        <li>Thème au choix : nature, patrimoine, géologie</li>
-        <li>Eau et petit matériel fournis</li>
-        <li>Pique-nique local en option (+8 €/pers.)</li>
-      </ul>
-      <div class="pricing-note">Tarif habituel : 50 €/pers. Offre valable tout juin.</div>
+
+  <!-- SÉLECTEUR DE FORMULES -->
+  <div class="formule-grid" data-reveal>
+    <div class="formule-card" data-formule="Demi-journée — 40 € / pers." data-prix="40 €/pers." onclick="selectFormule(this)">
+      <div class="formule-icon">🌅</div>
+      <div class="formule-name">Demi-journée</div>
+      <div class="formule-prix">40 <span>€/pers.</span></div>
+      <div class="formule-prix-old">50 €</div>
     </div>
-    <div class="pricing-card featured">
-      <div class="pricing-label">★ Le plus demandé</div>
-      <div class="pricing-name">Journée Complète</div>
-      <div class="price-block">
-        <span class="price-original">90 € / pers.</span>
-        <span class="price-promo">72 €<span class="price-unit"> / pers.</span></span>
-        <span class="price-save">−20 % ce mois-ci</span>
-      </div>
-      <div style="font-size:.72rem;color:rgba(138,171,144,0.7);margin-top:.4rem;">Groupe : à partir de 250 € (jusqu'à 10 pers.)</div>
-      <div class="pricing-divider"></div>
-      <ul class="pricing-features">
-        <li>7 à 8 heures d'immersion totale</li>
-        <li>Circuit personnalisé sur mesure</li>
-        <li>Pique-nique terroir inclus</li>
-        <li>Adaptation météo en temps réel</li>
-        <li>Photos souvenirs partagées</li>
-        <li>Carnet de route offert</li>
-      </ul>
-      <div class="pricing-note">Tarif habituel : 90 €/pers. Offre valable tout juin.</div>
+    <div class="formule-card active" data-formule="Journée complète — 72 € / pers." data-prix="72 €/pers." onclick="selectFormule(this)">
+      <div class="formule-badge-best">★ Le plus demandé</div>
+      <div class="formule-icon">☀️</div>
+      <div class="formule-name">Journée complète</div>
+      <div class="formule-prix">72 <span>€/pers.</span></div>
+      <div class="formule-prix-old">90 €</div>
     </div>
-    <div class="pricing-card">
-      <div class="pricing-label">Immersion</div>
-      <div class="pricing-name">Séjour Multi-jours</div>
-      <div class="price-block">
-        <span class="price-original">150 € / pers. / jour</span>
-        <span class="price-promo">120 €<span class="price-unit"> / pers. / jour</span></span>
-        <span class="price-save">−20 % ce mois-ci</span>
-      </div>
-      <div style="font-size:.72rem;color:#3a6b4e;margin-top:.4rem;">Hébergements partenaires en sus</div>
-      <div class="pricing-divider"></div>
-      <ul class="pricing-features">
-        <li>2 à 5 jours d'exploration complète</li>
-        <li>Hébergements sélectionnés avec soin</li>
-        <li>Logistique complète prise en charge</li>
-        <li>Rencontres avec producteurs locaux</li>
-        <li>Carnet de route personnalisé</li>
-        <li>Groupe jusqu'à 12 personnes</li>
-      </ul>
-      <div class="pricing-note">Devis personnalisé selon groupe et durée.</div>
+    <div class="formule-card" data-formule="Séjour multi-jours — 120 € / j/pers." data-prix="120 €/j/pers." onclick="selectFormule(this)">
+      <div class="formule-icon">🏕️</div>
+      <div class="formule-name">Séjour multi-jours</div>
+      <div class="formule-prix">120 <span>€/j/pers.</span></div>
+      <div class="formule-prix-old">150 €</div>
+    </div>
+    <div class="formule-card" data-formule="Pass saisonnier — 290 € / saison" data-prix="290 €/saison" onclick="selectFormule(this)">
+      <div class="formule-icon">🎫</div>
+      <div class="formule-name">Pass saisonnier</div>
+      <div class="formule-prix">290 <span>€/saison</span></div>
+      <div class="formule-prix-old">390 €</div>
     </div>
   </div>
+
+  <!-- FORMULAIRE DE RÉSERVATION FORMSPREE -->
+  <form class="resa-form" data-reveal action="https://formspree.io/f/xjgzbdnj" method="POST" onsubmit="handleResa(event)">
+    <input type="hidden" name="_subject" value="🗓 Nouvelle demande de réservation — Explora Guide Ardèche">
+    <input type="hidden" name="_replyto" value="guide.ardeche.touriste@gmail.com">
+    <input type="hidden" name="formule" id="input-formule" value="Journée complète — 72 € / pers.">
+
+    <div class="resa-fields">
+      <div class="resa-field-group">
+        <label class="resa-label">Date souhaitée</label>
+        <input class="resa-input" type="date" name="date" required>
+      </div>
+      <div class="resa-field-group">
+        <label class="resa-label">Nombre de personnes</label>
+        <select class="resa-input" name="personnes" required>
+          <option value="1 personne">1 personne</option>
+          <option value="2 personnes" selected>2 personnes</option>
+          <option value="3 personnes">3 personnes</option>
+          <option value="4 personnes">4 personnes</option>
+          <option value="5 personnes">5 personnes</option>
+          <option value="6 à 8 personnes">6 à 8 personnes</option>
+          <option value="9 à 12 personnes">9 à 12 personnes</option>
+          <option value="Groupe +12">Groupe +12 (devis)</option>
+        </select>
+      </div>
+      <div class="resa-field-group">
+        <label class="resa-label">Ambiance souhaitée</label>
+        <select class="resa-input" name="ambiance" required>
+          <option value="Aventure & Sauvage">Aventure & Sauvage</option>
+          <option value="Nature & Géologie">Nature & Géologie</option>
+          <option value="Villages & Patrimoine">Villages & Patrimoine</option>
+          <option value="Gastronomie & Terroir">Gastronomie & Terroir</option>
+          <option value="Famille & Enfants">Famille & Enfants</option>
+          <option value="Soirée & Astronomie">Soirée & Astronomie</option>
+          <option value="Sur mesure">Sur mesure (préciser ci-dessous)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="resa-field-group" style="margin-top:1rem">
+      <label class="resa-label">Votre nom & email <span style="color:#d4a843">*</span></label>
+      <div class="resa-row">
+        <input class="resa-input" type="text" name="nom" placeholder="Prénom Nom" required>
+        <input class="resa-input" type="email" name="email" placeholder="votre@email.com" required>
+      </div>
+    </div>
+
+    <div class="resa-field-group" style="margin-top:1rem">
+      <label class="resa-label">Message / précisions (optionnel)</label>
+      <textarea class="resa-input resa-textarea" name="message" placeholder="Vos envies, contraintes, questions…"></textarea>
+    </div>
+
+    <div class="resa-formule-recap" id="resa-recap">
+      Formule sélectionnée : <strong id="recap-formule">Journée complète — 72 € / pers.</strong>
+    </div>
+
+    <button class="resa-submit" type="submit" id="resa-btn">→ Envoyer ma demande de réservation</button>
+    <div class="resa-note">🔒 Aucun paiement en ligne — confirmation par téléphone ou email · Sans acompte pour le mois de lancement</div>
+    <div class="resa-success" id="resa-success">✓ Demande envoyée ! Pierre-François vous répond sous 24h.</div>
+  </form>
+
   <div data-reveal style="margin-top:2rem;padding:1.25rem 1.5rem;border-left:3px solid #d4a843;background:rgba(212,168,67,0.05);max-width:680px;font-size:.82rem;color:#8aab90;line-height:1.7;">
     <strong style="color:#d4a843;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:.4rem;">ℹ️ Bon à savoir</strong>
     Tarifs pour un groupe de 2 à 4 personnes. Réductions pour familles nombreuses, groupes scolaires et associations.
@@ -1214,7 +1396,7 @@ footer { background: #080f0a; border-top: 1px solid rgba(212,168,67,0.15); paddi
   </div>
   <div data-reveal>
     <div class="contact-form-title">Écrivez-moi,<br><em>je vous réponds vite</em></div>
-    <form action="https://formspree.io/f/guide.ardeche.touriste@gmail.com" method="POST">
+    <form action="https://formspree.io/f/xjgzbdnj" method="POST">
       <div class="form-row">
         <div class="form-group"><label class="form-label">Prénom</label><input class="form-input" type="text" name="prenom" placeholder="Votre prénom" required></div>
         <div class="form-group"><label class="form-label">Nom</label><input class="form-input" type="text" name="nom" placeholder="Votre nom" required></div>
@@ -1270,6 +1452,48 @@ footer { background: #080f0a; border-top: 1px solid rgba(212,168,67,0.15); paddi
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+// ─── MOTEUR DE RÉSERVATION ───
+function selectFormule(card) {
+  document.querySelectorAll('.formule-card').forEach(c => c.classList.remove('active'));
+  card.classList.add('active');
+  const f = card.dataset.formule;
+  document.getElementById('input-formule').value = f;
+  document.getElementById('recap-formule').textContent = f;
+}
+
+async function handleResa(e) {
+  e.preventDefault();
+  const btn = document.getElementById('resa-btn');
+  const success = document.getElementById('resa-success');
+  btn.disabled = true;
+  btn.textContent = '⏳ Envoi en cours…';
+  try {
+    const resp = await fetch(e.target.action, {
+      method: 'POST',
+      body: new FormData(e.target),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (resp.ok) {
+      success.style.display = 'block';
+      btn.textContent = '✓ Demande envoyée !';
+      btn.style.background = '#4a7558';
+      e.target.reset();
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.textContent = '→ Envoyer ma demande de réservation';
+        btn.style.background = '';
+        success.style.display = 'none';
+      }, 6000);
+    } else {
+      throw new Error();
+    }
+  } catch {
+    btn.disabled = false;
+    btn.textContent = '→ Envoyer ma demande de réservation';
+    alert('Une erreur est survenue. Contactez Pierre-François directement au 07 48 16 98 03.');
+  }
+}
+
 // ─── MENU MOBILE ───
 function toggleMobileMenu() {
   const menu = document.getElementById('mobile-menu');
