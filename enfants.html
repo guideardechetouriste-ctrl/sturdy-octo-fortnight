@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ardèche avec des Enfants – Explora Guide</title>
+<meta name="description" content="Activités, randonnées et sorties nature adaptées aux enfants en Ardèche. Conseils d'un guide local pour des vacances en famille inoubliables.">
+<meta property="og:title" content="Ardèche avec des Enfants – Explora Guide">
+<meta property="og:description" content="Randonnées adaptées, nature, géologie, villages — vivre l'Ardèche en famille avec un guide local passionné.">
+<meta property="og:type" content="website">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-535NW0ECMQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-535NW0ECMQ');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@200;300;400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --stone: #0d1410;
+  --earth: #111a14;
+  --clay: #162019;
+  --ochre: #d4a843;
+  --cream: #f0ece0;
+  --mist: #8aab90;
+  --sage: #6a9275;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Josefin Sans', sans-serif; background: #0d1410; color: #f0ece0; overflow-x: hidden; }
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5%;
+  background: rgba(13,20,16,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(212,168,67,0.15);
+  box-shadow: 0 1px 20px rgba(0,0,0,0.5);
+}
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-style: italic; color: #d4a843; letter-spacing: 0.05em; text-decoration: none; line-height: 1.2; }
+.nav-logo span { display: block; font-style: normal; font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8aab90; font-family: 'Josefin Sans', sans-serif; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: #8aab90; text-decoration: none; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: #d4a843; }
+.nav-cta { display: flex; align-items: center; gap: 0.5rem; background: #d4a843; color: #0d1410; text-decoration: none; padding: 0.55rem 1.2rem; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; border: 1px solid #d4b85a; transition: all 0.25s; font-weight: 600; }
+.nav-cta:hover { background: #d4b85a; }
+
+/* HERO */
+.page-hero {
+  padding: 10rem 5% 5rem;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to bottom, #0d1410, #111a14);
+  border-bottom: 1px solid rgba(212,168,67,0.1);
+  overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212,168,67,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+.section-label { font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase; color: #d4a843; display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.section-label::after { content: ''; flex: 0 0 40px; height: 1px; background: #d4a843; opacity: 0.5; }
+.page-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 300; line-height: 1.1; color: #f0ece0; margin-bottom: 1.2rem; }
+.page-hero h1 em { font-style: italic; color: #d4a843; }
+.page-hero p { font-size: 0.95rem; color: #8aab90; line-height: 1.8; max-width: 580px; margin-bottom: 2rem; }
+.hero-badges { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+.hero-badge { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: #8aab90; padding: 0.4rem 0.9rem; border: 1px solid rgba(212,168,67,0.2); }
+
+/* INTRO GUIDE */
+.guide-intro {
+  background: #111a14;
+  padding: 4rem 5%;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: center;
+  border-bottom: 1px solid rgba(212,168,67,0.08);
+}
+.guide-intro-avatar {
+  aspect-ratio: 1;
+  max-width: 220px;
+  overflow: hidden;
+  border: 1px solid rgba(212,168,67,0.2);
+  position: relative;
+}
+.guide-intro-avatar img { width: 100%; height: 100%; object-fit: cover; filter: sepia(15%) contrast(1.05); }
+.guide-intro-avatar::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 60%, rgba(13,20,16,0.4)); }
+.guide-intro-text .section-label { margin-bottom: 0.5rem; }
+.guide-intro-text h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: #f0ece0; margin-bottom: 1rem; line-height: 1.2; }
+.guide-intro-text h2 em { font-style: italic; color: #d4a843; }
+.guide-intro-text p { font-size: 0.9rem; color: #8aab90; line-height: 1.85; margin-bottom: 0.8rem; }
+.guide-intro-text em { color: #d4a843; font-style: italic; }
+
+/* AGES SECTION */
+.ages-section {
+  padding: 5rem 5%;
+  position: relative;
+  z-index: 1;
+  background: #0d1410;
+}
+.ages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2px;
+  background: rgba(212,168,67,0.05);
+  border: 1px solid rgba(212,168,67,0.05);
+  margin-top: 3rem;
+}
+.age-card {
+  background: #0d1410;
+  padding: 2rem;
+  transition: background 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.age-card:hover { background: #111a14; }
+.age-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: #d4a843; transition: height 0.4s ease; }
+.age-card:hover::before { height: 100%; }
+.age-icon { font-size: 2rem; margin-bottom: 1rem; }
+.age-range { font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase; color: #d4a843; margin-bottom: 0.5rem; }
+.age-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: #f0ece0; margin-bottom: 0.75rem; }
+.age-desc { font-size: 0.82rem; color: #8aab90; line-height: 1.7; margin-bottom: 1rem; }
+.age-activites { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+.age-activites li { font-size: 0.78rem; color: #6a9275; display: flex; gap: 0.5rem; }
+.age-activites li::before { content: '→'; color: #d4a843; flex-shrink: 0; }
+
+/* ACTIVITÉS */
+.activites-section {
+  padding: 5rem 5%;
+  background: #111a14;
+  position: relative;
+  z-index: 1;
+}
+.activites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2px;
+  margin-top: 3rem;
+  background: rgba(212,168,67,0.04);
+  border: 1px solid rgba(212,168,67,0.04);
+}
+.activite-card {
+  background: #111a14;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+.activite-card:hover { background: #162019; }
+.activite-img { height: 180px; overflow: hidden; }
+.activite-img img { width: 100%; height: 100%; object-fit: cover; filter: sepia(20%) brightness(0.8); transition: transform 0.6s, filter 0.4s; }
+.activite-card:hover .activite-img img { transform: scale(1.05); filter: sepia(5%) brightness(0.95); }
+.activite-body { padding: 1.5rem; }
+.activite-tag { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: #d4a843; margin-bottom: 0.5rem; }
+.activite-title { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: #f0ece0; margin-bottom: 0.5rem; line-height: 1.3; }
+.activite-desc { font-size: 0.82rem; color: #8aab90; line-height: 1.7; }
+.activite-meta { display: flex; gap: 1rem; margin-top: 0.8rem; flex-wrap: wrap; }
+.activite-meta span { font-size: 0.68rem; color: #6a9275; letter-spacing: 0.1em; }
+
+/* CONSEILS */
+.conseils-section {
+  padding: 5rem 5%;
+  background: #0d1410;
+  position: relative;
+  z-index: 1;
+}
+.conseils-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.conseil-card {
+  background: #111a14;
+  border: 1px solid rgba(212,168,67,0.1);
+  padding: 2rem;
+  transition: border-color 0.3s;
+}
+.conseil-card:hover { border-color: rgba(212,168,67,0.35); }
+.conseil-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; color: rgba(212,168,67,0.15); line-height: 1; margin-bottom: 0.5rem; }
+.conseil-icon { font-size: 1.4rem; margin-bottom: 0.6rem; }
+.conseil-title { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: #d4a843; margin-bottom: 0.5rem; }
+.conseil-desc { font-size: 0.85rem; color: #8aab90; line-height: 1.7; }
+.conseil-desc strong { color: #f0ece0; }
+
+/* CTA RÉSERVATION */
+.cta-section {
+  padding: 5rem 5%;
+  background: linear-gradient(135deg, #111a14, #162019);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  border-top: 1px solid rgba(212,168,67,0.1);
+  border-bottom: 1px solid rgba(212,168,67,0.1);
+}
+.cta-section h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 300; color: #f0ece0; margin-bottom: 1rem; }
+.cta-section h2 em { font-style: italic; color: #d4a843; }
+.cta-section p { font-size: 0.9rem; color: #8aab90; line-height: 1.8; max-width: 500px; margin: 0 auto 2.5rem; }
+.cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.btn-primary { display: inline-flex; align-items: center; gap: 0.6rem; background: #d4a843; color: #0d1410; text-decoration: none; padding: 0.9rem 2rem; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; border: 1px solid #d4b85a; transition: all 0.25s; font-family: 'Josefin Sans', sans-serif; font-weight: 600; }
+.btn-primary:hover { background: #d4b85a; transform: translateY(-2px); }
+.btn-outline { display: inline-flex; align-items: center; gap: 0.6rem; background: transparent; color: #f0ece0; text-decoration: none; padding: 0.9rem 2rem; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; border: 1px solid rgba(242,234,216,0.25); transition: all 0.25s; }
+.btn-outline:hover { border-color: #d4a843; color: #d4a843; }
+
+/* FAQ */
+.faq-section {
+  padding: 5rem 5%;
+  background: #111a14;
+  position: relative;
+  z-index: 1;
+}
+.faq-list { margin-top: 3rem; display: flex; flex-direction: column; gap: 2px; }
+.faq-item {
+  background: #0d1410;
+  border: 1px solid rgba(212,168,67,0.08);
+  overflow: hidden;
+}
+.faq-question {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.88rem;
+  color: #f0ece0;
+  letter-spacing: 0.05em;
+  transition: background 0.2s;
+}
+.faq-question:hover { background: #111a14; }
+.faq-question .faq-arrow { color: #d4a843; font-size: 0.7rem; transition: transform 0.3s; }
+.faq-item.open .faq-arrow { transform: rotate(180deg); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.2s;
+  font-size: 0.85rem;
+  color: #8aab90;
+  line-height: 1.75;
+  padding: 0 1.5rem;
+}
+.faq-item.open .faq-answer { max-height: 300px; padding: 0 1.5rem 1.25rem; }
+
+/* FOOTER */
+footer { background: #080f0a; border-top: 1px solid rgba(212,168,67,0.15); padding: 3rem 5%; position: relative; z-index: 1; }
+.footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(212,168,67,0.08); }
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: #d4a843; display: block; margin-bottom: 0.4rem; text-decoration: none; }
+.footer-logo-sub { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: #6a9275; }
+.footer-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
+.footer-links a { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(240,236,224,0.4); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: #d4a843; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { font-size: 0.7rem; color: rgba(240,236,224,0.35); letter-spacing: 0.1em; }
+.footer-eco { font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: #6a9275; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .guide-intro { grid-template-columns: 1fr; gap: 2rem; }
+  .guide-intro-avatar { max-width: 150px; }
+  .activites-grid { grid-template-columns: 1fr; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+  .footer-top { flex-direction: column; }
+  .footer-links { flex-wrap: wrap; gap: 0.8rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    Pierre François <em>Passager</em>
+    <span>Accompagnateur Touristique · Ardèche 07</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">À propos</a></li>
+    <li><a href="index.html#services">Prestations</a></li>
+    <li><a href="index.html#circuits">Circuits</a></li>
+    <li><a href="index.html#agenda">Agenda</a></li>
+    <li><a href="ebooks.html">Guides gratuits</a></li>
+    <li><a href="enfants.html" class="active">Familles</a></li>
+    <li><a href="index.html#pricing">Tarifs</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="tel:0748169803">📞 Réserver</a>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="section-label">Sorties en famille</div>
+  <h1>L'Ardèche<br><em>avec vos enfants</em></h1>
+  <p>Des balades adaptées à chaque âge, des découvertes qui fascinent les petits comme les grands, et un guide qui sait transformer chaque caillou en aventure. L'Ardèche est un terrain de jeu naturel exceptionnel pour les familles.</p>
+  <div class="hero-badges">
+    <span class="hero-badge">👶 Dès 4 ans</span>
+    <span class="hero-badge">🥾 Rythme adapté</span>
+    <span class="hero-badge">🔍 Pédagogique</span>
+    <span class="hero-badge">⏱ Max 4h</span>
+    <span class="hero-badge">📍 Autour de Privas</span>
+  </div>
+</div>
+
+<!-- INTRO GUIDE -->
+<div class="guide-intro">
+  <div class="guide-intro-avatar">
+    <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&q=80" alt="Pierre François guide Ardèche famille">
+  </div>
+  <div class="guide-intro-text">
+    <div class="section-label">Le guide</div>
+    <h2>Ardéchois de naissance,<br><em>passionné de transmission</em></h2>
+    <p>J'ai grandi dans ce territoire et j'y ai développé une passion pour la géologie, la faune, la flore et l'histoire. Avec les enfants, je transforme chaque sortie en <em>expédition</em> : on cherche des fossiles, on reconnaît les traces d'animaux, on goûte les plantes sauvages comestibles.</p>
+    <p>Mon approche est simple : <em>adapter le rythme à la famille</em>, jamais l'inverse. Une pause improvisée près d'un ruisseau, une histoire de volcan racontée assis sur un rocher — c'est ça, l'Ardèche vivante.</p>
+  </div>
+</div>
+
+<!-- PAR ÂGE -->
+<section class="ages-section">
+  <div class="section-label">Par tranche d'âge</div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;color:#f0ece0;">Une sortie <em style="font-style:italic;color:#d4a843;">adaptée à chaque âge</em></h2>
+  <div class="ages-grid">
+
+    <div class="age-card">
+      <div class="age-icon">🐣</div>
+      <div class="age-range">4 – 7 ans</div>
+      <div class="age-title">Les petits explorateurs</div>
+      <div class="age-desc">Des balades courtes (1h–1h30), ludiques et sensorielles. On touche, on sent, on écoute la forêt. Les enfants repartent avec une histoire à raconter.</div>
+      <ul class="age-activites">
+        <li>Chercher des traces d'animaux</li>
+        <li>Reconnaître les oiseaux au chant</li>
+        <li>Cueillir des plantes aromatiques</li>
+        <li>Construire un abri naturel</li>
+      </ul>
+    </div>
+
+    <div class="age-card">
+      <div class="age-icon">🧗</div>
+      <div class="age-range">8 – 12 ans</div>
+      <div class="age-title">Les aventuriers</div>
+      <div class="age-desc">Des randonnées de 2h à 3h avec un peu de dénivelé. On explique la géologie des volcans, on lit les cartes, on observe la faune. L'âge idéal pour l'Ardèche.</div>
+      <ul class="age-activites">
+        <li>Explorer des coulées basaltiques</li>
+        <li>Identifier champignons et plantes</li>
+        <li>Lecture de carte et orientation</li>
+        <li>Baignade en rivière secrète</li>
+      </ul>
+    </div>
+
+    <div class="age-card">
+      <div class="age-icon">🏔️</div>
+      <div class="age-range">13 ans et +</div>
+      <div class="age-title">Les grands randonneurs</div>
+      <div class="age-desc">Des circuits plus ambitieux jusqu'à 4h. Géologie approfondie, histoire locale, découverte des gorges sauvages. Les ados repartent souvent conquis par le territoire.</div>
+      <ul class="age-activites">
+        <li>Gorges et canyons secrets</li>
+        <li>Villages de schiste médiévaux</li>
+        <li>Astronomie sur les hauts plateaux</li>
+        <li>Découverte de la vie sauvage</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ACTIVITÉS -->
+<section class="activites-section">
+  <div class="section-label">Idées de sorties</div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;color:#f0ece0;">Ce qu'on fait <em style="font-style:italic;color:#d4a843;">ensemble</em></h2>
+  <div class="activites-grid">
+
+    <div class="activite-card">
+      <div class="activite-img">
+        <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=80" alt="Volcans Ardèche famille">
+      </div>
+      <div class="activite-body">
+        <div class="activite-tag">Géologie · Volcanisme</div>
+        <div class="activite-title">À la découverte des volcans</div>
+        <div class="activite-desc">Orgues basaltiques, coulées de lave figées, cratères endormis — l'Ardèche est un livre de géologie à ciel ouvert. Les enfants adorent imaginer les éruptions d'il y a 10 000 ans.</div>
+        <div class="activite-meta">
+          <span>⏱ 2h–3h</span>
+          <span>👶 Dès 6 ans</span>
+          <span>📍 Autour de Privas</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activite-card">
+      <div class="activite-img">
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80" alt="Forêt châtaigniers Ardèche">
+      </div>
+      <div class="activite-body">
+        <div class="activite-tag">Nature · Forêt</div>
+        <div class="activite-title">La forêt des châtaigniers centenaires</div>
+        <div class="activite-desc">Sous les voûtes des châtaigniers géants, on cherche les traces de sangliers, on identifie les champignons, on écoute le silence. Une balade douce et sensorielle.</div>
+        <div class="activite-meta">
+          <span>⏱ 1h30–2h</span>
+          <span>👶 Dès 4 ans</span>
+          <span>📍 Pranles</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activite-card">
+      <div class="activite-img">
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80" alt="Village médiéval Ardèche">
+      </div>
+      <div class="activite-body">
+        <div class="activite-tag">Patrimoine · Histoire</div>
+        <div class="activite-title">Villages de pierre et ruelles secrètes</div>
+        <div class="activite-desc">Les villages de schiste autour de Privas cachent des ruelles médiévales, des légendes et des panoramas. Je transforme la visite en jeu de piste pour les enfants.</div>
+        <div class="activite-meta">
+          <span>⏱ 2h</span>
+          <span>👶 Dès 5 ans</span>
+          <span>📍 Alentours Privas</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activite-card">
+      <div class="activite-img">
+        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&q=80" alt="Cascade Ardèche enfants">
+      </div>
+      <div class="activite-body">
+        <div class="activite-tag">Eau · Nature</div>
+        <div class="activite-title">Cascades et rivières secrètes</div>
+        <div class="activite-desc">Des cascades accessibles à pied, des vasques naturelles pour se baigner, des truites à observer dans l'eau claire. Les enfants ne veulent plus repartir.</div>
+        <div class="activite-meta">
+          <span>⏱ 2h–3h</span>
+          <span>👶 Dès 5 ans</span>
+          <span>📍 Vallée de l'Ouvèze</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activite-card">
+      <div class="activite-img">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80" alt="Nature observation faune Ardèche">
+      </div>
+      <div class="activite-body">
+        <div class="activite-tag">Faune · Observation</div>
+        <div class="activite-title">Sur les traces des animaux sauvages</div>
+        <div class="activite-desc">Empreintes de sangliers, pelotes de réjection de chouettes, terriers de blaireaux — on lit le livre ouvert de la nature. Les enfants deviennent de vrais pisteurs.</div>
+        <div class="activite-meta">
+          <span>⏱ 2h</span>
+          <span>👶 Dès 6 ans</span>
+          <span>📍 Forêt de Privas</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activite-card">
+      <div class="activite-img">
+        <img src="https://images.unsplash.com/photo-1510797215324-95aa89f43c33?w=600&q=80" alt="Panorama Ardèche famille">
+      </div>
+      <div class="activite-body">
+        <div class="activite-tag">Panorama · Découverte</div>
+        <div class="activite-title">Belvédères et points de vue secrets</div>
+        <div class="activite-desc">Des sommets accessibles en famille avec des vues à couper le souffle. Je connais les chemins courts qui mènent aux plus beaux panoramas sans épuiser les enfants.</div>
+        <div class="activite-meta">
+          <span>⏱ 3h</span>
+          <span>👶 Dès 8 ans</span>
+          <span>📍 Hauteurs de Privas</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONSEILS PRATIQUES -->
+<section class="conseils-section">
+  <div class="section-label">Conseils pratiques</div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;color:#f0ece0;">Bien préparer <em style="font-style:italic;color:#d4a843;">sa sortie famille</em></h2>
+  <div class="conseils-grid">
+
+    <div class="conseil-card">
+      <div class="conseil-num">01</div>
+      <div class="conseil-icon">👟</div>
+      <div class="conseil-title">Équipement enfants</div>
+      <div class="conseil-desc"><strong>Chaussures fermées obligatoires</strong> — pas de sandales sur les sentiers. Une veste légère même en été (le temps change vite en altitude). Gourde individuelle pour chaque enfant.</div>
+    </div>
+
+    <div class="conseil-card">
+      <div class="conseil-num">02</div>
+      <div class="conseil-icon">☀️</div>
+      <div class="conseil-title">La chaleur ardéchoise</div>
+      <div class="conseil-desc">En juillet-août, <strong>on part tôt le matin</strong> (8h) et on rentre avant midi. La chaleur de l'après-midi n'est pas adaptée aux enfants. Je m'adapte toujours au rythme de la famille.</div>
+    </div>
+
+    <div class="conseil-card">
+      <div class="conseil-num">03</div>
+      <div class="conseil-icon">🎒</div>
+      <div class="conseil-title">Le sac à dos enfant</div>
+      <div class="conseil-desc">Dès 6 ans, <strong>donner un petit sac à porter</strong> responsabilise et motive l'enfant. Idéalement : sa gourde, une barre de céréales, et un carnet pour dessiner ce qu'il observe.</div>
+    </div>
+
+    <div class="conseil-card">
+      <div class="conseil-num">04</div>
+      <div class="conseil-icon">📵</div>
+      <div class="conseil-title">Déconnecter pour reconnecter</div>
+      <div class="conseil-desc">Je propose aux enfants des <strong>défis d'observation</strong> tout au long de la balade — pas d'écrans, juste la curiosité. Les parents sont souvent surpris de voir leurs enfants captivés.</div>
+    </div>
+
+    <div class="conseil-card">
+      <div class="conseil-num">05</div>
+      <div class="conseil-icon">🤕</div>
+      <div class="conseil-title">Sécurité en nature</div>
+      <div class="conseil-desc">Je porte toujours une <strong>trousse de premiers secours</strong>. Je connais les plantes urticantes, les guêpes, la chaleur — et j'apprends aux enfants à observer sans toucher.</div>
+    </div>
+
+    <div class="conseil-card">
+      <div class="conseil-num">06</div>
+      <div class="conseil-icon">🌧️</div>
+      <div class="conseil-title">Et si il pleut ?</div>
+      <div class="conseil-desc">La pluie ne gâche pas tout en Ardèche ! <strong>Je maintiens les sorties par temps couvert</strong> (hors orage). La forêt sous la pluie a une magie particulière que les enfants adorent.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="section-label" style="justify-content:center;">Réserver une sortie famille</div>
+  <h2>Prêts pour <em>l'aventure ardéchoise</em> ?</h2>
+  <p>Dites-moi les âges de vos enfants, vos disponibilités et vos envies. Je construis une sortie sur mesure qui fera des souvenirs pour toute la famille.</p>
+  <div class="cta-buttons">
+    <a class="btn-primary" href="index.html#contact">→ Organiser notre sortie famille</a>
+    <a class="btn-outline" href="tel:0748169803">📞 07 48 16 98 03</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-label">Questions fréquentes</div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;color:#f0ece0;">Vos questions <em style="font-style:italic;color:#d4a843;">sur les sorties famille</em></h2>
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        À partir de quel âge peut-on faire une sortie guidée ?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">Dès 4 ans pour les balades très courtes et sensorielles (1h). Pour les randonnées de 2h à 3h, je recommande à partir de 6-7 ans. Je m'adapte toujours au niveau et à l'énergie du jour.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        Combien de temps dure une sortie famille ?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">Entre 1h30 et 4h maximum, pauses comprises. En été, je recommande les sorties matinales (8h–12h) pour éviter la chaleur. Je prévois toujours des pauses adaptées au rythme des enfants.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        Quel équipement faut-il prévoir ?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">Chaussures fermées (pas de sandales), gourde, casquette ou chapeau, crème solaire en été. Je fournis une liste complète après la réservation selon la saison et la sortie choisie.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        Les sorties sont-elles dangereuses pour les enfants ?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">Non — je choisis des itinéraires adaptés au groupe. Je porte une trousse de premiers secours et je connais parfaitement le terrain. La sécurité est toujours ma priorité absolue.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        Quel est le tarif pour une famille avec enfants ?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">Les tarifs sont calculés par adulte. Les enfants de moins de 12 ans bénéficient d'une réduction — contactez-moi pour un devis personnalisé selon la composition de votre famille.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        Peut-on annuler en cas de mauvais temps ?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">En cas d'orage ou de conditions dangereuses, j'annule et on reporte sans frais. Par temps couvert ou légère pluie, la sortie est maintenue — c'est souvent les meilleures conditions pour observer la nature.</div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <a class="footer-logo" href="index.html">Pierre François Passager</a>
+      <div class="footer-logo-sub">Accompagnateur Touristique · Ardèche 07</div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="index.html#about">À propos</a></li>
+      <li><a href="index.html#services">Prestations</a></li>
+      <li><a href="index.html#circuits">Circuits</a></li>
+      <li><a href="ebooks.html">Guides gratuits</a></li>
+      <li><a href="enfants.html">Familles</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 · Accompagnateur Touristique Ardèche</div>
+    <div class="footer-eco">🌿 Site éco-conçu · Sans cookies publicitaires</div>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+</script>
+
+</body>
+</html>
