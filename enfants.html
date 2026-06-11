@@ -55,13 +55,26 @@ nav {
   border-bottom: 1px solid rgba(212,168,67,0.15);
   box-shadow: 0 1px 20px rgba(0,0,0,0.5);
 }
-.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-style: italic; color: #d4a843; letter-spacing: 0.05em; text-decoration: none; line-height: 1.2; }
-.nav-logo span { display: block; font-style: normal; font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8aab90; font-family: 'Josefin Sans', sans-serif; }
-.nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a { color: #8aab90; text-decoration: none; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; transition: color 0.2s; }
+.nav-logo-img { display: flex; align-items: center; padding: 0; flex-shrink: 0; text-decoration: none; }
+.nav-logo-img svg { transition: opacity 0.3s; opacity: 0.92; }
+.nav-logo-img:hover svg { opacity: 1; }
+.nav-links { display: flex; gap: 1.1rem; list-style: none; flex-wrap: nowrap; align-items: center; }
+.nav-links a { color: #8aab90; text-decoration: none; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; white-space: nowrap; }
 .nav-links a:hover, .nav-links a.active { color: #d4a843; }
-.nav-cta { display: flex; align-items: center; gap: 0.5rem; background: #d4a843; color: #0d1410; text-decoration: none; padding: 0.55rem 1.2rem; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; border: 1px solid #d4b85a; transition: all 0.25s; font-weight: 600; }
+.nav-cta { display: flex; align-items: center; gap: 0.5rem; background: #d4a843; color: #0d1410; text-decoration: none; padding: 0.55rem 1.2rem; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; border: 1px solid #d4b85a; transition: all 0.25s; font-weight: 600; flex-shrink: 0; }
 .nav-cta:hover { background: #d4b85a; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: #8aab90; transition: all 0.3s; }
+.mobile-menu { display: none; position: fixed; inset: 0; background: rgba(13,20,16,0.98); z-index: 105; flex-direction: column; align-items: center; justify-content: center; gap: 0; padding-top: 4rem; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: #f0ece0; text-decoration: none; padding: 0.9rem 2rem; width: 100%; text-align: center; border-bottom: 1px solid rgba(212,168,67,0.08); transition: color 0.2s; }
+.mobile-menu a:first-child { border-top: 1px solid rgba(212,168,67,0.08); }
+.mobile-menu a:hover { color: #d4a843; }
+.mobile-menu-cta { margin-top: 1.5rem; background: #d4a843 !important; color: #0d1410 !important; font-family: 'Josefin Sans', sans-serif !important; font-size: 0.85rem !important; font-weight: 600 !important; letter-spacing: 0.2em !important; text-transform: uppercase; border-bottom: none !important; padding: 1rem 2rem !important; width: auto !important; }
+.footer-logo-img { display: flex; align-items: center; text-decoration: none; }
+.footer-logo-img svg { opacity: 0.65; transition: opacity 0.3s; }
+.footer-logo-img:hover svg { opacity: 0.9; }
+.footer-logo-sub { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: #6a9275; margin-top: 0.5rem; }
 
 /* HERO */
 .page-hero {
@@ -278,6 +291,8 @@ footer { background: #080f0a; border-top: 1px solid rgba(212,168,67,0.15); paddi
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .nav-links { display: none; }
+  .nav-cta { display: none; }
+  .hamburger { display: flex; }
   .guide-intro { grid-template-columns: 1fr; gap: 2rem; }
   .guide-intro-avatar { max-width: 150px; }
   .activites-grid { grid-template-columns: 1fr; }
@@ -290,22 +305,95 @@ footer { background: #080f0a; border-top: 1px solid rgba(212,168,67,0.15); paddi
 <body>
 
 <nav>
-  <a class="nav-logo" href="index.html">
-    Pierre François <em>Passager</em>
-    <span>Accompagnateur Touristique · Ardèche 07</span>
+  <a class="nav-logo-img" href="index.html">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" role="img" style="height:52px;width:auto;display:block;">
+<title>Explora Guide</title>
+<style>.lg{fill:#2d7a3a}.lm{fill:#348a42}.ll{fill:#3a9448}.lt{fill:#45a854}.lh{fill:#52bc62}</style>
+<path d="M340,42 L420,70 L420,180 Q420,250 340,295 Q260,250 260,180 L260,70 Z" class="lg"/>
+<path d="M340,52 L412,78 L412,178 Q412,242 340,284 Q268,242 268,178 L268,78 Z" fill="none" stroke="#5aaa66" stroke-width="2"/>
+<path d="M340,58 L406,84 L406,178 Q406,236 340,276 Q274,236 274,178 L274,84 Z" fill="#1a5228"/>
+<circle cx="340" cy="178" r="80" fill="none" stroke="#2d7a3a" stroke-width="3"/>
+<circle cx="340" cy="178" r="75" fill="none" stroke="#4a9458" stroke-width="1"/>
+<polygon points="340,98 333,116 340,112 347,116" fill="#5aaa66"/>
+<text x="340" y="95" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#c8e8c8" letter-spacing="1">N</text>
+<polygon points="340,258 333,240 340,244 347,240" fill="#4a9458"/>
+<text x="340" y="272" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#c8e8c8" letter-spacing="1">S</text>
+<polygon points="420,178 402,171 406,178 402,185" fill="#4a9458"/>
+<text x="432" y="182" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#c8e8c8" letter-spacing="1">E</text>
+<polygon points="260,178 278,171 274,178 278,185" fill="#4a9458"/>
+<text x="248" y="182" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#c8e8c8" letter-spacing="1">W</text>
+<line x1="340" y1="103" x2="340" y2="110" stroke="#4a9458" stroke-width="1.5"/>
+<line x1="340" y1="246" x2="340" y2="253" stroke="#4a9458" stroke-width="1.5"/>
+<line x1="415" y1="178" x2="408" y2="178" stroke="#4a9458" stroke-width="1.5"/>
+<line x1="265" y1="178" x2="272" y2="178" stroke="#4a9458" stroke-width="1.5"/>
+<line x1="396" y1="134" x2="391" y2="139" stroke="#3a8448" stroke-width="1"/>
+<line x1="284" y1="134" x2="289" y2="139" stroke="#3a8448" stroke-width="1"/>
+<line x1="396" y1="222" x2="391" y2="217" stroke="#3a8448" stroke-width="1"/>
+<line x1="284" y1="222" x2="289" y2="217" stroke="#3a8448" stroke-width="1"/>
+<rect x="334" y="218" width="12" height="28" rx="3" class="lg"/>
+<path d="M334,244 Q322,252 314,248" fill="none" stroke="#2d7a3a" stroke-width="3" stroke-linecap="round"/>
+<path d="M346,244 Q358,252 366,248" fill="none" stroke="#2d7a3a" stroke-width="3" stroke-linecap="round"/>
+<ellipse cx="340" cy="206" rx="38" ry="20" class="lg"/>
+<ellipse cx="306" cy="200" rx="18" ry="13" class="lg"/>
+<ellipse cx="374" cy="200" rx="18" ry="13" class="lg"/>
+<ellipse cx="340" cy="185" rx="30" ry="18" class="lm"/>
+<ellipse cx="315" cy="179" rx="16" ry="12" class="lm"/>
+<ellipse cx="365" cy="179" rx="16" ry="12" class="lm"/>
+<ellipse cx="340" cy="165" rx="24" ry="16" class="ll"/>
+<ellipse cx="322" cy="160" rx="14" ry="10" class="ll"/>
+<ellipse cx="358" cy="160" rx="14" ry="10" class="ll"/>
+<ellipse cx="340" cy="148" rx="16" ry="12" class="lt"/>
+<ellipse cx="328" cy="145" rx="10" ry="8" class="lt"/>
+<ellipse cx="352" cy="145" rx="10" ry="8" class="lt"/>
+<ellipse cx="340" cy="136" rx="10" ry="9" fill="#52bc62"/>
+<ellipse cx="300" cy="194" rx="8" ry="6" class="lh" opacity="0.7"/>
+<ellipse cx="380" cy="194" rx="8" ry="6" class="lh" opacity="0.7"/>
+<ellipse cx="312" cy="172" rx="6" ry="5" class="lh" opacity="0.6"/>
+<ellipse cx="368" cy="172" rx="6" ry="5" class="lh" opacity="0.6"/>
+<ellipse cx="326" cy="154" rx="5" ry="4" class="lh" opacity="0.6"/>
+<ellipse cx="354" cy="154" rx="5" ry="4" class="lh" opacity="0.6"/>
+<ellipse cx="340" cy="129" rx="7" ry="5" fill="#68d478" opacity="0.5"/>
+<text x="340" y="334" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="38" font-weight="900" letter-spacing="6" fill="#2d7a3a">EXPLORA</text>
+<text x="340" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="400" letter-spacing="14" fill="#4a9458">GUIDE</text>
+<line x1="172" y1="376" x2="270" y2="376" stroke="#2d7a3a" stroke-width="1"/>
+<line x1="410" y1="376" x2="508" y2="376" stroke="#2d7a3a" stroke-width="1"/>
+<text x="340" y="380" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" font-weight="400" letter-spacing="3.5" fill="#4a9458">VOTRE PARTENAIRE D'AVENTURE EN CONFIANCE</text>
+</svg>
   </a>
   <ul class="nav-links">
     <li><a href="index.html#about">À propos</a></li>
+    <li><a href="index.html#ambiances">Ambiances</a></li>
     <li><a href="index.html#services">Prestations</a></li>
     <li><a href="index.html#circuits">Circuits</a></li>
     <li><a href="index.html#agenda">Agenda</a></li>
-    <li><a href="ebooks.html">Guides gratuits</a></li>
-    <li><a href="enfants.html" class="active">Familles</a></li>
+    <li><a href="index.html#map-section">Carte</a></li>
     <li><a href="index.html#pricing">Tarifs</a></li>
+    <li><a href="ebooks.html">Guides gratuits</a></li>
+    <li><a href="enfants.html" class="active">Ardèche en famille</a></li>
     <li><a href="index.html#contact">Contact</a></li>
   </ul>
-  <a class="nav-cta" href="tel:0748169803">📞 Réserver</a>
+  <div style="display:flex;align-items:center;gap:0.8rem;">
+    <a class="nav-cta" href="tel:0748169803">📞 Réserver</a>
+    <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
+
+<!-- MENU MOBILE -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html#about" onclick="closeMobileMenu()">À propos</a>
+  <a href="index.html#ambiances" onclick="closeMobileMenu()">Ambiances</a>
+  <a href="index.html#services" onclick="closeMobileMenu()">Prestations</a>
+  <a href="index.html#circuits" onclick="closeMobileMenu()">Circuits</a>
+  <a href="index.html#agenda" onclick="closeMobileMenu()">Agenda</a>
+  <a href="index.html#map-section" onclick="closeMobileMenu()">Carte</a>
+  <a href="index.html#pricing" onclick="closeMobileMenu()">Tarifs</a>
+  <a href="ebooks.html" onclick="closeMobileMenu()">Guides gratuits</a>
+  <a href="enfants.html" onclick="closeMobileMenu()">Ardèche en famille</a>
+  <a href="index.html#contact" onclick="closeMobileMenu()">Contact</a>
+  <a href="tel:0748169803" class="mobile-menu-cta">📞 07 48 16 98 03</a>
+</div>
 
 <!-- HERO -->
 <div class="page-hero">
@@ -609,7 +697,61 @@ footer { background: #080f0a; border-top: 1px solid rgba(212,168,67,0.15); paddi
 <footer>
   <div class="footer-top">
     <div>
-      <a class="footer-logo" href="index.html">Pierre François Passager</a>
+      <a class="footer-logo-img" href="index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" role="img" style="height:38px;width:auto;display:block;">
+<title>Explora Guide</title>
+<style>.lg{fill:#2d7a3a}.lm{fill:#348a42}.ll{fill:#3a9448}.lt{fill:#45a854}.lh{fill:#52bc62}</style>
+<path d="M340,42 L420,70 L420,180 Q420,250 340,295 Q260,250 260,180 L260,70 Z" class="lg"/>
+<path d="M340,52 L412,78 L412,178 Q412,242 340,284 Q268,242 268,178 L268,78 Z" fill="none" stroke="#5aaa66" stroke-width="2"/>
+<path d="M340,58 L406,84 L406,178 Q406,236 340,276 Q274,236 274,178 L274,84 Z" fill="#1a5228"/>
+<circle cx="340" cy="178" r="80" fill="none" stroke="#2d7a3a" stroke-width="3"/>
+<circle cx="340" cy="178" r="75" fill="none" stroke="#4a9458" stroke-width="1"/>
+<polygon points="340,98 333,116 340,112 347,116" fill="#5aaa66"/>
+<text x="340" y="95" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#c8e8c8" letter-spacing="1">N</text>
+<polygon points="340,258 333,240 340,244 347,240" fill="#4a9458"/>
+<text x="340" y="272" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#c8e8c8" letter-spacing="1">S</text>
+<polygon points="420,178 402,171 406,178 402,185" fill="#4a9458"/>
+<text x="432" y="182" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#c8e8c8" letter-spacing="1">E</text>
+<polygon points="260,178 278,171 274,178 278,185" fill="#4a9458"/>
+<text x="248" y="182" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#c8e8c8" letter-spacing="1">W</text>
+<line x1="340" y1="103" x2="340" y2="110" stroke="#4a9458" stroke-width="1.5"/>
+<line x1="340" y1="246" x2="340" y2="253" stroke="#4a9458" stroke-width="1.5"/>
+<line x1="415" y1="178" x2="408" y2="178" stroke="#4a9458" stroke-width="1.5"/>
+<line x1="265" y1="178" x2="272" y2="178" stroke="#4a9458" stroke-width="1.5"/>
+<line x1="396" y1="134" x2="391" y2="139" stroke="#3a8448" stroke-width="1"/>
+<line x1="284" y1="134" x2="289" y2="139" stroke="#3a8448" stroke-width="1"/>
+<line x1="396" y1="222" x2="391" y2="217" stroke="#3a8448" stroke-width="1"/>
+<line x1="284" y1="222" x2="289" y2="217" stroke="#3a8448" stroke-width="1"/>
+<rect x="334" y="218" width="12" height="28" rx="3" class="lg"/>
+<path d="M334,244 Q322,252 314,248" fill="none" stroke="#2d7a3a" stroke-width="3" stroke-linecap="round"/>
+<path d="M346,244 Q358,252 366,248" fill="none" stroke="#2d7a3a" stroke-width="3" stroke-linecap="round"/>
+<ellipse cx="340" cy="206" rx="38" ry="20" class="lg"/>
+<ellipse cx="306" cy="200" rx="18" ry="13" class="lg"/>
+<ellipse cx="374" cy="200" rx="18" ry="13" class="lg"/>
+<ellipse cx="340" cy="185" rx="30" ry="18" class="lm"/>
+<ellipse cx="315" cy="179" rx="16" ry="12" class="lm"/>
+<ellipse cx="365" cy="179" rx="16" ry="12" class="lm"/>
+<ellipse cx="340" cy="165" rx="24" ry="16" class="ll"/>
+<ellipse cx="322" cy="160" rx="14" ry="10" class="ll"/>
+<ellipse cx="358" cy="160" rx="14" ry="10" class="ll"/>
+<ellipse cx="340" cy="148" rx="16" ry="12" class="lt"/>
+<ellipse cx="328" cy="145" rx="10" ry="8" class="lt"/>
+<ellipse cx="352" cy="145" rx="10" ry="8" class="lt"/>
+<ellipse cx="340" cy="136" rx="10" ry="9" fill="#52bc62"/>
+<ellipse cx="300" cy="194" rx="8" ry="6" class="lh" opacity="0.7"/>
+<ellipse cx="380" cy="194" rx="8" ry="6" class="lh" opacity="0.7"/>
+<ellipse cx="312" cy="172" rx="6" ry="5" class="lh" opacity="0.6"/>
+<ellipse cx="368" cy="172" rx="6" ry="5" class="lh" opacity="0.6"/>
+<ellipse cx="326" cy="154" rx="5" ry="4" class="lh" opacity="0.6"/>
+<ellipse cx="354" cy="154" rx="5" ry="4" class="lh" opacity="0.6"/>
+<ellipse cx="340" cy="129" rx="7" ry="5" fill="#68d478" opacity="0.5"/>
+<text x="340" y="334" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="38" font-weight="900" letter-spacing="6" fill="#2d7a3a">EXPLORA</text>
+<text x="340" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="400" letter-spacing="14" fill="#4a9458">GUIDE</text>
+<line x1="172" y1="376" x2="270" y2="376" stroke="#2d7a3a" stroke-width="1"/>
+<line x1="410" y1="376" x2="508" y2="376" stroke="#2d7a3a" stroke-width="1"/>
+<text x="340" y="380" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" font-weight="400" letter-spacing="3.5" fill="#4a9458">VOTRE PARTENAIRE D'AVENTURE EN CONFIANCE</text>
+</svg>
+      </a>
       <div class="footer-logo-sub">Accompagnateur Touristique · Ardèche 07</div>
     </div>
     <ul class="footer-links">
@@ -622,7 +764,7 @@ footer { background: #080f0a; border-top: 1px solid rgba(212,168,67,0.15); paddi
     </ul>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2026 · Accompagnateur Touristique Ardèche</div>
+    <div class="footer-copy">© 2026 · Explora Guide · Accompagnateur Touristique Ardèche</div>
     <div class="footer-eco">🌿 Site éco-conçu · Sans cookies publicitaires</div>
   </div>
 </footer>
@@ -633,6 +775,18 @@ function toggleFaq(el) {
   const isOpen = item.classList.contains('open');
   document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
   if (!isOpen) item.classList.add('open');
+}
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobile-menu');
+  const btn = document.getElementById('hamburger');
+  menu.classList.toggle('open');
+  btn.classList.toggle('open');
+  document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+}
+function closeMobileMenu() {
+  document.getElementById('mobile-menu').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+  document.body.style.overflow = '';
 }
 </script>
 
