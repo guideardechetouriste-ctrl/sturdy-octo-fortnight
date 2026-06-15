@@ -1895,6 +1895,8 @@ const spots = [
   { lat:44.57,lng:4.61,color:'#6a9275',size:12,tag:'Cascade · Secret',title:'Cascade de Ray-Pic',desc:'La plus belle cascade d\'Ardèche, tombant de 60m au cœur d\'un cirque volcanique.',meta:'⏱ 2h A/R · Meilleure en avril-mai' },
   { lat:44.28,lng:4.30,color:'#6a9275',size:12,tag:'Panorama · Exclusif',title:'Belvédère secret du Chassezac',desc:'Un point de vue que je suis le seul guide à montrer. Vue à 180° sur les gorges au coucher du soleil.',meta:'🌅 Meilleur en soirée · Accès piste' },
   { lat:44.82,lng:4.17,color:'#6a9275',size:12,tag:'Astronomie · Nuit',title:'Hauts Plateaux des Cévennes',desc:'Zone de réserve de ciel étoilé — parmi les meilleurs sites d\'observation d\'Europe.',meta:'🌌 Sorties nocturnes sur demande' },
+  { lat:44.30,lng:4.32,color:'#d4708a',size:14,tag:'⭐ Festival · 25-27 juin',title:'Aluna Festival, Ruoms',desc:'Le festival incontournable de l\'été ardéchois, aux portes des gorges. 3 jours de musique.',meta:'🎵 Voir l\'agenda complet des fêtes & festivals' },
+  { lat:44.43,lng:4.16,color:'#d4708a',size:14,tag:'⭐ Tradition · Oct-Nov',title:'Les Castagnades, Cévennes d\'Ardèche',desc:'La fête de la châtaigne dans les villages des Cévennes : grillades, artisans, musique et danses.',meta:'🌰 Voir l\'agenda complet des fêtes & festivals' },
 ];
 spots.forEach(s => {
   const marker = L.marker([s.lat,s.lng],{icon:makeIcon(s.color,s.size)}).addTo(map);
