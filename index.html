@@ -478,7 +478,7 @@ nav.nav-scrolled .nav-favorites:hover { color: #d4a843; border-color: rgba(212,1
 .map-popup-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: #f0ece0; line-height: 1.3; margin-bottom: 0.4rem; }
 .map-popup-desc { font-size: 0.78rem; color: #8aab90; line-height: 1.6; }
 .map-popup-meta { margin-top: 0.6rem; font-size: 0.68rem; color: #d4a843; letter-spacing: 0.05em; }
-.leaflet-tile { filter: brightness(0.6) saturate(0.4) hue-rotate(100deg) contrast(1.1); }
+.leaflet-tile { }
 .leaflet-control-zoom a { background: #111a14 !important; color: #d4a843 !important; border-color: rgba(212,168,67,0.2) !important; }
 .leaflet-control-zoom a:hover { background: #162019 !important; }
 .leaflet-control-attribution { background: rgba(13,20,16,0.8) !important; color: #4a7558 !important; }
@@ -1874,29 +1874,29 @@ function submitNewsletter(e) {
 
 // ─── CARTE LEAFLET ───
 const map = L.map('trail-map', { center: [44.55, 4.38], zoom: 10, zoomControl: true, attributionControl: true });
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap contributors', maxZoom: 18 }).addTo(map);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', { attribution: '© OpenStreetMap contributors © CARTO', maxZoom: 19 }).addTo(map);
 const makeIcon = (color, size = 14) => L.divIcon({
   className: '',
   html: `<div style="width:${size}px;height:${size}px;background:${color};border:2px solid rgba(240,236,224,0.6);border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.6);"></div>`,
   iconSize: [size, size], iconAnchor: [size/2, size/2], popupAnchor: [0, -size]
 });
 const spots = [
-  { lat:44.37,lng:4.40,color:'#d4a843',size:18,tag:'Circuit · 65 km · 4-5 jours',title:'Grand Tour des Villages de Caractère',desc:'Vogüé, Balazuc, Labeaume, Ruoms — ruelles pavées, châteaux médiévaux et falaises calcaires.',meta:'🥾 Niveau modéré · Départ : Vogüé' },
+  { lat:44.49,lng:4.36,color:'#d4a843',size:18,tag:'Circuit · 65 km · 4-5 jours',title:'Grand Tour des Villages de Caractère',desc:'Vogüé, Balazuc, Labeaume, Ruoms — ruelles pavées, châteaux médiévaux et falaises calcaires.',meta:'🥾 Niveau modéré · Départ : Vogüé' },
   { lat:44.85,lng:4.22,color:'#d4a843',size:18,tag:'Circuit · 50 km · 3 jours',title:'Haute-Route des Sucs et Volcans',desc:'Mont Gerbier-de-Jonc, Mont Mézenc, structures mystiques de Borée. Grands espaces sauvages.',meta:'🥾 Niveau sportif · Départ : Le Monastier' },
-  { lat:44.33,lng:4.19,color:'#d4a843',size:18,tag:'Circuit · 42 km · 3 jours',title:'Traversée des Gorges & Canyons Secrets',desc:'Gorges du Chassezac, Bois de Païolive, village isolé de Thines.',meta:'🥾 Niveau sportif · Départ : Les Vans' },
-  { lat:44.62,lng:4.31,color:'#d4a843',size:18,tag:'Circuit · 48 km · 3 jours',title:'Tour des Merveilles Cachées',desc:'Coulée basaltique de Jaujac, Pont du Diable à Thueyts, Meyras — Ardèche cévenole.',meta:'🥾 Niveau modéré · Départ : Thueyts' },
-  { lat:44.41,lng:4.56,color:'#8aab90',size:12,tag:'Spéléologie · Secret',title:'Grotte de Saint-Marcel',desc:'Réseau souterrain de 55 km. Concrétions exceptionnelles.',meta:'⏱ 2h · Accès guide indispensable' },
-  { lat:44.25,lng:4.38,color:'#8aab90',size:12,tag:'Patrimoine · Hors du temps',title:'Thines, village de schiste',desc:'Village médiéval accroché à une falaise, accessible uniquement à pied.',meta:'⏱ 3h A/R · Niveau modéré' },
-  { lat:44.48,lng:4.04,color:'#8aab90',size:12,tag:'Forêt · Minéral',title:'Bois de Païolive',desc:'Labyrinthe de roches calcaires millénaires sous une forêt de chênes verts.',meta:'⏱ 2-4h · Toute l\'année' },
-  { lat:44.73,lng:4.06,color:'#8aab90',size:12,tag:'Volcanisme · Rare',title:'Lac d\'Issarlès',desc:'Cratère volcanique rempli d\'eau d\'un bleu irréel à 1000m d\'altitude.',meta:'⏱ 1h30 · Baignade possible' },
-  { lat:44.61,lng:4.21,color:'#c06040',size:14,tag:'Géologie · Spectaculaire',title:'Orgues basaltiques de Jaujac',desc:'Colonnes de basalte géantes figées il y a 10 000 ans.',meta:'⏱ 1h · Paysage martien' },
-  { lat:44.63,lng:4.28,color:'#c06040',size:14,tag:'Légende · Basalte',title:'Pont du Diable, Thueyts',desc:'Arc naturel de basalte sculpté par la lave et l\'Ardèche.',meta:'⏱ 30 min · Photo incontournable' },
-  { lat:44.35,lng:4.52,color:'#c06040',size:14,tag:'Canyon · Sauvage',title:'Gorges du Chassezac',desc:'Canyon d\'une sauvagerie rare — parois de grès rouge, eau émeraude.',meta:'⏱ Demi-journée · Niveau modéré' },
-  { lat:44.57,lng:4.61,color:'#6a9275',size:12,tag:'Cascade · Secret',title:'Cascade de Ray-Pic',desc:'La plus belle cascade d\'Ardèche, tombant de 60m au cœur d\'un cirque volcanique.',meta:'⏱ 2h A/R · Meilleure en avril-mai' },
-  { lat:44.28,lng:4.30,color:'#6a9275',size:12,tag:'Panorama · Exclusif',title:'Belvédère secret du Chassezac',desc:'Un point de vue que je suis le seul guide à montrer. Vue à 180° sur les gorges au coucher du soleil.',meta:'🌅 Meilleur en soirée · Accès piste' },
-  { lat:44.82,lng:4.17,color:'#6a9275',size:12,tag:'Astronomie · Nuit',title:'Hauts Plateaux des Cévennes',desc:'Zone de réserve de ciel étoilé — parmi les meilleurs sites d\'observation d\'Europe.',meta:'🌌 Sorties nocturnes sur demande' },
-  { lat:44.30,lng:4.32,color:'#d4708a',size:14,tag:'⭐ Festival · 25-27 juin',title:'Aluna Festival, Ruoms',desc:'Le festival incontournable de l\'été ardéchois, aux portes des gorges. 3 jours de musique.',meta:'🎵 Voir l\'agenda complet des fêtes & festivals',link:'agenda-ardeche.html' },
-  { lat:44.43,lng:4.16,color:'#d4708a',size:14,tag:'⭐ Tradition · Oct-Nov',title:'Les Castagnades, Cévennes d\'Ardèche',desc:'La fête de la châtaigne dans les villages des Cévennes : grillades, artisans, musique et danses.',meta:'🌰 Voir l\'agenda complet des fêtes & festivals',link:'agenda-ardeche.html' },
+  { lat:44.40,lng:4.15,color:'#d4a843',size:18,tag:'Circuit · 42 km · 3 jours',title:'Traversée des Gorges & Canyons Secrets',desc:'Gorges du Chassezac, Bois de Païolive, village isolé de Thines.',meta:'🥾 Niveau sportif · Départ : Les Vans' },
+  { lat:44.65,lng:4.26,color:'#d4a843',size:18,tag:'Circuit · 48 km · 3 jours',title:'Tour des Merveilles Cachées',desc:'Coulée basaltique de Jaujac, Pont du Diable à Thueyts, Meyras — Ardèche cévenole.',meta:'🥾 Niveau modéré · Départ : Thueyts' },
+  { lat:44.33,lng:4.59,color:'#8aab90',size:12,tag:'Spéléologie · Secret',title:'Grotte de Saint-Marcel',desc:'Réseau souterrain de 55 km. Concrétions exceptionnelles.',meta:'⏱ 2h · Accès guide indispensable' },
+  { lat:44.48,lng:4.05,color:'#8aab90',size:12,tag:'Patrimoine · Hors du temps',title:'Thines, village de schiste',desc:'Village médiéval accroché à une falaise, accessible uniquement à pied.',meta:'⏱ 3h A/R · Niveau modéré' },
+  { lat:44.39,lng:4.18,color:'#8aab90',size:12,tag:'Forêt · Minéral',title:'Bois de Païolive',desc:'Labyrinthe de roches calcaires millénaires sous une forêt de chênes verts.',meta:'⏱ 2-4h · Toute l\'année' },
+  { lat:44.82,lng:4.06,color:'#8aab90',size:12,tag:'Volcanisme · Rare',title:'Lac d\'Issarlès',desc:'Cratère volcanique rempli d\'eau d\'un bleu irréel à 1000m d\'altitude.',meta:'⏱ 1h30 · Baignade possible' },
+  { lat:44.64,lng:4.25,color:'#c06040',size:14,tag:'Géologie · Spectaculaire',title:'Orgues basaltiques de Jaujac',desc:'Colonnes de basalte géantes figées il y a 10 000 ans.',meta:'⏱ 1h · Paysage martien' },
+  { lat:44.65,lng:4.26,color:'#c06040',size:14,tag:'Légende · Basalte',title:'Pont du Diable, Thueyts',desc:'Arc naturel de basalte sculpté par la lave et l\'Ardèche.',meta:'⏱ 30 min · Photo incontournable' },
+  { lat:44.38,lng:4.14,color:'#c06040',size:14,tag:'Canyon · Sauvage',title:'Gorges du Chassezac',desc:'Canyon d\'une sauvagerie rare — parois de grès rouge, eau émeraude.',meta:'⏱ Demi-journée · Niveau modéré' },
+  { lat:44.70,lng:4.27,color:'#6a9275',size:12,tag:'Cascade · Secret',title:'Cascade de Ray-Pic',desc:'La plus belle cascade d\'Ardèche, tombant de 60m au cœur d\'un cirque volcanique.',meta:'⏱ 2h A/R · Meilleure en avril-mai' },
+  { lat:44.36,lng:4.16,color:'#6a9275',size:12,tag:'Panorama · Exclusif',title:'Belvédère secret du Chassezac',desc:'Un point de vue que je suis le seul guide à montrer. Vue à 180° sur les gorges au coucher du soleil.',meta:'🌅 Meilleur en soirée · Accès piste' },
+  { lat:44.70,lng:4.15,color:'#6a9275',size:12,tag:'Astronomie · Nuit',title:'Hauts Plateaux des Cévennes',desc:'Zone de réserve de ciel étoilé — parmi les meilleurs sites d\'observation d\'Europe.',meta:'🌌 Sorties nocturnes sur demande' },
+  { lat:44.45,lng:4.34,color:'#d4708a',size:14,tag:'⭐ Festival · 25-27 juin',title:'Aluna Festival, Ruoms',desc:'Le festival incontournable de l\'été ardéchois, aux portes des gorges. 3 jours de musique.',meta:'🎵 Voir l\'agenda complet des fêtes & festivals',link:'agenda-ardeche.html' },
+  { lat:44.45,lng:4.20,color:'#d4708a',size:14,tag:'⭐ Tradition · Oct-Nov',title:'Les Castagnades, Cévennes d\'Ardèche',desc:'La fête de la châtaigne dans les villages des Cévennes : grillades, artisans, musique et danses.',meta:'🌰 Voir l\'agenda complet des fêtes & festivals',link:'agenda-ardeche.html' },
 ];
 spots.forEach(s => {
   const marker = L.marker([s.lat,s.lng],{icon:makeIcon(s.color,s.size)}).addTo(map);
