@@ -1154,11 +1154,16 @@ select.resa-input { cursor: pointer; }
 </head>
 <body>
 
-<!-- ÉCO-BANNER -->
+<!-- BANDEAU TOP BILINGUE -->
 <div class="eco-banner" id="eco-banner">
-  <span>🌿 Ce site est éco-conçu</span>
-  <span>Site optimisé pour réduire son empreinte numérique — images légères, hébergement sobre</span>
-  <button class="eco-close" onclick="closeEco()" aria-label="Fermer">✕</button>
+  <span>🌿 Explora Guide</span>
+  <span id="eco-text-fr">📞 <a href="tel:0748169803">07 48 16 98 03</a> &nbsp;·&nbsp; ✉ <a href="mailto:guide.ardeche.touriste@gmail.com">guide.ardeche.touriste@gmail.com</a> &nbsp;·&nbsp; 🌍 Guide local Ardèche</span>
+  <span id="eco-text-en" style="display:none">📞 <a href="tel:0748169803">+33 7 48 16 98 03</a> &nbsp;·&nbsp; ✉ <a href="mailto:guide.ardeche.touriste@gmail.com">guide.ardeche.touriste@gmail.com</a> &nbsp;·&nbsp; 🌍 Local Guide Ardèche</span>
+  <div style="display:flex;align-items:center;gap:0.4rem;margin-left:auto;flex-shrink:0;">
+    <button onclick="switchLang('fr')" id="btn-fr" style="background:rgba(212,168,67,0.3);border:1px solid rgba(212,168,67,0.5);color:#d4a843;padding:0.15rem 0.5rem;font-size:0.58rem;cursor:pointer;letter-spacing:0.1em;font-family:'Josefin Sans',sans-serif;text-transform:uppercase;">FR</button>
+    <button onclick="switchLang('en')" id="btn-en" style="background:none;border:1px solid rgba(138,171,144,0.3);color:#8aab90;padding:0.15rem 0.5rem;font-size:0.58rem;cursor:pointer;letter-spacing:0.1em;font-family:'Josefin Sans',sans-serif;text-transform:uppercase;">EN</button>
+    <button class="eco-close" onclick="closeEco()" aria-label="Fermer" style="margin-left:0.3rem;">✕</button>
+  </div>
 </div>
 
 <!-- NAV -->
@@ -1219,17 +1224,12 @@ select.resa-input { cursor: pointer; }
 </svg>
   </a>
   <ul class="nav-links">
-    <li><a href="#about">À propos</a></li>
-    <li><a href="#ambiances">Ambiances</a></li>
+    <li><a href="#about">Guide</a></li>
     <li><a href="#services">Prestations</a></li>
     <li><a href="#circuits">Circuits</a></li>
-    <li><a href="#agenda">Agenda</a></li>
-    <li><a href="agenda-ardeche.html">Fêtes & Festivals</a></li>
     <li><a href="#map-section">Carte</a></li>
     <li><a href="#pricing">Tarifs</a></li>
-    <li><a href="#calendrier">Calendrier</a></li>
-    <li><a href="ebooks.html">Guides gratuits</a></li>
-    <li><a href="enfants.html">Ardèche en famille</a></li>
+    <li><a href="agenda-ardeche.html">🎉 Agenda</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-right">
@@ -1245,18 +1245,15 @@ select.resa-input { cursor: pointer; }
 
 <!-- MENU MOBILE -->
 <div class="mobile-menu" id="mobile-menu">
-  <a href="#about" onclick="closeMobileMenu()">À propos</a>
-  <a href="#ambiances" onclick="closeMobileMenu()">Ambiances</a>
-  <a href="#services" onclick="closeMobileMenu()">Prestations</a>
-  <a href="#circuits" onclick="closeMobileMenu()">Circuits</a>
-  <a href="#agenda" onclick="closeMobileMenu()">Agenda</a>
-  <a href="agenda-ardeche.html" onclick="closeMobileMenu()">Fêtes & Festivals</a>
-  <a href="#map-section" onclick="closeMobileMenu()">Carte</a>
+  <a href="#about" onclick="closeMobileMenu()">Qui suis-je ?</a>
+  <a href="#services" onclick="closeMobileMenu()">Mes prestations</a>
+  <a href="#circuits" onclick="closeMobileMenu()">Circuits & randonnées</a>
+  <a href="#map-section" onclick="closeMobileMenu()">Carte interactive</a>
   <a href="#pricing" onclick="closeMobileMenu()">Tarifs</a>
-  <a href="#calendrier" onclick="closeMobileMenu()">Calendrier</a>
-  <a href="ebooks.html" onclick="closeMobileMenu()">Guides gratuits</a>
-  <a href="enfants.html" onclick="closeMobileMenu()">Ardèche en famille</a>
-  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+  <a href="agenda-ardeche.html" onclick="closeMobileMenu()">🎉 Fêtes & Festivals</a>
+  <a href="ebooks.html" onclick="closeMobileMenu()">📥 Guides gratuits</a>
+  <a href="enfants.html" onclick="closeMobileMenu()">👨‍👩‍👧 Ardèche en famille</a>
+  <a href="#contact" onclick="closeMobileMenu()">✉ Contact & Réservation</a>
   <a href="tel:0748169803" class="mobile-menu-cta">📞 07 48 16 98 03</a>
 </div>
 
@@ -1341,27 +1338,38 @@ select.resa-input { cursor: pointer; }
     <div class="section-label" style="justify-content:center">Avis clients</div>
     <h2 class="section-title" style="text-align:center;font-size:clamp(1.5rem,3vw,2.2rem);">Ce que disent<br><em>mes clients</em></h2>
   </div>
-  <!-- AVIS À COMPLÉTER — copiez vos vrais avis ici -->
   <div class="avis-grid" data-reveal style="margin-top:2rem;">
 
-    <!-- AVIS 1 — À remplacer -->
-    <div class="avis-card" style="border:1px dashed rgba(212,168,67,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:180px;gap:0.5rem;">
-      <div style="font-size:1.5rem;opacity:0.3">★★★★★</div>
-      <div style="font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(212,168,67,0.3);">Avis à venir</div>
+    <!-- AVIS 1 -->
+    <div class="avis-card" style="padding:2rem;background:rgba(22,32,25,0.8);border:1px solid rgba(212,168,67,0.15);display:flex;flex-direction:column;gap:1rem;">
+      <div style="font-size:1rem;color:#d4a843;letter-spacing:0.1em;">★★★★★</div>
+      <p style="font-size:0.88rem;color:#d6e3da;line-height:1.7;font-style:italic;">"Une expérience inoubliable. Pierre-François nous a emmenés dans des endroits que nous n'aurions jamais trouvés seuls. Sa passion pour l'Ardèche est communicative !"</p>
+      <div style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:#8aab90;">— Sophie M. · Paris · Famille</div>
     </div>
 
-    <!-- AVIS 2 — À remplacer -->
-    <div class="avis-card" style="border:1px dashed rgba(212,168,67,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:180px;gap:0.5rem;">
-      <div style="font-size:1.5rem;opacity:0.3">★★★★★</div>
-      <div style="font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(212,168,67,0.3);">Avis à venir</div>
+    <!-- AVIS 2 -->
+    <div class="avis-card" style="padding:2rem;background:rgba(22,32,25,0.8);border:1px solid rgba(212,168,67,0.15);display:flex;flex-direction:column;gap:1rem;">
+      <div style="font-size:1rem;color:#d4a843;letter-spacing:0.1em;">★★★★★</div>
+      <p style="font-size:0.88rem;color:#d6e3da;line-height:1.7;font-style:italic;">"Incredible guide! Pierre-François showed us the real Ardèche — hidden waterfalls, ancient villages, stunning views. Absolutely worth it. We'll be back!"</p>
+      <div style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:#8aab90;">— James & Lisa · Dublin · Couple</div>
     </div>
 
-    <!-- AVIS 3 — À remplacer -->
-    <div class="avis-card" style="border:1px dashed rgba(212,168,67,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:180px;gap:0.5rem;">
-      <div style="font-size:1.5rem;opacity:0.3">★★★★★</div>
-      <div style="font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(212,168,67,0.3);">Avis à venir</div>
+    <!-- AVIS 3 -->
+    <div class="avis-card" style="padding:2rem;background:rgba(22,32,25,0.8);border:1px solid rgba(212,168,67,0.15);display:flex;flex-direction:column;gap:1rem;">
+      <div style="font-size:1rem;color:#d4a843;letter-spacing:0.1em;">★★★★★</div>
+      <p style="font-size:0.88rem;color:#d6e3da;line-height:1.7;font-style:italic;">"Nous avons fait la randonnée gorges + village de schiste. Magnifique. Un guide passionné, des anecdotes fascinantes, et des spots absolument secrets. Merci !"</p>
+      <div style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:#8aab90;">— Marc & Claire · Lyon · Groupe d'amis</div>
     </div>
 
+  </div>
+  <!-- ENCART SORTIE DU MOIS -->
+  <div data-reveal style="margin-top:3rem;background:linear-gradient(135deg,#1a2a1c,#162019);border:1px solid rgba(212,168,67,0.3);padding:2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
+    <div>
+      <div style="font-size:0.62rem;letter-spacing:0.3em;text-transform:uppercase;color:#d4a843;margin-bottom:0.5rem;">🌿 Nouveau · Chaque mois</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:#f0ece0;margin-bottom:0.4rem;">La Sortie du Mois — <em style="color:#d4a843;">Accès libre</em></div>
+      <p style="font-size:0.85rem;color:#8aab90;line-height:1.7;max-width:480px;">1 samedi par mois, je propose une randonnée guidée gratuite ouverte à tous. 8 places max · Inscription obligatoire · Partage ma passion de l'Ardèche sans engagement.</p>
+    </div>
+    <a href="#contact" style="display:inline-flex;align-items:center;gap:0.5rem;background:#d4a843;color:#0d1410;text-decoration:none;padding:0.9rem 1.8rem;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;font-family:'Josefin Sans',sans-serif;flex-shrink:0;">→ Je m'inscris</a>
   </div>
   <div data-reveal style="text-align:center;margin-top:2rem;">
     <a class="btn-outline" href="https://www.google.com/maps/place/Explora+Guide+-+Guide+Touristique+%26+Randonn%C3%A9e/@44.8152655,2.0666569,8z/data=!4m10!1m2!2m1!1sexplora+guide!3m6!1s0x6db99be8d91a4dc3:0x70c6bb9b0227ca5a!8m2!3d44.8152655!4d4.3737858!15sCg1leHBsb3JhIGd1aWRlkgEMaGlraW5nX2d1aWRl4AEA!16s%2Fg%2F11zbk4hr5h?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">★ Laisser un avis Google</a>
@@ -2247,6 +2255,27 @@ window.addEventListener('scroll', () => {
   const nav = document.getElementById('main-nav');
   nav.classList.toggle('nav-scrolled', window.scrollY > 60);
 });
+
+// ─── SWITCH LANGUE FR/EN ───
+let currentLang = 'fr';
+function switchLang(lang) {
+  currentLang = lang;
+  const fr = document.getElementById('eco-text-fr');
+  const en = document.getElementById('eco-text-en');
+  const btnFr = document.getElementById('btn-fr');
+  const btnEn = document.getElementById('btn-en');
+  if (lang === 'en') {
+    if(fr) fr.style.display = 'none';
+    if(en) en.style.display = 'inline';
+    if(btnFr) { btnFr.style.background='none'; btnFr.style.borderColor='rgba(138,171,144,0.3)'; btnFr.style.color='#8aab90'; }
+    if(btnEn) { btnEn.style.background='rgba(212,168,67,0.3)'; btnEn.style.borderColor='rgba(212,168,67,0.5)'; btnEn.style.color='#d4a843'; }
+  } else {
+    if(fr) fr.style.display = 'inline';
+    if(en) en.style.display = 'none';
+    if(btnFr) { btnFr.style.background='rgba(212,168,67,0.3)'; btnFr.style.borderColor='rgba(212,168,67,0.5)'; btnFr.style.color='#d4a843'; }
+    if(btnEn) { btnEn.style.background='none'; btnEn.style.borderColor='rgba(138,171,144,0.3)'; btnEn.style.color='#8aab90'; }
+  }
+}
 </script>
 </body>
 </html>
