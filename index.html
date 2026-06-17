@@ -1157,8 +1157,7 @@ select.resa-input { cursor: pointer; }
 <!-- BANDEAU TOP BILINGUE -->
 <div class="eco-banner" id="eco-banner">
   <span>🌿 Explora Guide</span>
-  <span id="eco-text-fr">📞 <a href="tel:0748169803">07 48 16 98 03</a> &nbsp;·&nbsp; ✉ <a href="mailto:guide.ardeche.touriste@gmail.com">guide.ardeche.touriste@gmail.com</a> &nbsp;·&nbsp; 🌍 Guide local Ardèche</span>
-  <span id="eco-text-en" style="display:none">📞 <a href="tel:0748169803">+33 7 48 16 98 03</a> &nbsp;·&nbsp; ✉ <a href="mailto:guide.ardeche.touriste@gmail.com">guide.ardeche.touriste@gmail.com</a> &nbsp;·&nbsp; 🌍 Local Guide Ardèche</span>
+  <span data-fr="📞 <a href='tel:0748169803'>07 48 16 98 03</a> &nbsp;·&nbsp; ✉ <a href='mailto:guide.ardeche.touriste@gmail.com'>guide.ardeche.touriste@gmail.com</a> &nbsp;·&nbsp; 🌍 Guide local Ardèche" data-en="📞 <a href='tel:+33748169803'>+33 7 48 16 98 03</a> &nbsp;·&nbsp; ✉ <a href='mailto:guide.ardeche.touriste@gmail.com'>guide.ardeche.touriste@gmail.com</a> &nbsp;·&nbsp; 🌍 Local Ardèche Guide">📞 <a href="tel:0748169803">07 48 16 98 03</a> &nbsp;·&nbsp; ✉ <a href="mailto:guide.ardeche.touriste@gmail.com">guide.ardeche.touriste@gmail.com</a> &nbsp;·&nbsp; 🌍 Guide local Ardèche</span>
   <div style="display:flex;align-items:center;gap:0.4rem;margin-left:auto;flex-shrink:0;">
     <button onclick="switchLang('fr')" id="btn-fr" style="background:rgba(212,168,67,0.3);border:1px solid rgba(212,168,67,0.5);color:#d4a843;padding:0.15rem 0.5rem;font-size:0.58rem;cursor:pointer;letter-spacing:0.1em;font-family:'Josefin Sans',sans-serif;text-transform:uppercase;">FR</button>
     <button onclick="switchLang('en')" id="btn-en" style="background:none;border:1px solid rgba(138,171,144,0.3);color:#8aab90;padding:0.15rem 0.5rem;font-size:0.58rem;cursor:pointer;letter-spacing:0.1em;font-family:'Josefin Sans',sans-serif;text-transform:uppercase;">EN</button>
@@ -1224,19 +1223,19 @@ select.resa-input { cursor: pointer; }
 </svg>
   </a>
   <ul class="nav-links">
-    <li><a href="#about">Guide</a></li>
-    <li><a href="#services">Prestations</a></li>
-    <li><a href="#circuits">Circuits</a></li>
-    <li><a href="#map-section">Carte</a></li>
-    <li><a href="#pricing">Tarifs</a></li>
-    <li><a href="agenda-ardeche.html">🎉 Agenda</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about" data-fr="Guide" data-en="About">Guide</a></li>
+    <li><a href="#services" data-fr="Prestations" data-en="Services">Prestations</a></li>
+    <li><a href="#circuits" data-fr="Circuits" data-en="Routes">Circuits</a></li>
+    <li><a href="#map-section" data-fr="Carte" data-en="Map">Carte</a></li>
+    <li><a href="#pricing" data-fr="Tarifs" data-en="Pricing">Tarifs</a></li>
+    <li><a href="agenda-ardeche.html" data-fr="🎉 Agenda" data-en="🎉 Agenda">🎉 Agenda</a></li>
+    <li><a href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
   </ul>
   <div class="nav-right">
     <a class="nav-favorites" href="#" onclick="toggleFavPanel(event)">
-      ♡ Mon carnet <span class="fav-count" id="fav-count">0</span>
+      <span data-fr="♡ Mon carnet" data-en="♡ My wishlist">♡ Mon carnet</span> <span class="fav-count" id="fav-count">0</span>
     </a>
-    <a class="nav-cta" href="tel:0748169803">📞 Réserver</a>
+    <a class="nav-cta" href="tel:0748169803" data-fr="📞 Réserver" data-en="📞 Book now">📞 Réserver</a>
     <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -1245,31 +1244,31 @@ select.resa-input { cursor: pointer; }
 
 <!-- MENU MOBILE -->
 <div class="mobile-menu" id="mobile-menu">
-  <a href="#about" onclick="closeMobileMenu()">Qui suis-je ?</a>
-  <a href="#services" onclick="closeMobileMenu()">Mes prestations</a>
-  <a href="#circuits" onclick="closeMobileMenu()">Circuits & randonnées</a>
-  <a href="#map-section" onclick="closeMobileMenu()">Carte interactive</a>
-  <a href="#pricing" onclick="closeMobileMenu()">Tarifs</a>
-  <a href="agenda-ardeche.html" onclick="closeMobileMenu()">🎉 Fêtes & Festivals</a>
-  <a href="ebooks.html" onclick="closeMobileMenu()">📥 Guides gratuits</a>
-  <a href="enfants.html" onclick="closeMobileMenu()">👨‍👩‍👧 Ardèche en famille</a>
-  <a href="#contact" onclick="closeMobileMenu()">✉ Contact & Réservation</a>
-  <a href="tel:0748169803" class="mobile-menu-cta">📞 07 48 16 98 03</a>
+  <a href="#about" onclick="closeMobileMenu()" data-fr="Qui suis-je ?" data-en="About me">Qui suis-je ?</a>
+  <a href="#services" onclick="closeMobileMenu()" data-fr="Mes prestations" data-en="My services">Mes prestations</a>
+  <a href="#circuits" onclick="closeMobileMenu()" data-fr="Circuits & randonnées" data-en="Hikes & routes">Circuits & randonnées</a>
+  <a href="#map-section" onclick="closeMobileMenu()" data-fr="Carte interactive" data-en="Interactive map">Carte interactive</a>
+  <a href="#pricing" onclick="closeMobileMenu()" data-fr="Tarifs" data-en="Pricing">Tarifs</a>
+  <a href="agenda-ardeche.html" onclick="closeMobileMenu()" data-fr="🎉 Fêtes & Festivals" data-en="🎉 Festivals & Events">🎉 Fêtes & Festivals</a>
+  <a href="ebooks.html" onclick="closeMobileMenu()" data-fr="📥 Guides gratuits" data-en="📥 Free hiking guides">📥 Guides gratuits</a>
+  <a href="enfants.html" onclick="closeMobileMenu()" data-fr="👨‍👩‍👧 Ardèche en famille" data-en="👨‍👩‍👧 Family trips">👨‍👩‍👧 Ardèche en famille</a>
+  <a href="#contact" onclick="closeMobileMenu()" data-fr="✉ Contact & Réservation" data-en="✉ Contact & Booking">✉ Contact & Réservation</a>
+  <a href="tel:0748169803" class="mobile-menu-cta" data-fr="📞 07 48 16 98 03" data-en="📞 +33 7 48 16 98 03">📞 07 48 16 98 03</a>
 </div>
 
 <!-- CTA STICKY MOBILE -->
 <div class="mobile-sticky-cta">
-  <a class="cta-call" href="tel:0748169803">📞 Appeler</a>
-  <a class="cta-email" href="#contact">✉ Réserver</a>
+  <a class="cta-call" href="tel:0748169803" data-fr="📞 Appeler" data-en="📞 Call">📞 Appeler</a>
+  <a class="cta-email" href="#contact" data-fr="✉ Réserver" data-en="✉ Book">✉ Réserver</a>
 </div>
 
 <!-- PANEL FAVORIS (carnet de voyage) -->
 <div class="fav-panel" id="fav-panel">
   <button class="fav-close-btn" onclick="toggleFavPanel(event)">✕</button>
-  <div class="fav-panel-title">Mon carnet</div>
-  <div class="fav-panel-sub">Lieux & circuits sauvegardés</div>
-  <div id="fav-content"><p class="fav-empty">Cliquez ♡ sur un lieu ou un circuit pour le sauvegarder ici et préparer votre Ardèche idéale.</p></div>
-  <button class="fav-panel-cta" onclick="sendCarnet()">→ Envoyer mon carnet par email</button>
+  <div class="fav-panel-title" data-fr="Mon carnet" data-en="My wishlist">Mon carnet</div>
+  <div class="fav-panel-sub" data-fr="Lieux & circuits sauvegardés" data-en="Saved places & routes">Lieux & circuits sauvegardés</div>
+  <div id="fav-content"><p class="fav-empty" data-fr="Cliquez ♡ sur un lieu ou un circuit pour le sauvegarder ici et préparer votre Ardèche idéale." data-en="Click ♡ on a place or route to save it here and plan your perfect Ardèche experience.">Cliquez ♡ sur un lieu ou un circuit pour le sauvegarder ici et préparer votre Ardèche idéale.</p></div>
+  <button class="fav-panel-cta" onclick="sendCarnet()" data-fr="→ Envoyer mon carnet par email" data-en="→ Send my wishlist by email">→ Envoyer mon carnet par email</button>
 </div>
 
 <!-- HERO -->
@@ -1283,7 +1282,7 @@ select.resa-input { cursor: pointer; }
   <div class="hero-side-line"></div>
   <div class="hero-content">
     <div>
-      <div class="hero-eyebrow" data-reveal>Ardéchois de naissance · 07</div>
+      <div class="hero-eyebrow" data-reveal data-fr="Ardéchois de naissance · 07" data-en="Born & raised in Ardèche · 07">Ardéchois de naissance · 07</div>
       <h1 class="hero-title" data-reveal>
         <span class="line">Explora</span>
         <span class="line accent">Guide</span>
@@ -1291,12 +1290,12 @@ select.resa-input { cursor: pointer; }
     </div>
     <div class="hero-bottom-row" data-reveal>
       <div>
-        <p class="hero-sub">Né et élevé en Ardèche, je connais ce territoire dans ses moindres recoins. Gorges, villages de pierre, cascades secrètes, garrigue et vignobles…</p>
+        <p class="hero-sub" data-fr="Né et élevé en Ardèche, je connais ce territoire dans ses moindres recoins. Gorges, villages de pierre, cascades secrètes, garrigue et vignobles…" data-en="Born and raised in Ardèche, I know this land in its smallest corners. Gorges, stone villages, secret waterfalls, garrigue and vineyards…">Né et élevé en Ardèche, je connais ce territoire dans ses moindres recoins. Gorges, villages de pierre, cascades secrètes, garrigue et vignobles…</p>
         <div class="hero-tags">
-          <span class="hero-tag">Guide local</span>
-          <span class="hero-tag">Anti-guide</span>
-          <span class="hero-tag">Spots secrets</span>
-          <span class="hero-tag">Sur mesure</span>
+          <span class="hero-tag" data-fr="Guide local" data-en="Local guide">Guide local</span>
+          <span class="hero-tag" data-fr="Anti-guide" data-en="Off the beaten path">Anti-guide</span>
+          <span class="hero-tag" data-fr="Spots secrets" data-en="Secret spots">Spots secrets</span>
+          <span class="hero-tag" data-fr="Sur mesure" data-en="Tailor-made">Sur mesure</span>
         </div>
       </div>
       <div class="hero-cta-group">
@@ -1304,9 +1303,9 @@ select.resa-input { cursor: pointer; }
           <svg viewBox="0 0 184 65" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <polygon points="0,0 184,0 168,65 16,65" fill="#d4a843"/>
           </svg>
-          <span class="hero-cta-label">Réserver</span>
+          <span class="hero-cta-label" data-fr="Réserver" data-en="Book now">Réserver</span>
         </a>
-        <a class="hero-cta-secondary" href="#places">Découvrir l'Ardèche</a>
+        <a class="hero-cta-secondary" href="#places" data-fr="Découvrir l'Ardèche" data-en="Explore Ardèche">Découvrir l'Ardèche</a>
       </div>
     </div>
   </div>
@@ -1323,11 +1322,11 @@ select.resa-input { cursor: pointer; }
 
   </div>
   <div class="about-text" data-reveal>
-    <div class="section-label">À propos</div>
-    <h2 class="section-title">Je vous fais découvrir<br><em>la vraie Ardèche</em></h2>
-    <p>Celle qui ne se trouve dans <em>aucun guide touristique</em>. Passionné d'histoire, de géologie et de nature, je partage ma connaissance intime du territoire avec ceux qui souhaitent sortir des sentiers battus.</p>
-    <p>Accompagnateur touristique certifié, je construis chaque excursion sur mesure, selon vos envies, votre rythme et votre niveau. Familles, couples, groupes — chacun trouve son Ardèche.</p>
-    <p>De la grotte ornée à la cascade invisible, du village de schiste aux gorges sauvages, <em>chaque sortie est une révélation</em>.</p>
+    <div class="section-label" data-fr="À propos" data-en="About me">À propos</div>
+    <h2 class="section-title" data-fr="Je vous fais découvrir<br><em>la vraie Ardèche</em>" data-en="I show you<br><em>the real Ardèche</em>">Je vous fais découvrir<br><em>la vraie Ardèche</em></h2>
+    <p data-fr="Celle qui ne se trouve dans <em>aucun guide touristique</em>. Passionné d'histoire, de géologie et de nature, je partage ma connaissance intime du territoire avec ceux qui souhaitent sortir des sentiers battus." data-en="The one you won't find in <em>any tourist guide</em>. Passionate about history, geology and nature, I share my intimate knowledge of this land with those who want to go beyond the obvious.">Celle qui ne se trouve dans <em>aucun guide touristique</em>. Passionné d'histoire, de géologie et de nature, je partage ma connaissance intime du territoire avec ceux qui souhaitent sortir des sentiers battus.</p>
+    <p data-fr="Accompagnateur touristique certifié, je construis chaque excursion sur mesure, selon vos envies, votre rythme et votre niveau. Familles, couples, groupes — chacun trouve son Ardèche." data-en="A certified nature guide, I build every outing around your wishes, your pace and your level. Families, couples, groups — everyone finds their own Ardèche.">Accompagnateur touristique certifié, je construis chaque excursion sur mesure, selon vos envies, votre rythme et votre niveau. Familles, couples, groupes — chacun trouve son Ardèche.</p>
+    <p data-fr="De la grotte ornée à la cascade invisible, du village de schiste aux gorges sauvages, <em>chaque sortie est une révélation</em>." data-en="From painted caves to hidden waterfalls, from schist villages to wild gorges, <em>every outing is a revelation</em>.">De la grotte ornée à la cascade invisible, du village de schiste aux gorges sauvages, <em>chaque sortie est une révélation</em>.</p>
     <div class="about-signature">Pierre François</div>
   </div>
 </section>
@@ -1335,8 +1334,8 @@ select.resa-input { cursor: pointer; }
 <!-- AVIS / SOCIAL PROOF -->
 <section id="avis" style="padding:4rem 5%;">
   <div class="avis-header" data-reveal>
-    <div class="section-label" style="justify-content:center">Avis clients</div>
-    <h2 class="section-title" style="text-align:center;font-size:clamp(1.5rem,3vw,2.2rem);">Ce que disent<br><em>mes clients</em></h2>
+    <div class="section-label" style="justify-content:center" data-fr="Avis clients" data-en="Guest reviews">Avis clients</div>
+    <h2 class="section-title" style="text-align:center;font-size:clamp(1.5rem,3vw,2.2rem);" data-fr="Ce que disent<br><em>mes clients</em>" data-en="What my guests<br><em>are saying</em>">Ce que disent<br><em>mes clients</em></h2>
   </div>
   <div class="avis-grid" data-reveal style="margin-top:2rem;">
 
@@ -1365,23 +1364,23 @@ select.resa-input { cursor: pointer; }
   <!-- ENCART SORTIE DU MOIS -->
   <div data-reveal style="margin-top:3rem;background:linear-gradient(135deg,#1a2a1c,#162019);border:1px solid rgba(212,168,67,0.3);padding:2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
     <div>
-      <div style="font-size:0.62rem;letter-spacing:0.3em;text-transform:uppercase;color:#d4a843;margin-bottom:0.5rem;">🌿 Nouveau · Chaque mois</div>
-      <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:#f0ece0;margin-bottom:0.4rem;">La Sortie du Mois — <em style="color:#d4a843;">Accès libre</em></div>
-      <p style="font-size:0.85rem;color:#8aab90;line-height:1.7;max-width:480px;">1 samedi par mois, je propose une randonnée guidée gratuite ouverte à tous. 8 places max · Inscription obligatoire · Partage ma passion de l'Ardèche sans engagement.</p>
+      <div style="font-size:0.62rem;letter-spacing:0.3em;text-transform:uppercase;color:#d4a843;margin-bottom:0.5rem;" data-fr="🌿 Nouveau · Chaque mois" data-en="🌿 New · Every month">🌿 Nouveau · Chaque mois</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:#f0ece0;margin-bottom:0.4rem;" data-fr="La Sortie du Mois — <em style='color:#d4a843;'>Accès libre</em>" data-en="Hike of the Month — <em style='color:#d4a843;'>Free access</em>">La Sortie du Mois — <em style="color:#d4a843;">Accès libre</em></div>
+      <p style="font-size:0.85rem;color:#8aab90;line-height:1.7;max-width:480px;" data-fr="1 samedi par mois, je propose une randonnée guidée gratuite ouverte à tous. 8 places max · Inscription obligatoire · Partage ma passion de l'Ardèche sans engagement." data-en="One Saturday a month, I offer a free guided hike open to everyone. Max 8 spots · Registration required · Experience Ardèche with no strings attached.">1 samedi par mois, je propose une randonnée guidée gratuite ouverte à tous. 8 places max · Inscription obligatoire · Partage ma passion de l'Ardèche sans engagement.</p>
     </div>
-    <a href="#contact" style="display:inline-flex;align-items:center;gap:0.5rem;background:#d4a843;color:#0d1410;text-decoration:none;padding:0.9rem 1.8rem;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;font-family:'Josefin Sans',sans-serif;flex-shrink:0;">→ Je m'inscris</a>
+    <a href="#contact" style="display:inline-flex;align-items:center;gap:0.5rem;background:#d4a843;color:#0d1410;text-decoration:none;padding:0.9rem 1.8rem;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;font-family:'Josefin Sans',sans-serif;flex-shrink:0;" data-fr="→ Je m'inscris" data-en="→ Sign me up">→ Je m'inscris</a>
   </div>
   <div data-reveal style="text-align:center;margin-top:2rem;">
-    <a class="btn-outline" href="https://www.google.com/maps/place/Explora+Guide+-+Guide+Touristique+%26+Randonn%C3%A9e/@44.8152655,2.0666569,8z/data=!4m10!1m2!2m1!1sexplora+guide!3m6!1s0x6db99be8d91a4dc3:0x70c6bb9b0227ca5a!8m2!3d44.8152655!4d4.3737858!15sCg1leHBsb3JhIGd1aWRlkgEMaGlraW5nX2d1aWRl4AEA!16s%2Fg%2F11zbk4hr5h?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">★ Laisser un avis Google</a>
+    <a class="btn-outline" href="https://www.google.com/maps/place/Explora+Guide+-+Guide+Touristique+%26+Randonn%C3%A9e/@44.8152655,2.0666569,8z/data=!4m10!1m2!2m1!1sexplora+guide!3m6!1s0x6db99be8d91a4dc3:0x70c6bb9b0227ca5a!8m2!3d44.8152655!4d4.3737858!15sCg1leHBsb3JhIGd1aWRlkgEMaGlraW5nX2d1aWRl4AEA!16s%2Fg%2F11zbk4hr5h?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" data-fr="★ Laisser un avis Google" data-en="★ Leave a Google review">★ Laisser un avis Google</a>
   </div>
 </section>
 
 <!-- L'ARDÈCHE EN 4 AMBIANCES (inspiré Ardèche Guide) -->
 <section class="section" id="ambiances">
   <div data-reveal>
-    <div class="section-label">Territoire</div>
-    <h2 class="section-title">L'Ardèche,<br><em>1 destination · 4 ambiances</em></h2>
-    <p style="color:#8aab90;font-size:.92rem;line-height:1.8;max-width:560px;margin-top:.5rem;">Chaque coin de ce département a son caractère. Je vous guide dans les quatre visages de l'Ardèche selon vos envies.</p>
+    <div class="section-label" data-fr="Territoire" data-en="Territory">Territoire</div>
+    <h2 class="section-title" data-fr="L'Ardèche,<br><em>1 destination · 4 ambiances</em>" data-en="Ardèche,<br><em>1 destination · 4 experiences</em>">L'Ardèche,<br><em>1 destination · 4 ambiances</em></h2>
+    <p style="color:#8aab90;font-size:.92rem;line-height:1.8;max-width:560px;margin-top:.5rem;" data-fr="Chaque coin de ce département a son caractère. Je vous guide dans les quatre visages de l'Ardèche selon vos envies." data-en="Every corner of this region has its own character. I guide you through the four faces of Ardèche, tailored to your desires.">Chaque coin de ce département a son caractère. Je vous guide dans les quatre visages de l'Ardèche selon vos envies.</p>
   </div>
   <div class="ambiances-grid" data-reveal>
     <div class="ambiance-card">
@@ -1389,9 +1388,9 @@ select.resa-input { cursor: pointer; }
       <div class="ambiance-card-overlay"></div>
       <button class="ambiance-fav-btn" onclick="toggleFav(this,'Ardèche Sud & Gorges')">♡</button>
       <div class="ambiance-card-info">
-        <div class="ambiance-card-tag">Activités · Nature</div>
+        <div class="ambiance-card-tag" data-fr="Activités · Nature" data-en="Activities · Nature">Activités · Nature</div>
         <div class="ambiance-card-name">Ardèche Sud & Gorges</div>
-        <div class="ambiance-card-sub">Canoë, gorges, Pont d'Arc, villages calcaires</div>
+        <div class="ambiance-card-sub" data-fr="Canoë, gorges, Pont d'Arc, villages calcaires" data-en="Canoeing, gorges, Pont d'Arc, limestone villages">Canoë, gorges, Pont d'Arc, villages calcaires</div>
       </div>
     </div>
     <div class="ambiance-card">
@@ -1399,9 +1398,9 @@ select.resa-input { cursor: pointer; }
       <div class="ambiance-card-overlay"></div>
       <button class="ambiance-fav-btn" onclick="toggleFav(this,'Ardèche Verte')">♡</button>
       <div class="ambiance-card-info">
-        <div class="ambiance-card-tag">Vélo · Patrimoine</div>
+        <div class="ambiance-card-tag" data-fr="Vélo · Patrimoine" data-en="Cycling · Heritage">Vélo · Patrimoine</div>
         <div class="ambiance-card-name">Ardèche Verte</div>
-        <div class="ambiance-card-sub">Voies vertes, châtaigniers, Dolce Via</div>
+        <div class="ambiance-card-sub" data-fr="Voies vertes, châtaigniers, Dolce Via" data-en="Greenways, chestnut trees, Dolce Via trail">Voies vertes, châtaigniers, Dolce Via</div>
       </div>
     </div>
     <div class="ambiance-card">
@@ -1409,9 +1408,9 @@ select.resa-input { cursor: pointer; }
       <div class="ambiance-card-overlay"></div>
       <button class="ambiance-fav-btn" onclick="toggleFav(this,'Montagnes & Volcans')">♡</button>
       <div class="ambiance-card-info">
-        <div class="ambiance-card-tag">Volcanisme · Thermalisme</div>
+        <div class="ambiance-card-tag" data-fr="Volcanisme · Thermalisme" data-en="Volcanism · Thermal springs">Volcanisme · Thermalisme</div>
         <div class="ambiance-card-name">Montagnes & Volcans</div>
-        <div class="ambiance-card-sub">Mont Gerbier, cascades, sources thermales</div>
+        <div class="ambiance-card-sub" data-fr="Mont Gerbier, cascades, sources thermales" data-en="Mont Gerbier, waterfalls, thermal springs">Mont Gerbier, cascades, sources thermales</div>
       </div>
     </div>
     <div class="ambiance-card">
@@ -1419,9 +1418,9 @@ select.resa-input { cursor: pointer; }
       <div class="ambiance-card-overlay"></div>
       <button class="ambiance-fav-btn" onclick="toggleFav(this,'Vallée du Rhône')">♡</button>
       <div class="ambiance-card-info">
-        <div class="ambiance-card-tag">Vins · Gastronomie</div>
+        <div class="ambiance-card-tag" data-fr="Vins · Gastronomie" data-en="Wine · Gastronomy">Vins · Gastronomie</div>
         <div class="ambiance-card-name">Vallée du Rhône</div>
-        <div class="ambiance-card-sub">Vignobles, gastronomie, villages perchés</div>
+        <div class="ambiance-card-sub" data-fr="Vignobles, gastronomie, villages perchés" data-en="Vineyards, gastronomy, hilltop villages">Vignobles, gastronomie, villages perchés</div>
       </div>
     </div>
   </div>
@@ -1430,9 +1429,9 @@ select.resa-input { cursor: pointer; }
 <!-- LIEUX INSOLITES -->
 <section class="section" id="places">
   <div class="places-intro" data-reveal>
-    <div class="section-label">Découvertes</div>
-    <h2 class="section-title">Lieux <em>insolites</em><br>& secrets d'Ardèche</h2>
-    <p>Au-delà des gorges connues, l'Ardèche recèle des trésors que seuls les locaux partagent. Des formations rocheuses mystérieuses, des sources cachées, des villages hors du temps.</p>
+    <div class="section-label" data-fr="Découvertes" data-en="Discoveries">Découvertes</div>
+    <h2 class="section-title" data-fr="Lieux <em>insolites</em><br>&amp; secrets d'Ardèche" data-en="Unusual places<br>&amp; <em>secrets</em> of Ardèche">Lieux <em>insolites</em><br>& secrets d'Ardèche</h2>
+    <p data-fr="Au-delà des gorges connues, l'Ardèche recèle des trésors que seuls les locaux partagent. Des formations rocheuses mystérieuses, des sources cachées, des villages hors du temps." data-en="Beyond the famous gorges, Ardèche hides treasures that only locals share. Mysterious rock formations, hidden springs, timeless villages.">Au-delà des gorges connues, l'Ardèche recèle des trésors que seuls les locaux partagent. Des formations rocheuses mystérieuses, des sources cachées, des villages hors du temps.</p>
   </div>
   <div class="places-grid">
     <div class="place-card" data-reveal>
@@ -1440,9 +1439,9 @@ select.resa-input { cursor: pointer; }
       <div class="place-card-overlay"></div>
       <button class="place-fav-btn" onclick="toggleFav(this,'Gorges du Chassezac')">♡</button>
       <div class="place-card-info">
-        <div class="place-card-tag">Géologie · Vertige</div>
-        <div class="place-card-name">Les Gorges Sauvages du Chassezac</div>
-        <div class="place-card-desc">Un canyon d'une sauvagerie rare, presque inconnu des touristes. Parois de grès rouge à pic, eau émeraude, silence total — à 40 minutes de Vallon.</div>
+        <div class="place-card-tag" data-fr="Géologie · Vertige" data-en="Geology · Vertigo">Géologie · Vertige</div>
+        <div class="place-card-name" data-fr="Les Gorges Sauvages du Chassezac" data-en="The Wild Chassezac Gorges">Les Gorges Sauvages du Chassezac</div>
+        <div class="place-card-desc" data-fr="Un canyon d'une sauvagerie rare, presque inconnu des touristes. Parois de grès rouge à pic, eau émeraude, silence total — à 40 minutes de Vallon." data-en="A canyon of rare wildness, almost unknown to tourists. Sheer red sandstone walls, emerald water, total silence — 40 minutes from Vallon.">Un canyon d'une sauvagerie rare, presque inconnu des touristes. Parois de grès rouge à pic, eau émeraude, silence total — à 40 minutes de Vallon.</div>
       </div>
     </div>
     <div class="place-card" data-reveal>
@@ -1450,9 +1449,9 @@ select.resa-input { cursor: pointer; }
       <div class="place-card-overlay"></div>
       <button class="place-fav-btn" onclick="toggleFav(this,'Pont du Diable Thueyts')">♡</button>
       <div class="place-card-info">
-        <div class="place-card-tag">Légende · Basalte</div>
-        <div class="place-card-name">Pont du Diable, Thueyts</div>
-        <div class="place-card-desc">Un arc naturel de basalte sculpté par la lave et l'Ardèche, chargé de légendes médiévales.</div>
+        <div class="place-card-tag" data-fr="Légende · Basalte" data-en="Legend · Basalt">Légende · Basalte</div>
+        <div class="place-card-name" data-fr="Pont du Diable, Thueyts" data-en="Devil's Bridge, Thueyts">Pont du Diable, Thueyts</div>
+        <div class="place-card-desc" data-fr="Un arc naturel de basalte sculpté par la lave et l'Ardèche, chargé de légendes médiévales." data-en="A natural basalt arch carved by lava and the Ardèche river, steeped in medieval legends.">Un arc naturel de basalte sculpté par la lave et l'Ardèche, chargé de légendes médiévales.</div>
       </div>
     </div>
     <div class="place-card" data-reveal>
@@ -1460,9 +1459,9 @@ select.resa-input { cursor: pointer; }
       <div class="place-card-overlay"></div>
       <button class="place-fav-btn" onclick="toggleFav(this,'Bois de Païolive')">♡</button>
       <div class="place-card-info">
-        <div class="place-card-tag">Forêt · Minéral</div>
-        <div class="place-card-name">Bois de Païolive</div>
-        <div class="place-card-desc">Un labyrinthe de roches calcaires millénaires sous une forêt de chênes verts — un monde à part.</div>
+        <div class="place-card-tag" data-fr="Forêt · Minéral" data-en="Forest · Stone">Forêt · Minéral</div>
+        <div class="place-card-name" data-fr="Bois de Païolive" data-en="Bois de Païolive Forest">Bois de Païolive</div>
+        <div class="place-card-desc" data-fr="Un labyrinthe de roches calcaires millénaires sous une forêt de chênes verts — un monde à part." data-en="A labyrinth of ancient limestone rocks beneath a holm oak forest — a world apart.">Un labyrinthe de roches calcaires millénaires sous une forêt de chênes verts — un monde à part.</div>
       </div>
     </div>
     <div class="place-card" data-reveal>
@@ -1470,9 +1469,9 @@ select.resa-input { cursor: pointer; }
       <div class="place-card-overlay"></div>
       <button class="place-fav-btn" onclick="toggleFav(this,'Thines village de schiste')">♡</button>
       <div class="place-card-info">
-        <div class="place-card-tag">Patrimoine</div>
-        <div class="place-card-name">Thines, village de schiste</div>
-        <div class="place-card-desc">Un village médiéval accroché à une falaise, accessible uniquement à pied. Hors du temps.</div>
+        <div class="place-card-tag" data-fr="Patrimoine" data-en="Heritage">Patrimoine</div>
+        <div class="place-card-name" data-fr="Thines, village de schiste" data-en="Thines, a schist village">Thines, village de schiste</div>
+        <div class="place-card-desc" data-fr="Un village médiéval accroché à une falaise, accessible uniquement à pied. Hors du temps." data-en="A medieval village clinging to a cliff, only reachable on foot. Completely timeless.">Un village médiéval accroché à une falaise, accessible uniquement à pied. Hors du temps.</div>
       </div>
     </div>
     <div class="place-card" data-reveal>
@@ -1480,9 +1479,9 @@ select.resa-input { cursor: pointer; }
       <div class="place-card-overlay"></div>
       <button class="place-fav-btn" onclick="toggleFav(this,'Orgues basaltiques de Jaujac')">♡</button>
       <div class="place-card-info">
-        <div class="place-card-tag">Volcanisme</div>
-        <div class="place-card-name">Coulées basaltiques de Jaujac</div>
-        <div class="place-card-desc">Des orgues de basalte géantes figées il y a 10 000 ans. Un paysage martien au cœur de l'Ardèche.</div>
+        <div class="place-card-tag" data-fr="Volcanisme" data-en="Volcanism">Volcanisme</div>
+        <div class="place-card-name" data-fr="Coulées basaltiques de Jaujac" data-en="Jaujac Basalt Flows">Coulées basaltiques de Jaujac</div>
+        <div class="place-card-desc" data-fr="Des orgues de basalte géantes figées il y a 10 000 ans. Un paysage martien au cœur de l'Ardèche." data-en="Giant basalt organ pipes frozen 10,000 years ago. A Martian landscape at the heart of Ardèche.">Des orgues de basalte géantes figées il y a 10 000 ans. Un paysage martien au cœur de l'Ardèche.</div>
       </div>
     </div>
     <div class="place-card" data-reveal>
@@ -1490,9 +1489,9 @@ select.resa-input { cursor: pointer; }
       <div class="place-card-overlay"></div>
       <button class="place-fav-btn" onclick="toggleFav(this,'Cascade de Ray-Pic')">♡</button>
       <div class="place-card-info">
-        <div class="place-card-tag">Cascade · Secret</div>
-        <div class="place-card-name">La Cascade de Ray-Pic</div>
-        <div class="place-card-desc">La plus belle cascade d'Ardèche, que les touristes ne trouvent jamais sans guide local.</div>
+        <div class="place-card-tag" data-fr="Cascade · Secret" data-en="Waterfall · Hidden">Cascade · Secret</div>
+        <div class="place-card-name" data-fr="La Cascade de Ray-Pic" data-en="Ray-Pic Waterfall">La Cascade de Ray-Pic</div>
+        <div class="place-card-desc" data-fr="La plus belle cascade d'Ardèche, que les touristes ne trouvent jamais sans guide local." data-en="The most beautiful waterfall in Ardèche, which tourists never find without a local guide.">La plus belle cascade d'Ardèche, que les touristes ne trouvent jamais sans guide local.</div>
       </div>
     </div>
   </div>
@@ -1502,26 +1501,26 @@ select.resa-input { cursor: pointer; }
 <section class="section" id="services">
   <div class="services-header" data-reveal>
     <div>
-      <div class="section-label">Prestations</div>
-      <h2 class="section-title">Des expériences<br><em>sur mesure</em></h2>
+      <div class="section-label" data-fr="Prestations" data-en="Services">Prestations</div>
+      <h2 class="section-title" data-fr="Des expériences<br><em>sur mesure</em>" data-en="Experiences<br><em>tailor-made for you</em>">Des expériences<br><em>sur mesure</em></h2>
     </div>
-    <a class="btn-outline" href="#contact">Me contacter</a>
+    <a class="btn-outline" href="#contact" data-fr="Me contacter" data-en="Get in touch">Me contacter</a>
   </div>
   <div class="services-grid" data-reveal>
-    <div class="service-item"><div class="service-num">01</div><div class="service-icon">🥾</div><div class="service-name">Randonnées guidées</div><div class="service-desc">Demi-journée ou journée complète sur des sentiers confidentiels. Faune, flore, géologie : je raconte l'Ardèche vivante.</div></div>
-    <div class="service-item"><div class="service-num">02</div><div class="service-icon">🏛️</div><div class="service-name">Visites de villages</div><div class="service-desc">Les ruelles pavées de Vogüé, Balazuc, Labeaume, Alba-la-Romaine… Avec les anecdotes que les guides ne racontent pas.</div></div>
-    <div class="service-item"><div class="service-num">03</div><div class="service-icon">🌋</div><div class="service-name">Découverte géologique</div><div class="service-desc">Volcans, gorges, grottes, orgues basaltiques… L'Ardèche est un livre d'histoire naturelle à ciel ouvert.</div></div>
-    <div class="service-item"><div class="service-num">04</div><div class="service-icon">🍷</div><div class="service-name">Gastronomie & Terroir</div><div class="service-desc">Vignerons, fromagers, producteurs de châtaignes — je vous emmène à la rencontre des artisans qui font l'Ardèche authentique.</div></div>
-    <div class="service-item"><div class="service-num">05</div><div class="service-icon">👨‍👩‍👧</div><div class="service-name">Sorties familles</div><div class="service-desc">Adaptées aux enfants, ludiques et pédagogiques. L'Ardèche fascine les petits autant que les grands.</div></div>
-    <div class="service-item"><div class="service-num">06</div><div class="service-icon">🌙</div><div class="service-name">Soirées & couchers de soleil</div><div class="service-desc">Les belvédères secrets au coucher du soleil, les étoiles depuis les hauts plateaux — des moments hors du commun.</div></div>
+    <div class="service-item"><div class="service-num">01</div><div class="service-icon">🥾</div><div class="service-name" data-fr="Randonnées guidées" data-en="Guided hikes">Randonnées guidées</div><div class="service-desc" data-fr="Demi-journée ou journée complète sur des sentiers confidentiels. Faune, flore, géologie : je raconte l'Ardèche vivante." data-en="Half-day or full day on hidden trails. Wildlife, plants, geology: I tell the living story of Ardèche.">Demi-journée ou journée complète sur des sentiers confidentiels. Faune, flore, géologie : je raconte l'Ardèche vivante.</div></div>
+    <div class="service-item"><div class="service-num">02</div><div class="service-icon">🏛️</div><div class="service-name" data-fr="Visites de villages" data-en="Village tours">Visites de villages</div><div class="service-desc" data-fr="Les ruelles pavées de Vogüé, Balazuc, Labeaume, Alba-la-Romaine… Avec les anecdotes que les guides ne racontent pas." data-en="The cobbled lanes of Vogüé, Balazuc, Labeaume, Alba-la-Romaine… With stories no guidebook will tell you.">Les ruelles pavées de Vogüé, Balazuc, Labeaume, Alba-la-Romaine… Avec les anecdotes que les guides ne racontent pas.</div></div>
+    <div class="service-item"><div class="service-num">03</div><div class="service-icon">🌋</div><div class="service-name" data-fr="Découverte géologique" data-en="Geology discovery">Découverte géologique</div><div class="service-desc" data-fr="Volcans, gorges, grottes, orgues basaltiques… L'Ardèche est un livre d'histoire naturelle à ciel ouvert." data-en="Volcanoes, gorges, caves, basalt columns… Ardèche is an open-air natural history book.">Volcans, gorges, grottes, orgues basaltiques… L'Ardèche est un livre d'histoire naturelle à ciel ouvert.</div></div>
+    <div class="service-item"><div class="service-num">04</div><div class="service-icon">🍷</div><div class="service-name" data-fr="Gastronomie & Terroir" data-en="Food & Local produce">Gastronomie & Terroir</div><div class="service-desc" data-fr="Vignerons, fromagers, producteurs de châtaignes — je vous emmène à la rencontre des artisans qui font l'Ardèche authentique." data-en="Winemakers, cheese producers, chestnut growers — I take you to meet the artisans who make authentic Ardèche.">Vignerons, fromagers, producteurs de châtaignes — je vous emmène à la rencontre des artisans qui font l'Ardèche authentique.</div></div>
+    <div class="service-item"><div class="service-num">05</div><div class="service-icon">👨‍👩‍👧</div><div class="service-name" data-fr="Sorties familles" data-en="Family outings">Sorties familles</div><div class="service-desc" data-fr="Adaptées aux enfants, ludiques et pédagogiques. L'Ardèche fascine les petits autant que les grands." data-en="Adapted for children, fun and educational. Ardèche enchants kids as much as adults.">Adaptées aux enfants, ludiques et pédagogiques. L'Ardèche fascine les petits autant que les grands.</div></div>
+    <div class="service-item"><div class="service-num">06</div><div class="service-icon">🌙</div><div class="service-name" data-fr="Soirées & couchers de soleil" data-en="Sunsets & evening outings">Soirées & couchers de soleil</div><div class="service-desc" data-fr="Les belvédères secrets au coucher du soleil, les étoiles depuis les hauts plateaux — des moments hors du commun." data-en="Secret viewpoints at sunset, stargazing from the high plateaus — truly extraordinary moments.">Les belvédères secrets au coucher du soleil, les étoiles depuis les hauts plateaux — des moments hors du commun.</div></div>
   </div>
 </section>
 
 <!-- CIRCUITS -->
 <section class="section" id="circuits">
   <div data-reveal>
-    <div class="section-label">Explorations Majeures</div>
-    <h2 class="section-title">4 Grands Circuits<br><em>d'Exception</em></h2>
+    <div class="section-label" data-fr="Explorations Majeures" data-en="Major Explorations">Explorations Majeures</div>
+    <h2 class="section-title" data-fr="4 Grands Circuits<br><em>d'Exception</em>" data-en="4 Exceptional<br><em>Guided Routes</em>">4 Grands Circuits<br><em>d'Exception</em></h2>
   </div>
   <div class="circuits-grid" data-reveal>
     <div class="circuit-card">
@@ -1531,9 +1530,9 @@ select.resa-input { cursor: pointer; }
       </div>
       <button class="circuit-fav" onclick="toggleFav(this,'Circuit Villages de Caractère')">♡</button>
       <div class="circuit-body">
-        <div class="circuit-name">Le Grand Tour des Villages de Caractère</div>
-        <div class="circuit-desc">Un voyage dans le temps reliant Vogüé, Balazuc, Labeaume et Ruoms. Ruelles pavées, châteaux médiévaux et falaises calcaires.</div>
-        <div class="circuit-tip"><strong>💡 Logistique</strong>• <em>Échappatoire :</em> Accessible en bus (Aubenas-Alès) pour écourter une étape.<br>• <em>Terroir :</em> Dégustation du cépage local "Chatus" à Ruoms.</div>
+        <div class="circuit-name" data-fr="Le Grand Tour des Villages de Caractère" data-en="The Grand Tour of Charming Villages">Le Grand Tour des Villages de Caractère</div>
+        <div class="circuit-desc" data-fr="Un voyage dans le temps reliant Vogüé, Balazuc, Labeaume et Ruoms. Ruelles pavées, châteaux médiévaux et falaises calcaires." data-en="A journey through time linking Vogüé, Balazuc, Labeaume and Ruoms. Cobbled lanes, medieval castles and limestone cliffs.">Un voyage dans le temps reliant Vogüé, Balazuc, Labeaume et Ruoms. Ruelles pavées, châteaux médiévaux et falaises calcaires.</div>
+        <div class="circuit-tip" data-fr="<strong>💡 Logistique</strong>• <em>Échappatoire :</em> Accessible en bus (Aubenas-Alès) pour écourter une étape.<br>• <em>Terroir :</em> Dégustation du cépage local &quot;Chatus&quot; à Ruoms." data-en="<strong>💡 Logistics</strong>• <em>Shortcut:</em> Accessible by bus (Aubenas-Alès) to shorten a stage.<br>• <em>Local taste:</em> Tasting of the local 'Chatus' grape variety in Ruoms."><strong>💡 Logistique</strong>• <em>Échappatoire :</em> Accessible en bus (Aubenas-Alès) pour écourter une étape.<br>• <em>Terroir :</em> Dégustation du cépage local "Chatus" à Ruoms.</div>
       </div>
     </div>
     <div class="circuit-card">
@@ -1543,9 +1542,9 @@ select.resa-input { cursor: pointer; }
       </div>
       <button class="circuit-fav" onclick="toggleFav(this,'Circuit Sucs et Volcans')">♡</button>
       <div class="circuit-body">
-        <div class="circuit-name">La Haute-Route des Sucs et Volcans</div>
-        <div class="circuit-desc">Grands espaces sauvages au Nord de l'Ardèche. Passage par le Mont Gerbier-de-Jonc, le Mont Mézenc et les structures mystiques de Borée.</div>
-        <div class="circuit-tip"><strong>💡 Logistique</strong>• <em>Échappatoire :</em> Refuges proches des axes routiers en cas d'orage.<br>• <em>Terroir :</em> Fin Gras du Mézenc en auberge de montagne.</div>
+        <div class="circuit-name" data-fr="La Haute-Route des Sucs et Volcans" data-en="The High Route of Volcanoes & Sucs">La Haute-Route des Sucs et Volcans</div>
+        <div class="circuit-desc" data-fr="Grands espaces sauvages au Nord de l'Ardèche. Passage par le Mont Gerbier-de-Jonc, le Mont Mézenc et les structures mystiques de Borée." data-en="Wide open wilderness in northern Ardèche. Crossing Mont Gerbier-de-Jonc, Mont Mézenc and the mystical formations of Borée.">Grands espaces sauvages au Nord de l'Ardèche. Passage par le Mont Gerbier-de-Jonc, le Mont Mézenc et les structures mystiques de Borée.</div>
+        <div class="circuit-tip" data-fr="<strong>💡 Logistique</strong>• <em>Échappatoire :</em> Refuges proches des axes routiers en cas d'orage.<br>• <em>Terroir :</em> Fin Gras du Mézenc en auberge de montagne." data-en="<strong>💡 Logistics</strong>• <em>Shortcut:</em> Mountain shelters near roads in case of storm.<br>• <em>Local taste:</em> Fin Gras du Mézenc beef at a mountain inn."><strong>💡 Logistique</strong>• <em>Échappatoire :</em> Refuges proches des axes routiers en cas d'orage.<br>• <em>Terroir :</em> Fin Gras du Mézenc en auberge de montagne.</div>
       </div>
     </div>
     <div class="circuit-card">
@@ -1555,9 +1554,9 @@ select.resa-input { cursor: pointer; }
       </div>
       <button class="circuit-fav" onclick="toggleFav(this,'Circuit Gorges et Canyons')">♡</button>
       <div class="circuit-body">
-        <div class="circuit-name">La Traversée des Gorges et Canyons Secrets</div>
-        <div class="circuit-desc">Randonnée sportive dans les Gorges du Chassezac, le Bois de Païolive et jusqu'au village isolé de Thines.</div>
-        <div class="circuit-tip"><strong>💡 Logistique</strong>• <em>Échappatoire :</em> Boucles modulables à Païolive.<br>• <em>Terroir :</em> Marché des Vans (Picodon et miel de châtaignier).</div>
+        <div class="circuit-name" data-fr="La Traversée des Gorges et Canyons Secrets" data-en="The Crossing of Secret Gorges & Canyons">La Traversée des Gorges et Canyons Secrets</div>
+        <div class="circuit-desc" data-fr="Randonnée sportive dans les Gorges du Chassezac, le Bois de Païolive et jusqu'au village isolé de Thines." data-en="A challenging hike through the Chassezac Gorges, the Bois de Païolive and on to the isolated village of Thines.">Randonnée sportive dans les Gorges du Chassezac, le Bois de Païolive et jusqu'au village isolé de Thines.</div>
+        <div class="circuit-tip" data-fr="<strong>💡 Logistique</strong>• <em>Échappatoire :</em> Boucles modulables à Païolive.<br>• <em>Terroir :</em> Marché des Vans (Picodon et miel de châtaignier)." data-en="<strong>💡 Logistics</strong>• <em>Shortcut:</em> Adjustable loops at Païolive.<br>• <em>Local taste:</em> Les Vans market (Picodon cheese and chestnut honey)."><strong>💡 Logistique</strong>• <em>Échappatoire :</em> Boucles modulables à Païolive.<br>• <em>Terroir :</em> Marché des Vans (Picodon et miel de châtaignier).</div>
       </div>
     </div>
     <div class="circuit-card">
@@ -1567,9 +1566,9 @@ select.resa-input { cursor: pointer; }
       </div>
       <button class="circuit-fav" onclick="toggleFav(this,'Circuit Merveilles Cachées')">♡</button>
       <div class="circuit-body">
-        <div class="circuit-name">Le Tour des Merveilles Cachées</div>
-        <div class="circuit-desc">Découverte de l'Ardèche Cévenole : la coulée basaltique de Jaujac, le mythique Pont du Diable à Thueyts et Meyras.</div>
-        <div class="circuit-tip"><strong>💡 Logistique</strong>• <em>Échappatoire :</em> Ligne de bus TER dans la vallée (RN102).<br>• <em>Terroir :</em> Châtaigne AOP et bière locale à Jaujac.</div>
+        <div class="circuit-name" data-fr="Le Tour des Merveilles Cachées" data-en="The Tour of Hidden Wonders">Le Tour des Merveilles Cachées</div>
+        <div class="circuit-desc" data-fr="Découverte de l'Ardèche Cévenole : la coulée basaltique de Jaujac, le mythique Pont du Diable à Thueyts et Meyras." data-en="Exploring the Cévenol Ardèche: the Jaujac basalt flow, the legendary Devil's Bridge at Thueyts and Meyras.">Découverte de l'Ardèche Cévenole : la coulée basaltique de Jaujac, le mythique Pont du Diable à Thueyts et Meyras.</div>
+        <div class="circuit-tip" data-fr="<strong>💡 Logistique</strong>• <em>Échappatoire :</em> Ligne de bus TER dans la vallée (RN102).<br>• <em>Terroir :</em> Châtaigne AOP et bière locale à Jaujac." data-en="<strong>💡 Logistics</strong>• <em>Shortcut:</em> TER bus line in the valley (RN102).<br>• <em>Local taste:</em> PDO chestnuts and local craft beer in Jaujac."><strong>💡 Logistique</strong>• <em>Échappatoire :</em> Ligne de bus TER dans la vallée (RN102).<br>• <em>Terroir :</em> Châtaigne AOP et bière locale à Jaujac.</div>
       </div>
     </div>
   </div>
@@ -1578,88 +1577,88 @@ select.resa-input { cursor: pointer; }
 <!-- AGENDA (inspiré Ardèche Guide) -->
 <section class="section" id="agenda">
   <div data-reveal>
-    <div class="section-label">Agenda</div>
-    <h2 class="section-title">Prochaines<br><em>sorties & événements</em></h2>
+    <div class="section-label" data-fr="Agenda" data-en="Schedule">Agenda</div>
+    <h2 class="section-title" data-fr="Prochaines<br><em>sorties & événements</em>" data-en="Upcoming<br><em>outings & events</em>">Prochaines<br><em>sorties & événements</em></h2>
   </div>
   <div class="agenda-tabs" data-reveal>
-    <button class="agenda-tab active" onclick="filterAgenda('tous',this)">Tous</button>
-    <button class="agenda-tab" onclick="filterAgenda('rando',this)">Randonnées</button>
-    <button class="agenda-tab" onclick="filterAgenda('gastronomie',this)">Gastronomie</button>
-    <button class="agenda-tab" onclick="filterAgenda('nuit',this)">Soirées</button>
+    <button class="agenda-tab active" onclick="filterAgenda('tous',this)" data-fr="Tous" data-en="All">Tous</button>
+    <button class="agenda-tab" onclick="filterAgenda('rando',this)" data-fr="Randonnées" data-en="Hikes">Randonnées</button>
+    <button class="agenda-tab" onclick="filterAgenda('gastronomie',this)" data-fr="Gastronomie" data-en="Food & Wine">Gastronomie</button>
+    <button class="agenda-tab" onclick="filterAgenda('nuit',this)" data-fr="Soirées" data-en="Evenings">Soirées</button>
   </div>
   <div class="agenda-grid" data-reveal>
     <div class="agenda-item" data-cat="rando">
       <div class="agenda-date">21 juin 2026</div>
-      <div class="agenda-title">Balade des Gorges de l'Ouvèze — Demi-journée</div>
+      <div class="agenda-title" data-fr="Balade des Gorges de l'Ouvèze — Demi-journée" data-en="Ouvèze Gorges Walk — Half day">Balade des Gorges de l'Ouvèze — Demi-journée</div>
       <div class="agenda-lieu">📍 Privas · 8h–12h</div>
-      <div class="agenda-tag">Randonnée</div>
+      <div class="agenda-tag" data-fr="Randonnée" data-en="Hike">Randonnée</div>
     </div>
     <div class="agenda-item" data-cat="gastronomie">
       <div class="agenda-date">28 juin 2026</div>
-      <div class="agenda-title">Rencontre avec les producteurs locaux du Coiron</div>
+      <div class="agenda-title" data-fr="Rencontre avec les producteurs locaux du Coiron" data-en="Meeting Coiron local producers">Rencontre avec les producteurs locaux du Coiron</div>
       <div class="agenda-lieu">📍 Privas · 9h–13h</div>
-      <div class="agenda-tag">Gastronomie</div>
+      <div class="agenda-tag" data-fr="Gastronomie" data-en="Food & Wine">Gastronomie</div>
     </div>
     <div class="agenda-item" data-cat="nuit">
       <div class="agenda-date">05 juil. 2026</div>
-      <div class="agenda-title">Coucher de soleil sur les hauteurs de Privas</div>
+      <div class="agenda-title" data-fr="Coucher de soleil sur les hauteurs de Privas" data-en="Sunset above Privas">Coucher de soleil sur les hauteurs de Privas</div>
       <div class="agenda-lieu">📍 Privas · 19h30–22h</div>
-      <div class="agenda-tag">Soirée</div>
+      <div class="agenda-tag" data-fr="Soirée" data-en="Evening">Soirée</div>
     </div>
     <div class="agenda-item" data-cat="rando">
       <div class="agenda-date">12 juil. 2026</div>
-      <div class="agenda-title">Villages de schiste du Pays de Privas — Balade patrimoine</div>
+      <div class="agenda-title" data-fr="Villages de schiste du Pays de Privas — Balade patrimoine" data-en="Schist villages of Privas — Heritage walk">Villages de schiste du Pays de Privas — Balade patrimoine</div>
       <div class="agenda-lieu">📍 Pranles · 8h30–12h30</div>
-      <div class="agenda-tag">Randonnée</div>
+      <div class="agenda-tag" data-fr="Randonnée" data-en="Hike">Randonnée</div>
     </div>
     <div class="agenda-item" data-cat="rando">
       <div class="agenda-date">19 juil. 2026</div>
-      <div class="agenda-title">Forêt du Cros de Géorand — Nature & Géologie</div>
+      <div class="agenda-title" data-fr="Forêt du Cros de Géorand — Nature & Géologie" data-en="Géorand Forest — Nature & Geology">Forêt du Cros de Géorand — Nature & Géologie</div>
       <div class="agenda-lieu">📍 Privas · 8h–12h</div>
-      <div class="agenda-tag">Randonnée</div>
+      <div class="agenda-tag" data-fr="Randonnée" data-en="Hike">Randonnée</div>
     </div>
     <div class="agenda-item" data-cat="gastronomie">
       <div class="agenda-date">26 juil. 2026</div>
-      <div class="agenda-title">Marché paysan & terroir ardéchois</div>
+      <div class="agenda-title" data-fr="Marché paysan & terroir ardéchois" data-en="Farmers' market & Ardèche local produce">Marché paysan & terroir ardéchois</div>
       <div class="agenda-lieu">📍 Privas · 9h–13h</div>
-      <div class="agenda-tag">Gastronomie</div>
+      <div class="agenda-tag" data-fr="Gastronomie" data-en="Food & Wine">Gastronomie</div>
     </div>
   </div>
   <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap" data-reveal>
-    <a class="btn-outline" href="agenda-ardeche.html">📅 Voir tout l'agenda 2026</a>
-    <a class="btn-outline" href="#contact">→ Demander les prochaines dates</a>
+    <a class="btn-outline" href="agenda-ardeche.html" data-fr="📅 Voir tout l'agenda 2026" data-en="📅 View full 2026 schedule">📅 Voir tout l'agenda 2026</a>
+    <a class="btn-outline" href="#contact" data-fr="→ Demander les prochaines dates" data-en="→ Ask for upcoming dates">→ Demander les prochaines dates</a>
   </div>
 </section>
 
 <!-- CARTE INTERACTIVE -->
 <section id="map-section">
   <div class="map-header" data-reveal>
-    <div class="section-label">Territoires guidés</div>
-    <h2 class="section-title">La carte de<br><em>mes terrains de jeu</em></h2>
-    <p style="color:#8aab90;font-size:.92rem;line-height:1.8;max-width:560px;margin-top:.75rem;">Cliquez sur chaque marqueur pour découvrir le lieu, le circuit associé et les infos pratiques.</p>
+    <div class="section-label" data-fr="Territoires guidés" data-en="Guided territories">Territoires guidés</div>
+    <h2 class="section-title" data-fr="La carte de<br><em>mes terrains de jeu</em>" data-en="The map of<br><em>my playgrounds</em>">La carte de<br><em>mes terrains de jeu</em></h2>
+    <p style="color:#8aab90;font-size:.92rem;line-height:1.8;max-width:560px;margin-top:.75rem;" data-fr="Cliquez sur chaque marqueur pour découvrir le lieu, le circuit associé et les infos pratiques." data-en="Click on each marker to discover the place, the associated route and practical information.">Cliquez sur chaque marqueur pour découvrir le lieu, le circuit associé et les infos pratiques.</p>
   </div>
   <div class="map-wrapper" data-reveal>
     <div id="trail-map"></div>
   </div>
   <div class="map-legend" data-reveal>
-    <div class="map-legend-item"><div class="map-legend-dot" style="background:#d4a843"></div>Circuits guidés</div>
-    <div class="map-legend-item"><div class="map-legend-dot" style="background:#8aab90"></div>Lieux insolites</div>
-    <div class="map-legend-item"><div class="map-legend-dot" style="background:#c06040"></div>Sites géologiques</div>
-    <div class="map-legend-item"><div class="map-legend-dot" style="background:#6a9275"></div>Points de vue secrets</div>
+    <div class="map-legend-item"><div class="map-legend-dot" style="background:#d4a843"></div data-fr="Circuits guidés" data-en="Guided routes">Circuits guidés</div>
+    <div class="map-legend-item"><div class="map-legend-dot" style="background:#8aab90"></div data-fr="Lieux insolites" data-en="Unusual places">Lieux insolites</div>
+    <div class="map-legend-item"><div class="map-legend-dot" style="background:#c06040"></div data-fr="Sites géologiques" data-en="Geological sites">Sites géologiques</div>
+    <div class="map-legend-item"><div class="map-legend-dot" style="background:#6a9275"></div data-fr="Points de vue secrets" data-en="Secret viewpoints">Points de vue secrets</div>
   </div>
 </section>
 
 <!-- INSOLITE STRIP -->
 <div class="insolite-strip">
-  <div class="insolite-strip-title" data-reveal>L'Ardèche <em>insolite</em> & secrète</div>
+  <div class="insolite-strip-title" data-reveal data-fr="L'Ardèche <em>insolite</em> & secrète" data-en="Ardèche <em>unusual</em> & secret">L'Ardèche <em>insolite</em> & secrète</div>
   <div class="insolite-scroll">
-    <div class="insolite-item"><img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&q=80" alt="Grotte de Saint-Marcel" loading="lazy"><div class="insolite-item-label"><div class="insolite-item-tag">Spéléologie</div>Grotte de Saint-Marcel</div></div>
-    <div class="insolite-item"><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=400&q=80" alt="Village de schiste" loading="lazy"><div class="insolite-item-label"><div class="insolite-item-tag">Patrimoine</div>Villages de schiste noir</div></div>
-    <div class="insolite-item"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=400&q=80" alt="Lac Issarlès" loading="lazy"><div class="insolite-item-label"><div class="insolite-item-tag">Volcanisme</div>Lac d'Issarlès, cratère volcanique</div></div>
-    <div class="insolite-item"><img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=400&q=80" alt="Orgues basaltiques" loading="lazy"><div class="insolite-item-label"><div class="insolite-item-tag">Géologie</div>Orgues basaltiques de Jaujac</div></div>
-    <div class="insolite-item"><img src="https://images.unsplash.com/photo-1510797215324-95aa89f43c33?w=400&q=80" alt="Dolmens" loading="lazy"><div class="insolite-item-label"><div class="insolite-item-tag">Préhistoire</div>Dolmens & menhirs secrets</div></div>
-    <div class="insolite-item"><img src="https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=400&q=80" alt="Nuit étoilée" loading="lazy"><div class="insolite-item-label"><div class="insolite-item-tag">Astronomie</div>Ciel étoilé des Cévennes</div></div>
-    <div class="insolite-item"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&q=80" alt="Châtaigniers" loading="lazy"><div class="insolite-item-label"><div class="insolite-item-tag">Nature</div>Châtaigniers centenaires</div></div>
+    <div class="insolite-item"><img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&q=80" alt="Grotte de Saint-Marcel" loading="lazy"><div class="insolite-item-label"><div class="insolite-item-tag">Spéléologie</div data-fr="Grotte de Saint-Marcel" data-en="Saint-Marcel Cave">Grotte de Saint-Marcel</div></div>
+    <div class="insolite-item"><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=400&q=80" alt="Village de schiste" loading="lazy"><div class="insolite-item-label"><div class="insolite-item-tag">Patrimoine</div data-fr="Villages de schiste noir" data-en="Black schist villages">Villages de schiste noir</div></div>
+    <div class="insolite-item"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=400&q=80" alt="Lac Issarlès" loading="lazy"><div class="insolite-item-label"><div class="insolite-item-tag">Volcanisme</div data-fr="Lac d'Issarlès, cratère volcanique" data-en="Lake Issarlès, volcanic crater">Lac d'Issarlès, cratère volcanique</div></div>
+    <div class="insolite-item"><img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=400&q=80" alt="Orgues basaltiques" loading="lazy"><div class="insolite-item-label"><div class="insolite-item-tag">Géologie</div data-fr="Orgues basaltiques de Jaujac" data-en="Jaujac basalt organ pipes">Orgues basaltiques de Jaujac</div></div>
+    <div class="insolite-item"><img src="https://images.unsplash.com/photo-1510797215324-95aa89f43c33?w=400&q=80" alt="Dolmens" loading="lazy"><div class="insolite-item-label"><div class="insolite-item-tag">Préhistoire</div data-fr="Dolmens & menhirs secrets" data-en="Secret dolmens & menhirs">Dolmens & menhirs secrets</div></div>
+    <div class="insolite-item"><img src="https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=400&q=80" alt="Nuit étoilée" loading="lazy"><div class="insolite-item-label"><div class="insolite-item-tag">Astronomie</div data-fr="Ciel étoilé des Cévennes" data-en="Starry sky of the Cévennes">Ciel étoilé des Cévennes</div></div>
+    <div class="insolite-item"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&q=80" alt="Châtaigniers" loading="lazy"><div class="insolite-item-label"><div class="insolite-item-tag">Nature</div data-fr="Châtaigniers centenaires" data-en="Century-old chestnut trees">Châtaigniers centenaires</div></div>
   </div>
 </div>
 
@@ -1667,23 +1666,23 @@ select.resa-input { cursor: pointer; }
 <section id="pass">
   <div class="pass-inner" data-reveal>
     <div>
-      <div class="section-label">Formule exclusive</div>
-      <h2 class="section-title">Le Pass<br><em>Pierre-François</em></h2>
-      <p style="color:#8aab90;font-size:.92rem;line-height:1.8;margin-top:.5rem;">Pour les visiteurs qui reviennent ou qui veulent explorer l'Ardèche en profondeur sur plusieurs séjours dans l'année.</p>
+      <div class="section-label" data-fr="Formule exclusive" data-en="Exclusive offer">Formule exclusive</div>
+      <h2 class="section-title" data-fr="Le Pass<br><em>Pierre-François</em>" data-en="The Pierre-François<br><em>Season Pass</em>">Le Pass<br><em>Pierre-François</em></h2>
+      <p style="color:#8aab90;font-size:.92rem;line-height:1.8;margin-top:.5rem;" data-fr="Pour les visiteurs qui reviennent ou qui veulent explorer l'Ardèche en profondeur sur plusieurs séjours dans l'année." data-en="For returning visitors or those who want to explore Ardèche in depth over multiple stays throughout the year.">Pour les visiteurs qui reviennent ou qui veulent explorer l'Ardèche en profondeur sur plusieurs séjours dans l'année.</p>
     </div>
     <div class="pass-card">
-      <div class="pass-label">Pass annuel — accès illimité</div>
+      <div class="pass-label" data-fr="Pass annuel — accès illimité" data-en="Annual pass — unlimited access">Pass annuel — accès illimité</div>
       <div class="pass-name">Explorer Pass</div>
-      <div class="pass-desc">Accédez à toutes mes sorties organisées tout au long de l'année avec un tarif préférentiel garanti.</div>
+      <div class="pass-desc" data-fr="Accédez à toutes mes sorties organisées tout au long de l'année avec un tarif préférentiel garanti." data-en="Access all my organised outings throughout the year at a guaranteed preferential rate.">Accédez à toutes mes sorties organisées tout au long de l'année avec un tarif préférentiel garanti.</div>
       <ul class="pass-features">
-        <li>Tarif −30% sur toutes les sorties pendant 12 mois</li>
-        <li>Accès prioritaire aux événements & soirées privées</li>
-        <li>Carnet de route personnalisé offert</li>
-        <li>Alertes en avant-première pour les nouvelles dates</li>
-        <li>1 sortie surprise offerte à l'achat</li>
+        <li data-fr="Tarif −30% sur toutes les sorties pendant 12 mois" data-en="30% discount on all outings for 12 months">Tarif −30% sur toutes les sorties pendant 12 mois</li>
+        <li data-fr="Accès prioritaire aux événements & soirées privées" data-en="Priority access to events & private evenings">Accès prioritaire aux événements & soirées privées</li>
+        <li data-fr="Carnet de route personnalisé offert" data-en="Personalised travel journal included">Carnet de route personnalisé offert</li>
+        <li data-fr="Alertes en avant-première pour les nouvelles dates" data-en="Early access alerts for new dates">Alertes en avant-première pour les nouvelles dates</li>
+        <li data-fr="1 sortie surprise offerte à l'achat" data-en="1 surprise outing offered at purchase">1 sortie surprise offerte à l'achat</li>
       </ul>
       <div class="pass-price">180 € <span>/ an · illimité</span></div>
-      <a class="btn-primary" href="#contact" style="margin-top:1.5rem;display:inline-flex;">→ Demander le pass</a>
+      <a class="btn-primary" href="#contact" style="margin-top:1.5rem;display:inline-flex;" data-fr="→ Demander le pass" data-en="→ Request the pass">→ Demander le pass</a>
     </div>
   </div>
 </section>
@@ -1691,35 +1690,35 @@ select.resa-input { cursor: pointer; }
 <!-- TARIFS + MOTEUR DE RÉSERVATION -->
 <section class="section" id="pricing">
   <div data-reveal>
-    <div class="section-label">Tarifs & Réservation</div>
-    <h2 class="section-title">Choisissez votre<br><em>formule & réservez</em></h2>
+    <div class="section-label" data-fr="Tarifs & Réservation" data-en="Pricing & Booking">Tarifs & Réservation</div>
+    <h2 class="section-title" data-fr="Choisissez votre<br><em>formule & réservez</em>" data-en="Choose your<br><em>package & book</em>">Choisissez votre<br><em>formule & réservez</em></h2>
   </div>
-  <div class="launch-banner" data-reveal>🎉 Offre de lancement — Été 2026 — 20% de réduction sur toutes les formules — Places limitées</div>
+  <div class="launch-banner" data-reveal data-fr="🎉 Offre de lancement — Été 2026 — 20% de réduction sur toutes les formules — Places limitées" data-en="🎉 Launch offer — Summer 2026 — 20% off all packages — Limited spots">🎉 Offre de lancement — Été 2026 — 20% de réduction sur toutes les formules — Places limitées</div>
 
   <!-- SÉLECTEUR DE FORMULES -->
   <div class="formule-grid" data-reveal>
     <div class="formule-card" data-formule="Demi-journée — 40 € / pers." data-prix="40 €/pers." onclick="selectFormule(this)">
       <div class="formule-icon">🌅</div>
-      <div class="formule-name">Demi-journée</div>
+      <div class="formule-name" data-fr="Demi-journée" data-en="Half day">Demi-journée</div>
       <div class="formule-prix">40 <span>€/pers.</span></div>
       <div class="formule-prix-old">50 €</div>
     </div>
     <div class="formule-card active" data-formule="Journée complète — 72 € / pers." data-prix="72 €/pers." onclick="selectFormule(this)">
-      <div class="formule-badge-best">★ Le plus demandé</div>
+      <div class="formule-badge-best" data-fr="★ Le plus demandé" data-en="★ Most popular">★ Le plus demandé</div>
       <div class="formule-icon">☀️</div>
-      <div class="formule-name">Journée complète</div>
+      <div class="formule-name" data-fr="Journée complète" data-en="Full day">Journée complète</div>
       <div class="formule-prix">72 <span>€/pers.</span></div>
       <div class="formule-prix-old">90 €</div>
     </div>
     <div class="formule-card" data-formule="Séjour multi-jours — 120 € / j/pers." data-prix="120 €/j/pers." onclick="selectFormule(this)">
       <div class="formule-icon">🏕️</div>
-      <div class="formule-name">Séjour multi-jours</div>
+      <div class="formule-name" data-fr="Séjour multi-jours" data-en="Multi-day stay">Séjour multi-jours</div>
       <div class="formule-prix">120 <span>€/j/pers.</span></div>
       <div class="formule-prix-old">150 €</div>
     </div>
     <div class="formule-card" data-formule="Pass saisonnier — 290 € / saison" data-prix="290 €/saison" onclick="selectFormule(this)">
       <div class="formule-icon">🎫</div>
-      <div class="formule-name">Pass saisonnier</div>
+      <div class="formule-name" data-fr="Pass saisonnier" data-en="Season pass">Pass saisonnier</div>
       <div class="formule-prix">290 <span>€/saison</span></div>
       <div class="formule-prix-old">390 €</div>
     </div>
@@ -1733,80 +1732,80 @@ select.resa-input { cursor: pointer; }
 
     <div class="resa-fields">
       <div class="resa-field-group">
-        <label class="resa-label">Date souhaitée</label>
+        <label class="resa-label" data-fr="Date souhaitée" data-en="Preferred date">Date souhaitée</label>
         <input class="resa-input" type="date" name="date" required>
       </div>
       <div class="resa-field-group">
-        <label class="resa-label">Nombre de personnes</label>
+        <label class="resa-label" data-fr="Nombre de personnes" data-en="Number of people">Nombre de personnes</label>
         <select class="resa-input" name="personnes" required>
-          <option value="1 personne">1 personne</option>
-          <option value="2 personnes" selected>2 personnes</option>
-          <option value="3 personnes">3 personnes</option>
-          <option value="4 personnes">4 personnes</option>
-          <option value="5 personnes">5 personnes</option>
-          <option value="6 à 8 personnes">6 à 8 personnes</option>
-          <option value="9 à 12 personnes">9 à 12 personnes</option>
-          <option value="Groupe +12">Groupe +12 (devis)</option>
+          <option value="1 personne" data-fr="1 personne" data-en="1 person">1 personne</option>
+          <option value="2 personnes" selected data-fr="2 personnes" data-en="2 people">2 personnes</option>
+          <option value="3 personnes" data-fr="3 personnes" data-en="3 people">3 personnes</option>
+          <option value="4 personnes" data-fr="4 personnes" data-en="4 people">4 personnes</option>
+          <option value="5 personnes" data-fr="5 personnes" data-en="5 people">5 personnes</option>
+          <option value="6 à 8 personnes" data-fr="6 à 8 personnes" data-en="6 to 8 people">6 à 8 personnes</option>
+          <option value="9 à 12 personnes" data-fr="9 à 12 personnes" data-en="9 to 12 people">9 à 12 personnes</option>
+          <option value="Groupe +12" data-fr="Groupe +12 (devis)" data-en="Group +12 (quote)">Groupe +12 (devis)</option>
         </select>
       </div>
       <div class="resa-field-group">
-        <label class="resa-label">Ambiance souhaitée</label>
+        <label class="resa-label" data-fr="Ambiance souhaitée" data-en="Preferred experience">Ambiance souhaitée</label>
         <select class="resa-input" name="ambiance" required>
-          <option value="Aventure & Sauvage">Aventure & Sauvage</option>
-          <option value="Nature & Géologie">Nature & Géologie</option>
-          <option value="Villages & Patrimoine">Villages & Patrimoine</option>
-          <option value="Gastronomie & Terroir">Gastronomie & Terroir</option>
-          <option value="Famille & Enfants">Famille & Enfants</option>
-          <option value="Soirée & Astronomie">Soirée & Astronomie</option>
-          <option value="Sur mesure">Sur mesure (préciser ci-dessous)</option>
+          <option value="Aventure & Sauvage" data-fr="Aventure & Sauvage" data-en="Adventure & Wild">Aventure & Sauvage</option>
+          <option value="Nature & Géologie" data-fr="Nature & Géologie" data-en="Nature & Geology">Nature & Géologie</option>
+          <option value="Villages & Patrimoine" data-fr="Villages & Patrimoine" data-en="Villages & Heritage">Villages & Patrimoine</option>
+          <option value="Gastronomie & Terroir" data-fr="Gastronomie & Terroir" data-en="Food & Local produce">Gastronomie & Terroir</option>
+          <option value="Famille & Enfants" data-fr="Famille & Enfants" data-en="Family & Children">Famille & Enfants</option>
+          <option value="Soirée & Astronomie" data-fr="Soirée & Astronomie" data-en="Evening & Stargazing">Soirée & Astronomie</option>
+          <option value="Sur mesure" data-fr="Sur mesure (préciser ci-dessous)" data-en="Tailor-made (specify below)">Sur mesure (préciser ci-dessous)</option>
         </select>
       </div>
     </div>
 
     <div class="resa-field-group" style="margin-top:1rem">
-      <label class="resa-label">Votre nom & email <span style="color:#d4a843">*</span></label>
+      <label class="resa-label" data-fr="Votre nom & email <span style='color:#d4a843'>*</span>" data-en="Your name & email <span style='color:#d4a843'>*</span>">Votre nom & email <span style="color:#d4a843">*</span></label>
       <div class="resa-row">
-        <input class="resa-input" type="text" name="nom" placeholder="Prénom Nom" required>
+        <input class="resa-input" type="text" name="nom" placeholder="Prénom Nom" data-placeholder-fr="Prénom Nom" data-placeholder-en="First Last" required>
         <input class="resa-input" type="email" name="email" placeholder="votre@email.com" required>
       </div>
     </div>
 
     <div class="resa-field-group" style="margin-top:1rem">
-      <label class="resa-label">Message / précisions (optionnel)</label>
-      <textarea class="resa-input resa-textarea" name="message" placeholder="Vos envies, contraintes, questions…"></textarea>
+      <label class="resa-label" data-fr="Message / précisions (optionnel)" data-en="Message / details (optional)">Message / précisions (optionnel)</label>
+      <textarea class="resa-input resa-textarea" name="message" placeholder="Vos envies, contraintes, questions…" data-placeholder-fr="Vos envies, contraintes, questions…" data-placeholder-en="Your wishes, constraints, questions…"></textarea>
     </div>
 
     <div class="resa-formule-recap" id="resa-recap">
-      Formule sélectionnée : <strong id="recap-formule">Journée complète — 72 € / pers.</strong>
+      <span data-fr="Formule sélectionnée :" data-en="Selected package:">Formule sélectionnée :</span> <strong id="recap-formule">Journée complète — 72 € / pers.</strong>
     </div>
 
-    <button class="resa-submit" type="submit" id="resa-btn">→ Envoyer ma demande de réservation</button>
-    <div class="resa-note">🔒 Aucun paiement en ligne — confirmation par téléphone ou email · Sans acompte pour le mois de lancement</div>
-    <div class="resa-success" id="resa-success">✓ Demande envoyée ! Pierre-François vous répond sous 24h.</div>
+    <button class="resa-submit" type="submit" id="resa-btn" data-fr="→ Envoyer ma demande de réservation" data-en="→ Send my booking request">→ Envoyer ma demande de réservation</button>
+    <div class="resa-note" data-fr="🔒 Aucun paiement en ligne — confirmation par téléphone ou email · Sans acompte pour le mois de lancement" data-en="🔒 No online payment — confirmation by phone or email · No deposit required for the launch period">🔒 Aucun paiement en ligne — confirmation par téléphone ou email · Sans acompte pour le mois de lancement</div>
+    <div class="resa-success" id="resa-success" data-fr="✓ Demande envoyée ! Pierre-François vous répond sous 24h." data-en="✓ Request sent! Pierre-François will reply within 24h.">✓ Demande envoyée ! Pierre-François vous répond sous 24h.</div>
   </form>
 
   <div data-reveal style="margin-top:2rem;padding:1.25rem 1.5rem;border-left:3px solid #d4a843;background:rgba(212,168,67,0.05);max-width:680px;font-size:.82rem;color:#8aab90;line-height:1.7;">
-    <strong style="color:#d4a843;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:.4rem;">ℹ️ Bon à savoir</strong>
-    Tarifs pour un groupe de 2 à 4 personnes. Réductions pour familles nombreuses, groupes scolaires et associations.
-    Paiement à la sortie — chèque, virement ou espèces. <strong style="color:#f0ece0">Aucun acompte demandé pour les réservations de l'été.</strong>
+    <strong style="color:#d4a843;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:.4rem;" data-fr="ℹ️ Bon à savoir" data-en="ℹ️ Good to know">ℹ️ Bon à savoir</strong>
+    <span data-fr="Tarifs pour un groupe de 2 à 4 personnes. Réductions pour familles nombreuses, groupes scolaires et associations. Paiement à la sortie — chèque, virement ou espèces." data-en="Prices for a group of 2 to 4 people. Discounts for large families, school groups and associations. Payment at the end of the outing — cheque, bank transfer or cash.">Tarifs pour un groupe de 2 à 4 personnes. Réductions pour familles nombreuses, groupes scolaires et associations.
+    Paiement à la sortie — chèque, virement ou espèces.</span> <strong style="color:#f0ece0" data-fr="Aucun acompte demandé pour les réservations de l'été." data-en="No deposit required for summer bookings.">Aucun acompte demandé pour les réservations de l'été.</strong>
   </div>
 </section>
 
 <!-- NEWSLETTER -->
 <div class="newsletter-bar" data-reveal>
-  <div class="newsletter-label">Restez informé des <span>prochaines sorties</span></div>
+  <div class="newsletter-label" data-fr="Restez informé des <span>prochaines sorties</span>" data-en="Stay informed about <span>upcoming outings</span>">Restez informé des <span>prochaines sorties</span></div>
   <form class="newsletter-form" onsubmit="submitNewsletter(event)">
     <input class="newsletter-input" type="email" placeholder="votre@email.com" required>
-    <button class="newsletter-btn" type="submit">→ S'abonner</button>
+    <button class="newsletter-btn" type="submit" data-fr="→ S'abonner" data-en="→ Subscribe">→ S'abonner</button>
   </form>
 </div>
 
 <!-- CALENDRIER DES DISPONIBILITÉS -->
 <section id="calendrier">
   <div class="cal-header" data-reveal>
-    <div class="section-label">Disponibilités</div>
-    <h2 class="section-title">Consultez mes disponibilités<br><em>& réservez en ligne</em></h2>
-    <p class="cal-intro">Vérifiez les créneaux libres directement sur mon calendrier, choisissez votre date et réservez — via Google Calendar ou le formulaire.</p>
+    <div class="section-label" data-fr="Disponibilités" data-en="Availability">Disponibilités</div>
+    <h2 class="section-title" data-fr="Consultez mes disponibilités<br><em>& réservez en ligne</em>" data-en="Check my availability<br><em>& book online</em>">Consultez mes disponibilités<br><em>& réservez en ligne</em></h2>
+    <p class="cal-intro" data-fr="Vérifiez les créneaux libres directement sur mon calendrier, choisissez votre date et réservez — via Google Calendar ou le formulaire." data-en="Check available slots directly on my calendar, choose your date and book — via Google Calendar or the form.">Vérifiez les créneaux libres directement sur mon calendrier, choisissez votre date et réservez — via Google Calendar ou le formulaire.</p>
   </div>
   <div class="cal-wrapper" data-reveal>
 
@@ -1819,33 +1818,33 @@ select.resa-input { cursor: pointer; }
           loading="lazy"
           scrolling="no">
         </iframe>
-        <div class="cal-embed-label">📅 Calendrier en temps réel — mis à jour automatiquement</div>
+        <div class="cal-embed-label" data-fr="📅 Calendrier en temps réel — mis à jour automatiquement" data-en="📅 Real-time calendar — updated automatically">📅 Calendrier en temps réel — mis à jour automatiquement</div>
       </div>
     </div>
 
     <!-- PANNEAU DE RÉSERVATION -->
     <div class="cal-booking-panel">
-      <div class="cal-booking-title">Choisissez votre date<br><em>& réservez</em></div>
+      <div class="cal-booking-title" data-fr="Choisissez votre date<br><em>& réservez</em>" data-en="Pick your date<br><em>& book</em>">Choisissez votre date<br><em>& réservez</em></div>
 
       <div class="cal-step">
         <div class="cal-step-num">1</div>
         <div class="cal-step-text">
-          <strong>Consultez le calendrier</strong>
-          <span>Les créneaux déjà réservés apparaissent sur le calendrier. Les jours libres sont disponibles pour votre sortie.</span>
+          <strong data-fr="Consultez le calendrier" data-en="Check the calendar">Consultez le calendrier</strong>
+          <span data-fr="Les créneaux déjà réservés apparaissent sur le calendrier. Les jours libres sont disponibles pour votre sortie." data-en="Already booked slots appear on the calendar. Free days are available for your outing.">Les créneaux déjà réservés apparaissent sur le calendrier. Les jours libres sont disponibles pour votre sortie.</span>
         </div>
       </div>
 
       <div class="cal-step">
         <div class="cal-step-num">2</div>
         <div class="cal-step-text">
-          <strong>Choisissez votre date</strong>
-          <span>Sélectionnez la date souhaitée pour votre aventure en Ardèche.</span>
+          <strong data-fr="Choisissez votre date" data-en="Choose your date">Choisissez votre date</strong>
+          <span data-fr="Sélectionnez la date souhaitée pour votre aventure en Ardèche." data-en="Select your preferred date for your Ardèche adventure.">Sélectionnez la date souhaitée pour votre aventure en Ardèche.</span>
         </div>
       </div>
 
       <!-- Sélecteur de date -->
       <div class="cal-date-picker-row">
-        <label class="cal-date-label" for="cal-date-select">Date souhaitée</label>
+        <label class="cal-date-label" for="cal-date-select" data-fr="Date souhaitée" data-en="Preferred date">Date souhaitée</label>
         <input
           type="date"
           id="cal-date-select"
@@ -1857,8 +1856,8 @@ select.resa-input { cursor: pointer; }
       <div class="cal-step">
         <div class="cal-step-num">3</div>
         <div class="cal-step-text">
-          <strong>Réservez directement</strong>
-          <span>Via Google Calendar (événement dans votre agenda + notification à Pierre-François) ou via le formulaire.</span>
+          <strong data-fr="Réservez directement" data-en="Book directly">Réservez directement</strong>
+          <span data-fr="Via Google Calendar (événement dans votre agenda + notification à Pierre-François) ou via le formulaire." data-en="Via Google Calendar (event in your diary + notification to Pierre-François) or via the form.">Via Google Calendar (événement dans votre agenda + notification à Pierre-François) ou via le formulaire.</span>
         </div>
       </div>
 
@@ -1870,17 +1869,17 @@ select.resa-input { cursor: pointer; }
           <line x1="8" y1="2" x2="8" y2="6" stroke="#d4a843" stroke-width="1.5" stroke-linecap="round"/>
           <line x1="16" y1="2" x2="16" y2="6" stroke="#d4a843" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
-        → Ajouter à Google Calendar & notifier Pierre-François
+        <span data-fr="→ Ajouter à Google Calendar & notifier Pierre-François" data-en="→ Add to Google Calendar & notify Pierre-François">→ Ajouter à Google Calendar & notifier Pierre-François</span>
       </a>
 
-      <div class="cal-or-divider">ou</div>
+      <div class="cal-or-divider" data-fr="ou" data-en="or">ou</div>
 
       <!-- Bouton formulaire Formspree -->
       <a id="cal-form-link" href="#pricing" class="cal-formspree-btn" onclick="goToFormWithDate(event)">
-        → Réserver via le formulaire
+        <span data-fr="→ Réserver via le formulaire" data-en="→ Book via the form">→ Réserver via le formulaire</span>
       </a>
 
-      <p class="cal-note">🔒 Sans paiement en ligne · Confirmation par Pierre-François sous 24h · 07 48 16 98 03</p>
+      <p class="cal-note" data-fr="🔒 Sans paiement en ligne · Confirmation par Pierre-François sous 24h · 07 48 16 98 03" data-en="🔒 No online payment · Confirmation from Pierre-François within 24h · +33 7 48 16 98 03">🔒 Sans paiement en ligne · Confirmation par Pierre-François sous 24h · 07 48 16 98 03</p>
     </div>
   </div>
 </section>
@@ -1888,30 +1887,30 @@ select.resa-input { cursor: pointer; }
 <!-- CONTACT -->
 <section class="section" id="contact">
   <div class="contact-left" data-reveal>
-    <div class="section-label">Contact</div>
-    <h2 class="section-title">Parlons de votre<br><em>Ardèche idéale</em></h2>
+    <div class="section-label" data-fr="Contact" data-en="Contact">Contact</div>
+    <h2 class="section-title" data-fr="Parlons de votre<br><em>Ardèche idéale</em>" data-en="Let's talk about<br><em>your ideal Ardèche</em>">Parlons de votre<br><em>Ardèche idéale</em></h2>
     <div class="contact-info-item">
       <div class="contact-info-icon">📍</div>
-      <div><div class="contact-info-label">Secteur</div><div class="contact-info-value">Ardèche · Département 07</div></div>
+      <div><div class="contact-info-label" data-fr="Secteur" data-en="Area">Secteur</div><div class="contact-info-value">Ardèche · Département 07</div></div>
     </div>
     <div class="contact-info-item">
       <div class="contact-info-icon">📧</div>
-      <div><div class="contact-info-label">Email</div><div class="contact-info-value"><a href="mailto:guide.ardeche.touriste@gmail.com">guide.ardeche.touriste@gmail.com</a></div></div>
+      <div><div class="contact-info-label" data-fr="Email" data-en="Email">Email</div><div class="contact-info-value"><a href="mailto:guide.ardeche.touriste@gmail.com">guide.ardeche.touriste@gmail.com</a></div></div>
     </div>
     <div class="contact-info-item">
       <div class="contact-info-icon">🕐</div>
-      <div><div class="contact-info-label">Disponibilités</div><div class="contact-info-value">Toute l'année · 7j/7</div></div>
+      <div><div class="contact-info-label" data-fr="Disponibilités" data-en="Availability">Disponibilités</div><div class="contact-info-value" data-fr="Toute l'année · 7j/7" data-en="All year round · 7 days/7">Toute l'année · 7j/7</div></div>
     </div>
     <a class="contact-cta-call" href="tel:0748169803">
       <div class="contact-cta-call-icon">📞</div>
-      <div class="contact-cta-call-text"><strong>Appel direct</strong><span>07 48 16 98 03</span></div>
+      <div class="contact-cta-call-text"><strong data-fr="Appel direct" data-en="Direct call">Appel direct</strong><span data-fr="07 48 16 98 03" data-en="+33 7 48 16 98 03">07 48 16 98 03</span></div>
     </a>
     <a class="contact-cta-call" href="mailto:guide.ardeche.touriste@gmail.com" style="margin-top:.75rem;background:rgba(212,168,67,0.1);border-color:rgba(212,168,67,0.3);">
       <div class="contact-cta-call-icon">✉️</div>
-      <div class="contact-cta-call-text" style="color:#f0ece0;"><strong style="color:#d4a843;">Envoyer un e-mail</strong><span style="color:#8aab90;font-size:1rem;">guide.ardeche.touriste@gmail.com</span></div>
+      <div class="contact-cta-call-text" style="color:#f0ece0;"><strong style="color:#d4a843;" data-fr="Envoyer un e-mail" data-en="Send an email">Envoyer un e-mail</strong><span style="color:#8aab90;font-size:1rem;">guide.ardeche.touriste@gmail.com</span></div>
     </a>
     <div class="contact-social">
-      <div class="contact-social-label">Suivez mes aventures</div>
+      <div class="contact-social-label" data-fr="Suivez mes aventures" data-en="Follow my adventures">Suivez mes aventures</div>
       <div class="social-links">
         <a class="social-link" href="#" target="_blank" rel="noopener">📷 Instagram</a>
         <a class="social-link" href="#" target="_blank" rel="noopener">👍 Facebook</a>
@@ -1921,20 +1920,20 @@ select.resa-input { cursor: pointer; }
     </div>
   </div>
   <div data-reveal>
-    <div class="contact-form-title">Écrivez-moi,<br><em>je vous réponds vite</em></div>
+    <div class="contact-form-title" data-fr="Écrivez-moi,<br><em>je vous réponds vite</em>" data-en="Write to me,<br><em>I'll reply quickly</em>">Écrivez-moi,<br><em>je vous réponds vite</em></div>
     <form action="https://formspree.io/f/xjgzbdnj" method="POST">
       <div class="form-row">
-        <div class="form-group"><label class="form-label">Prénom</label><input class="form-input" type="text" name="prenom" placeholder="Votre prénom" required></div>
-        <div class="form-group"><label class="form-label">Nom</label><input class="form-input" type="text" name="nom" placeholder="Votre nom" required></div>
+        <div class="form-group"><label class="form-label" data-fr="Prénom" data-en="First name">Prénom</label><input class="form-input" type="text" name="prenom" placeholder="Votre prénom" data-placeholder-fr="Votre prénom" data-placeholder-en="Your first name" required></div>
+        <div class="form-group"><label class="form-label" data-fr="Nom" data-en="Last name">Nom</label><input class="form-input" type="text" name="nom" placeholder="Votre nom" data-placeholder-fr="Votre nom" data-placeholder-en="Your last name" required></div>
       </div>
-      <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" name="email" placeholder="votre@email.com" required></div>
-      <div class="form-group"><label class="form-label">Téléphone</label><input class="form-input" type="tel" name="telephone" placeholder="06 xx xx xx xx"></div>
-      <div class="form-group"><label class="form-label">Type de visite souhaitée</label><input class="form-input" type="text" name="type_visite" placeholder="Randonnée, village, famille, géologie…"></div>
+      <div class="form-group"><label class="form-label" data-fr="Email" data-en="Email">Email</label><input class="form-input" type="email" name="email" placeholder="votre@email.com" required></div>
+      <div class="form-group"><label class="form-label" data-fr="Téléphone" data-en="Phone">Téléphone</label><input class="form-input" type="tel" name="telephone" placeholder="06 xx xx xx xx"></div>
+      <div class="form-group"><label class="form-label" data-fr="Type de visite souhaitée" data-en="Type of outing">Type de visite souhaitée</label><input class="form-input" type="text" name="type_visite" placeholder="Randonnée, village, famille, géologie…" data-placeholder-fr="Randonnée, village, famille, géologie…" data-placeholder-en="Hiking, village, family, geology…"></div>
       <div class="form-group" id="carnet-field" style="display:none"><label class="form-label">Mon carnet de voyage</label><textarea class="form-textarea" name="carnet" id="carnet-textarea" style="min-height:80px" placeholder="Lieux et circuits sauvegardés…" readonly></textarea></div>
-      <div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea" name="message" placeholder="Dites-moi ce que vous souhaitez découvrir, vos dates, la taille de votre groupe…" required></textarea></div>
+      <div class="form-group"><label class="form-label" data-fr="Message" data-en="Message">Message</label><textarea class="form-textarea" name="message" placeholder="Dites-moi ce que vous souhaitez découvrir, vos dates, la taille de votre groupe…" data-placeholder-fr="Dites-moi ce que vous souhaitez découvrir, vos dates, la taille de votre groupe…" data-placeholder-en="Tell me what you'd like to discover, your dates, the size of your group…" required></textarea></div>
       <input type="hidden" name="_subject" value="Nouvelle demande de visite — Guide Ardèche">
       <input type="hidden" name="_replyto" value="guide.ardeche.touriste@gmail.com">
-      <button class="form-submit" type="submit">→ Envoyer ma demande</button>
+      <button class="form-submit" type="submit" data-fr="→ Envoyer ma demande" data-en="→ Send my request">→ Envoyer ma demande</button>
     </form>
   </div>
 </section>
@@ -1942,14 +1941,14 @@ select.resa-input { cursor: pointer; }
 <!-- MENTIONS LÉGALES -->
 <section id="mentions">
   <div class="section">
-    <div class="mentions-title" data-reveal>Mentions légales</div>
+    <div class="mentions-title" data-reveal data-fr="Mentions légales" data-en="Legal notice">Mentions légales</div>
     <div class="mentions-text" data-reveal>
-      <strong>Responsable de la publication :</strong> Pierre François Passager, Accompagnateur Touristique indépendant — Ardèche (07).<br><br>
-      <strong>Activité :</strong> Accompagnateur de tourisme, déclaré auprès des autorités compétentes. Numéro SIRET disponible sur demande.<br><br>
-      <strong>Hébergement du site :</strong> GitHub Pages — GitHub, Inc., 88 Colin P Kelly Jr Street, San Francisco, CA 94107, USA.<br><br>
-      <strong>Propriété intellectuelle :</strong> L'ensemble du contenu de ce site (textes, visuels, structure) est protégé. Toute reproduction est interdite sans accord écrit préalable.<br><br>
-      <strong>Données personnelles :</strong> Les informations collectées via le formulaire de contact sont utilisées uniquement pour répondre à vos demandes et ne sont jamais transmises à des tiers. Conformément au RGPD, vous disposez d'un droit d'accès, de modification et de suppression de vos données.<br><br>
-      <strong>Cookies :</strong> Ce site n'utilise pas de cookies de suivi ou de ciblage publicitaire.
+      <strong data-fr="Responsable de la publication :" data-en="Publisher:">Responsable de la publication :</strong> <span data-fr="Pierre François Passager, Accompagnateur Touristique indépendant — Ardèche (07)." data-en="Pierre François Passager, Independent Tourism Guide — Ardèche (07).">Pierre François Passager, Accompagnateur Touristique indépendant — Ardèche (07).</span><br><br>
+      <strong data-fr="Activité :" data-en="Activity:">Activité :</strong> <span data-fr="Accompagnateur de tourisme, déclaré auprès des autorités compétentes. Numéro SIRET disponible sur demande." data-en="Tourism guide, registered with the relevant authorities. SIRET number available on request.">Accompagnateur de tourisme, déclaré auprès des autorités compétentes. Numéro SIRET disponible sur demande.</span><br><br>
+      <strong data-fr="Hébergement du site :" data-en="Website hosting:">Hébergement du site :</strong> GitHub Pages — GitHub, Inc., 88 Colin P Kelly Jr Street, San Francisco, CA 94107, USA.<br><br>
+      <strong data-fr="Propriété intellectuelle :" data-en="Intellectual property:">Propriété intellectuelle :</strong> <span data-fr="L'ensemble du contenu de ce site (textes, visuels, structure) est protégé. Toute reproduction est interdite sans accord écrit préalable." data-en="All content on this site (texts, visuals, structure) is protected. Any reproduction is prohibited without prior written consent.">L'ensemble du contenu de ce site (textes, visuels, structure) est protégé. Toute reproduction est interdite sans accord écrit préalable.</span><br><br>
+      <strong data-fr="Données personnelles :" data-en="Personal data:">Données personnelles :</strong> <span data-fr="Les informations collectées via le formulaire de contact sont utilisées uniquement pour répondre à vos demandes et ne sont jamais transmises à des tiers. Conformément au RGPD, vous disposez d'un droit d'accès, de modification et de suppression de vos données." data-en="Information collected via the contact form is used solely to respond to your requests and is never shared with third parties. In accordance with GDPR, you have the right to access, modify and delete your data.">Les informations collectées via le formulaire de contact sont utilisées uniquement pour répondre à vos demandes et ne sont jamais transmises à des tiers. Conformément au RGPD, vous disposez d'un droit d'accès, de modification et de suppression de vos données.</span><br><br>
+      <strong data-fr="Cookies :" data-en="Cookies:">Cookies :</strong> <span data-fr="Ce site n'utilise pas de cookies de suivi ou de ciblage publicitaire." data-en="This site does not use tracking or advertising cookies.">Ce site n'utilise pas de cookies de suivi ou de ciblage publicitaire.</span>
     </div>
   </div>
 </section>
@@ -2013,22 +2012,22 @@ select.resa-input { cursor: pointer; }
 <text x="340" y="380" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" font-weight="400" letter-spacing="3.5" fill="#4a9458">VOTRE PARTENAIRE D'AVENTURE EN CONFIANCE</text>
 </svg>
       </a>
-      <div class="footer-logo-sub">Accompagnateur Touristique · Ardèche 07</div>
+      <div class="footer-logo-sub" data-fr="Accompagnateur Touristique · Ardèche 07" data-en="Nature & Tourism Guide · Ardèche 07">Accompagnateur Touristique · Ardèche 07</div>
     </div>
     <ul class="footer-links">
-      <li><a href="#about">À propos</a></li>
-      <li><a href="#services">Prestations</a></li>
-      <li><a href="#circuits">Circuits</a></li>
-      <li><a href="#agenda">Agenda</a></li>
-      <li><a href="#calendrier">Calendrier</a></li>
-      <li><a href="agenda-ardeche.html">Fêtes & Festivals</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#mentions">Mentions légales</a></li>
+      <li><a href="#about" data-fr="À propos" data-en="About">À propos</a></li>
+      <li><a href="#services" data-fr="Prestations" data-en="Services">Prestations</a></li>
+      <li><a href="#circuits" data-fr="Circuits" data-en="Routes">Circuits</a></li>
+      <li><a href="#agenda" data-fr="Agenda" data-en="Schedule">Agenda</a></li>
+      <li><a href="#calendrier" data-fr="Calendrier" data-en="Calendar">Calendrier</a></li>
+      <li><a href="agenda-ardeche.html" data-fr="Fêtes & Festivals" data-en="Festivals & Events">Fêtes & Festivals</a></li>
+      <li><a href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+      <li><a href="#mentions" data-fr="Mentions légales" data-en="Legal notice">Mentions légales</a></li>
     </ul>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2025 · Accompagnateur Touristique Ardèche</div>
-    <div class="footer-eco">🌿 Site éco-conçu · Images optimisées · Sans cookies publicitaires</div>
+    <div class="footer-copy" data-fr="© 2025 · Accompagnateur Touristique Ardèche" data-en="© 2025 · Nature & Tourism Guide Ardèche">© 2025 · Accompagnateur Touristique Ardèche</div>
+    <div class="footer-eco" data-fr="🌿 Site éco-conçu · Images optimisées · Sans cookies publicitaires" data-en="🌿 Eco-designed website · Optimised images · No advertising cookies">🌿 Site éco-conçu · Images optimisées · Sans cookies publicitaires</div>
   </div>
 </footer>
 
@@ -2048,7 +2047,7 @@ async function handleResa(e) {
   const btn = document.getElementById('resa-btn');
   const success = document.getElementById('resa-success');
   btn.disabled = true;
-  btn.textContent = '⏳ Envoi en cours…';
+  btn.textContent = currentLang === 'en' ? '⏳ Sending…' : '⏳ Envoi en cours…';
   try {
     const resp = await fetch(e.target.action, {
       method: 'POST',
@@ -2057,12 +2056,12 @@ async function handleResa(e) {
     });
     if (resp.ok) {
       success.style.display = 'block';
-      btn.textContent = '✓ Demande envoyée !';
+      btn.textContent = currentLang === 'en' ? '✓ Request sent!' : '✓ Demande envoyée !';
       btn.style.background = '#4a7558';
       e.target.reset();
       setTimeout(() => {
         btn.disabled = false;
-        btn.textContent = '→ Envoyer ma demande de réservation';
+        btn.textContent = currentLang === 'en' ? '→ Send my booking request' : '→ Envoyer ma demande de réservation';
         btn.style.background = '';
         success.style.display = 'none';
       }, 6000);
@@ -2071,8 +2070,8 @@ async function handleResa(e) {
     }
   } catch {
     btn.disabled = false;
-    btn.textContent = '→ Envoyer ma demande de réservation';
-    alert('Une erreur est survenue. Contactez Pierre-François directement au 07 48 16 98 03.');
+    btn.textContent = currentLang === 'en' ? '→ Send my booking request' : '→ Envoyer ma demande de réservation';
+    alert(currentLang === 'en' ? 'An error occurred. Contact Pierre-François directly at +33 7 48 16 98 03.' : 'Une erreur est survenue. Contactez Pierre-François directement au 07 48 16 98 03.');
   }
 }
 
@@ -2101,7 +2100,7 @@ function onCalDateChange(val) {
 function openGcalBooking(e) {
   e.preventDefault();
   if (!calSelectedDate) {
-    alert('Veuillez d\'abord sélectionner une date dans le calendrier.');
+    alert(currentLang === 'en' ? 'Please select a date first.' : 'Veuillez d\'abord sélectionner une date dans le calendrier.');
     return false;
   }
   // Construire dates Google Calendar format YYYYMMDD
@@ -2120,7 +2119,7 @@ function openGcalBooking(e) {
 function goToFormWithDate(e) {
   e.preventDefault();
   if (!calSelectedDate) {
-    alert('Veuillez d\'abord sélectionner une date dans le calendrier.');
+    alert(currentLang === 'en' ? 'Please select a date first.' : 'Veuillez d\'abord sélectionner une date dans le calendrier.');
     return false;
   }
   // Pré-remplir le champ date du formulaire de réservation
@@ -2168,7 +2167,7 @@ function updateFavCount() {
 function updateFavPanel() {
   const el = document.getElementById('fav-content');
   if (favorites.length === 0) {
-    el.innerHTML = '<p class="fav-empty">Cliquez ♡ sur un lieu ou un circuit pour le sauvegarder ici et préparer votre Ardèche idéale.</p>';
+    el.innerHTML = currentLang === 'en' ? '<p class="fav-empty">Click ♡ on a place or route to save it here and plan your perfect Ardèche experience.</p>' : '<p class="fav-empty">Cliquez ♡ sur un lieu ou un circuit pour le sauvegarder ici et préparer votre Ardèche idéale.</p>';
   } else {
     el.innerHTML = '<div class="fav-list">' + favorites.map((f,i) =>
       `<div class="fav-list-item"><span class="fav-list-item-name">${f}</span><button class="fav-list-item-rm" onclick="removeFavByIndex(${i})">✕</button></div>`
@@ -2187,7 +2186,7 @@ function toggleFavPanel(e) {
 function sendCarnet() {
   const ta = document.getElementById('carnet-textarea');
   const field = document.getElementById('carnet-field');
-  if (favorites.length === 0) { alert('Aucun lieu sauvegardé pour l\'instant.'); return; }
+  if (favorites.length === 0) { alert(currentLang === 'en' ? 'No places saved yet.' : 'Aucun lieu sauvegardé pour l\'instant.'); return; }
   ta.value = favorites.join('\n');
   field.style.display = 'block';
   document.getElementById('fav-panel').classList.remove('open');
@@ -2207,9 +2206,9 @@ function filterAgenda(cat, btn) {
 function submitNewsletter(e) {
   e.preventDefault();
   const btn = e.target.querySelector('.newsletter-btn');
-  btn.textContent = '✓ Abonné !';
+  btn.textContent = currentLang === 'en' ? '✓ Subscribed!' : '✓ Abonné !';
   btn.style.background = '#4a7558';
-  setTimeout(() => { btn.textContent = '→ S\'abonner'; btn.style.background = ''; e.target.reset(); }, 3000);
+  setTimeout(() => { btn.textContent = currentLang === 'en' ? '→ Subscribe' : '→ S\'abonner'; btn.style.background = ''; e.target.reset(); }, 3000);
 }
 
 // ─── CARTE LEAFLET ───
@@ -2256,25 +2255,30 @@ window.addEventListener('scroll', () => {
   nav.classList.toggle('nav-scrolled', window.scrollY > 60);
 });
 
-// ─── SWITCH LANGUE FR/EN ───
+// ─── SWITCH LANGUE FR/EN — TRADUCTION COMPLÈTE DE LA PAGE ───
 let currentLang = 'fr';
 function switchLang(lang) {
   currentLang = lang;
-  const fr = document.getElementById('eco-text-fr');
-  const en = document.getElementById('eco-text-en');
   const btnFr = document.getElementById('btn-fr');
   const btnEn = document.getElementById('btn-en');
   if (lang === 'en') {
-    if(fr) fr.style.display = 'none';
-    if(en) en.style.display = 'inline';
     if(btnFr) { btnFr.style.background='none'; btnFr.style.borderColor='rgba(138,171,144,0.3)'; btnFr.style.color='#8aab90'; }
     if(btnEn) { btnEn.style.background='rgba(212,168,67,0.3)'; btnEn.style.borderColor='rgba(212,168,67,0.5)'; btnEn.style.color='#d4a843'; }
   } else {
-    if(fr) fr.style.display = 'inline';
-    if(en) en.style.display = 'none';
     if(btnFr) { btnFr.style.background='rgba(212,168,67,0.3)'; btnFr.style.borderColor='rgba(212,168,67,0.5)'; btnFr.style.color='#d4a843'; }
     if(btnEn) { btnEn.style.background='none'; btnEn.style.borderColor='rgba(138,171,144,0.3)'; btnEn.style.color='#8aab90'; }
   }
+  // Traduire tous les éléments ayant data-fr / data-en
+  document.querySelectorAll('[data-fr]').forEach(el => {
+    const txt = el.getAttribute('data-' + lang);
+    if (txt !== null) el.innerHTML = txt;
+  });
+  // Attributs placeholder, aria-label, title
+  document.querySelectorAll('[data-placeholder-fr]').forEach(el => {
+    el.placeholder = el.getAttribute('data-placeholder-' + lang) || el.placeholder;
+  });
+  // Mettre à jour html lang
+  document.documentElement.lang = lang;
 }
 </script>
 </body>
