@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Questions Fréquentes – Explora Guide Ardèche</title>
+<meta name="description" content="Toutes les réponses à vos questions sur les randonnées guidées en Ardèche : tarifs, niveau physique, météo, équipement, réservation, groupes, enfants.">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-535NW0ECMQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-535NW0ECMQ');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@200;300;400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --stone: #0d1410; --earth: #111a14; --clay: #162019;
+  --ochre: #d4a843; --cream: #f0ece0; --mist: #8aab90; --sage: #6a9275;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Josefin Sans', sans-serif; background: #0d1410; color: #f0ece0; overflow-x: hidden; }
+body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E"); pointer-events: none; z-index: 0; opacity: 0.3; }
+
+.lang-bar { background: #080f0a; padding: 0.3rem 5%; display: flex; justify-content: flex-end; gap: 0.4rem; align-items: center; position: relative; z-index: 101; border-bottom: 1px solid rgba(212,168,67,0.08); }
+.lang-btn { background: none; border: 1px solid rgba(138,171,144,0.3); color: #8aab90; padding: 0.15rem 0.55rem; font-size: 0.62rem; cursor: pointer; letter-spacing: 0.1em; font-family: 'Josefin Sans', sans-serif; text-transform: uppercase; transition: all 0.2s; }
+.lang-btn.active { background: rgba(212,168,67,0.3); border-color: rgba(212,168,67,0.5); color: #d4a843; }
+
+nav { position: sticky; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 5%; background: rgba(13,20,16,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(212,168,67,0.15); box-shadow: 0 1px 20px rgba(0,0,0,0.5); }
+.nav-logo-img { display: flex; align-items: center; padding: 0; flex-shrink: 0; text-decoration: none; }
+.nav-logo-img svg { transition: opacity 0.3s; opacity: 0.92; }
+.nav-logo-img:hover svg { opacity: 1; }
+.nav-links { display: flex; gap: 1.1rem; list-style: none; flex-wrap: nowrap; align-items: center; }
+.nav-links a { color: #8aab90; text-decoration: none; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; white-space: nowrap; }
+.nav-links a:hover, .nav-links a.active { color: #d4a843; }
+.nav-cta { display: flex; align-items: center; gap: 0.5rem; background: #d4a843; color: #0d1410; text-decoration: none; padding: 0.55rem 1.2rem; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; border: 1px solid #d4b85a; transition: all 0.25s; font-weight: 600; flex-shrink: 0; }
+.nav-cta:hover { background: #d4b85a; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: #8aab90; transition: all 0.3s; }
+.mobile-menu { display: none; position: fixed; inset: 0; background: rgba(13,20,16,0.98); z-index: 105; flex-direction: column; align-items: center; justify-content: center; gap: 0; padding-top: 4rem; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: #f0ece0; text-decoration: none; padding: 0.9rem 2rem; width: 100%; text-align: center; border-bottom: 1px solid rgba(212,168,67,0.08); transition: color 0.2s; }
+.mobile-menu a:first-child { border-top: 1px solid rgba(212,168,67,0.08); }
+.mobile-menu a:hover { color: #d4a843; }
+.mobile-menu-cta { margin-top: 1.5rem; background: #d4a843 !important; color: #0d1410 !important; font-family: 'Josefin Sans', sans-serif !important; font-size: 0.85rem !important; font-weight: 600 !important; letter-spacing: 0.2em !important; text-transform: uppercase; border-bottom: none !important; padding: 1rem 2rem !important; width: auto !important; }
+
+.faq-hero { padding: 5rem 5% 4rem; position: relative; z-index: 1; border-bottom: 1px solid rgba(212,168,67,0.1); background: linear-gradient(to bottom, #0d1410, #111a14); }
+.section-label { font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase; color: #d4a843; display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.section-label::after { content: ''; flex: 0 0 40px; height: 1px; background: #d4a843; opacity: 0.5; }
+.faq-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 300; line-height: 1.1; color: #f0ece0; margin-bottom: 1.2rem; }
+.faq-hero h1 em { font-style: italic; color: #d4a843; }
+.faq-hero p { font-size: 0.95rem; color: #8aab90; line-height: 1.8; max-width: 560px; }
+
+.faq-cats { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 2rem; }
+.faq-cat-pill { background: rgba(212,168,67,0.08); border: 1px solid rgba(212,168,67,0.25); color: #d4a843; padding: 0.45rem 1.1rem; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; font-family: 'Josefin Sans', sans-serif; }
+.faq-cat-pill:hover, .faq-cat-pill.actif { background: #d4a843; color: #0d1410; }
+
+.faq-section { max-width: 880px; margin: 0 auto; padding: 4rem 5%; position: relative; z-index: 1; }
+.faq-group { margin-bottom: 3rem; }
+.faq-group-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #d4a843; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.6rem; }
+.faq-item { border: 1px solid rgba(212,168,67,0.12); border-radius: 4px; margin-bottom: 0.7rem; overflow: hidden; background: rgba(212,168,67,0.02); transition: border-color 0.2s; }
+.faq-item.open { border-color: rgba(212,168,67,0.35); }
+.faq-question { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.1rem 1.4rem; cursor: pointer; user-select: none; }
+.faq-question-text { font-size: 0.95rem; color: #f0ece0; line-height: 1.4; font-weight: 500; }
+.faq-icon { flex-shrink: 0; width: 20px; height: 20px; position: relative; transition: transform 0.3s; }
+.faq-icon::before, .faq-icon::after { content: ''; position: absolute; background: #d4a843; transition: opacity 0.2s; }
+.faq-icon::before { width: 100%; height: 1.5px; top: 50%; left: 0; transform: translateY(-50%); }
+.faq-icon::after { width: 1.5px; height: 100%; left: 50%; top: 0; transform: translateX(-50%); }
+.faq-item.open .faq-icon::after { opacity: 0; }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.faq-answer-inner { padding: 0 1.4rem 1.3rem; font-size: 0.86rem; color: #8aab90; line-height: 1.75; }
+.faq-answer-inner strong { color: #f0ece0; }
+.faq-answer-inner a { color: #d4a843; text-decoration: none; border-bottom: 1px solid rgba(212,168,67,0.3); }
+
+.faq-cta { background: #111a14; border: 1px solid rgba(212,168,67,0.15); padding: 2.5rem; margin: 3rem 5% 5rem; text-align: center; position: relative; z-index: 1; }
+.faq-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: #f0ece0; margin-bottom: 0.6rem; font-weight: 300; }
+.faq-cta h3 em { color: #d4a843; font-style: italic; }
+.faq-cta p { font-size: 0.85rem; color: #8aab90; margin-bottom: 1.5rem; max-width: 460px; margin-left: auto; margin-right: auto; }
+.faq-cta-btns { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
+.btn-gold { background: #d4a843; color: #0d1410; padding: 0.8rem 1.8rem; text-decoration: none; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: background 0.2s; }
+.btn-gold:hover { background: #d4b85a; }
+.btn-outline-light { background: transparent; color: #f0ece0; border: 1px solid rgba(240,236,224,0.3); padding: 0.8rem 1.8rem; text-decoration: none; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; transition: all 0.2s; }
+.btn-outline-light:hover { border-color: #d4a843; color: #d4a843; }
+
+footer { background: #080f0a; border-top: 1px solid rgba(212,168,67,0.15); padding: 3rem 5%; position: relative; z-index: 1; }
+.footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(212,168,67,0.08); }
+.footer-logo-img { display: flex; align-items: center; text-decoration: none; }
+.footer-logo-img svg { opacity: 0.65; transition: opacity 0.3s; }
+.footer-logo-img:hover svg { opacity: 0.9; }
+.footer-logo-sub { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: #6a9275; margin-top: 0.5rem; }
+.footer-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
+.footer-links a { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(240,236,224,0.4); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: #d4a843; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { font-size: 0.7rem; color: rgba(240,236,224,0.35); letter-spacing: 0.1em; }
+.footer-eco { font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: #6a9275; }
+
+@media (max-width: 768px) {
+  nav { padding: 0.75rem 4%; }
+  .nav-links { display: none; }
+  .nav-cta { display: none; }
+  .hamburger { display: flex; }
+  .faq-hero { padding: 4rem 4% 3rem; }
+  .faq-section { padding: 3rem 4%; }
+  .faq-cta { margin: 2rem 4% 4rem; padding: 2rem 1.5rem; }
+  footer { padding: 2rem 4%; }
+  .footer-top { flex-direction: column; }
+  .footer-links { flex-wrap: wrap; gap: 0.8rem; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .lang-bar { padding: 0.3rem 4%; }
+}
+@media (min-width: 769px) {
+  .hamburger { display: none; }
+  .mobile-menu { display: none !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="lang-bar">
+  <button class="lang-btn active" id="btn-fr" onclick="switchLang('fr')">FR</button>
+  <button class="lang-btn" id="btn-en" onclick="switchLang('en')">EN</button>
+</div>
+
+<nav>
+  <a class="nav-logo-img" href="index.html">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" role="img" style="height:52px;width:auto;display:block;"><title>Explora Guide</title><style>.lg{fill:#2d7a3a}.lm{fill:#348a42}.ll{fill:#3a9448}.lt{fill:#45a854}.lh{fill:#52bc62}</style><path d="M340,42 L420,70 L420,180 Q420,250 340,295 Q260,250 260,180 L260,70 Z" class="lg"/><ellipse cx="340" cy="206" rx="38" ry="20" class="lg"/><ellipse cx="340" cy="185" rx="30" ry="18" class="lm"/><ellipse cx="340" cy="165" rx="24" ry="16" class="ll"/><ellipse cx="340" cy="148" rx="16" ry="12" class="lt"/><ellipse cx="340" cy="136" rx="10" ry="9" fill="#52bc62"/><text x="340" y="334" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="38" font-weight="900" letter-spacing="6" fill="#2d7a3a">EXPLORA</text><text x="340" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="400" letter-spacing="14" fill="#4a9458">GUIDE</text></svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#about" data-fr="À propos" data-en="About">À propos</a></li>
+    <li><a href="index.html#ambiances" data-fr="Ambiances" data-en="Landscapes">Ambiances</a></li>
+    <li><a href="index.html#services" data-fr="Prestations" data-en="Services">Prestations</a></li>
+    <li><a href="index.html#circuits" data-fr="Circuits" data-en="Routes">Circuits</a></li>
+    <li><a href="index.html#agenda" data-fr="Agenda" data-en="Schedule">Agenda</a></li>
+    <li><a href="index.html#pricing" data-fr="Tarifs" data-en="Pricing">Tarifs</a></li>
+    <li><a href="ebooks.html" data-fr="Guides gratuits" data-en="Free guides">Guides gratuits</a></li>
+    <li><a href="questions-frequentes.html" class="active" data-fr="FAQ" data-en="FAQ">FAQ</a></li>
+    <li><a href="index.html#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:0.8rem;">
+    <a class="nav-cta" href="tel:0748169803" data-fr="📞 Réserver" data-en="📞 Book now">📞 Réserver</a>
+    <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html#about" onclick="closeMobileMenu()" data-fr="À propos" data-en="About">À propos</a>
+  <a href="index.html#services" onclick="closeMobileMenu()" data-fr="Prestations" data-en="Services">Prestations</a>
+  <a href="index.html#circuits" onclick="closeMobileMenu()" data-fr="Circuits" data-en="Routes">Circuits</a>
+  <a href="index.html#agenda" onclick="closeMobileMenu()" data-fr="Agenda" data-en="Schedule">Agenda</a>
+  <a href="index.html#pricing" onclick="closeMobileMenu()" data-fr="Tarifs" data-en="Pricing">Tarifs</a>
+  <a href="ebooks.html" onclick="closeMobileMenu()" data-fr="Guides gratuits" data-en="Free guides">Guides gratuits</a>
+  <a href="questions-frequentes.html" onclick="closeMobileMenu()" data-fr="FAQ" data-en="FAQ">FAQ</a>
+  <a href="index.html#contact" onclick="closeMobileMenu()" data-fr="Contact" data-en="Contact">Contact</a>
+  <a href="tel:0748169803" class="mobile-menu-cta" data-fr="📞 07 48 16 98 03" data-en="📞 +33 7 48 16 98 03">📞 07 48 16 98 03</a>
+</div>
+
+<div class="faq-hero">
+  <div class="section-label" data-fr="Vos questions" data-en="Your questions">Vos questions</div>
+  <h1 data-fr="Questions <em>fréquentes</em><br>des voyageurs" data-en="<em>Frequently</em> asked<br>traveller questions">Questions <em>fréquentes</em><br>des voyageurs</h1>
+  <p data-fr="Avant de réserver votre sortie en Ardèche, voici les réponses aux questions que l'on me pose le plus souvent : niveau physique, météo, tarifs, équipement, groupes et enfants." data-en="Before booking your Ardèche outing, here are the answers to the questions I get asked most often: fitness level, weather, pricing, equipment, groups and children.">Avant de réserver votre sortie en Ardèche, voici les réponses aux questions que l'on me pose le plus souvent : niveau physique, météo, tarifs, équipement, groupes et enfants.</p>
+
+  <div class="faq-cats">
+    <button class="faq-cat-pill actif" onclick="filtrerFaq('tous', this)" data-fr="Toutes" data-en="All">Toutes</button>
+    <button class="faq-cat-pill" onclick="filtrerFaq('reservation', this)" data-fr="Réservation" data-en="Booking">Réservation</button>
+    <button class="faq-cat-pill" onclick="filtrerFaq('niveau', this)" data-fr="Niveau & Forme" data-en="Fitness Level">Niveau & Forme</button>
+    <button class="faq-cat-pill" onclick="filtrerFaq('pratique', this)" data-fr="Infos pratiques" data-en="Practical Info">Infos pratiques</button>
+    <button class="faq-cat-pill" onclick="filtrerFaq('famille', this)" data-fr="Famille & Groupes" data-en="Family & Groups">Famille & Groupes</button>
+  </div>
+</div>
+
+<div class="faq-section">
+
+  <div class="faq-group" data-cat="reservation">
+    <div class="faq-group-title">📅 <span data-fr="Réservation & Tarifs" data-en="Booking & Pricing">Réservation & Tarifs</span></div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-question-text" data-fr="Comment réserver une sortie avec vous ?" data-en="How do I book an outing with you?">Comment réserver une sortie avec vous ?</div>
+        <div class="faq-icon"></div>
+      </div>
+      <div class="faq-answer"><div class="faq-answer-inner" data-fr="Le plus simple est de remplir le <strong>formulaire de réservation</strong> sur la page d'accueil, ou de m'appeler directement au <strong>07 48 16 98 03</strong>. Je vous réponds sous 24h pour confirmer la date, le lieu et les détails pratiques." data-en="The easiest way is to fill out the <strong>booking form</strong> on the homepage, or call me directly at <strong>+33 7 48 16 98 03</strong>. I'll reply within 24h to confirm the date, location and practical details.">Le plus simple est de remplir le <strong>formulaire de réservation</strong> sur la page d'accueil, ou de m'appeler directement au <strong>07 48 16 98 03</strong>. Je vous réponds sous 24h pour confirmer la date, le lieu et les détails pratiques.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-question-text" data-fr="Faut-il payer un acompte pour réserver ?" data-en="Do I need to pay a deposit to book?">Faut-il payer un acompte pour réserver ?</div>
+        <div class="faq-icon"></div>
+      </div>
+      <div class="faq-answer"><div class="faq-answer-inner" data-fr="Non, <strong>aucun acompte n'est demandé</strong> pour le moment, notamment pendant la période de lancement. Le paiement se fait directement le jour de la sortie, par chèque, virement ou espèces." data-en="No, <strong>no deposit is required</strong> at the moment, especially during the launch period. Payment is made directly on the day of the outing, by cheque, bank transfer or cash.">Non, <strong>aucun acompte n'est demandé</strong> pour le moment, notamment pendant la période de lancement. Le paiement se fait directement le jour de la sortie, par chèque, virement ou espèces.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-question-text" data-fr="Quels sont vos tarifs ?" data-en="What are your rates?">Quels sont vos tarifs ?</div>
+        <div class="faq-icon"></div>
+      </div>
+      <div class="faq-answer"><div class="faq-answer-inner" data-fr="Les tarifs varient selon la formule choisie (demi-journée, journée complète, séjour multi-jours ou pass saisonnier) et sont calculés pour un groupe de 2 à 4 personnes. Retrouvez le détail complet dans la <a href='index.html#pricing'>section Tarifs</a> de la page d'accueil. Des réductions existent pour les familles nombreuses, groupes scolaires et associations." data-en="Rates vary depending on the package chosen (half day, full day, multi-day stay or season pass) and are calculated for a group of 2 to 4 people. Find the full breakdown in the <a href='index.html#pricing'>Pricing section</a> on the homepage. Discounts are available for large families, school groups and associations.">Les tarifs varient selon la formule choisie (demi-journée, journée complète, séjour multi-jours ou pass saisonnier) et sont calculés pour un groupe de 2 à 4 personnes. Retrouvez le détail complet dans la <a href="index.html#pricing">section Tarifs</a> de la page d'accueil. Des réductions existent pour les familles nombreuses, groupes scolaires et associations.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-question-text" data-fr="Puis-je annuler ou reporter ma sortie ?" data-en="Can I cancel or postpone my outing?">Puis-je annuler ou reporter ma sortie ?</div>
+        <div class="faq-icon"></div>
+      </div>
+      <div class="faq-answer"><div class="faq-answer-inner" data-fr="Oui, sans souci. Comme aucun acompte n'est demandé, vous pouvez annuler ou reporter librement — je vous demande simplement de me prévenir le plus tôt possible par téléphone ou email pour que je puisse réorganiser mon planning." data-en="Yes, no problem. Since no deposit is required, you can cancel or reschedule freely — I just ask that you let me know as early as possible by phone or email so I can reorganise my schedule.">Oui, sans souci. Comme aucun acompte n'est demandé, vous pouvez annuler ou reporter librement — je vous demande simplement de me prévenir le plus tôt possible par téléphone ou email pour que je puisse réorganiser mon planning.</div></div>
+    </div>
+  </div>
+
+  <div class="faq-group" data-cat="niveau">
+    <div class="faq-group-title">🥾 <span data-fr="Niveau & Forme physique" data-en="Fitness Level">Niveau & Forme physique</span></div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-question-text" data-fr="Faut-il être très sportif pour vous suivre ?" data-en="Do I need to be very fit to join you?">Faut-il être très sportif pour vous suivre ?</div>
+        <div class="faq-icon"></div>
+      </div>
+      <div class="faq-answer"><div class="faq-answer-inner" data-fr="Pas du tout. Je construis <strong>chaque sortie sur mesure</strong> en fonction du niveau du groupe. Certains circuits sont accessibles à toute la famille, d'autres plus sportifs pour les randonneurs aguerris. On en discute ensemble avant la réservation pour trouver la formule adaptée." data-en="Not at all. I build <strong>every outing to measure</strong> based on the group's level. Some routes are accessible to the whole family, others are more challenging for experienced hikers. We discuss this together before booking to find the right fit.">Pas du tout. Je construis <strong>chaque sortie sur mesure</strong> en fonction du niveau du groupe. Certains circuits sont accessibles à toute la famille, d'autres plus sportifs pour les randonneurs aguerris. On en discute ensemble avant la réservation pour trouver la formule adaptée.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-question-text" data-fr="Quelle est la durée maximale d'une sortie ?" data-en="What's the maximum duration of an outing?">Quelle est la durée maximale d'une sortie ?</div>
+        <div class="faq-icon"></div>
+      </div>
+      <div class="faq-answer"><div class="faq-answer-inner" data-fr="Mes excursions durent <strong>4 heures maximum</strong>. C'est une durée idéale pour profiter pleinement du paysage sans s'épuiser, tout en laissant du temps pour les pauses, les photos et les explications sur la faune, la flore et la géologie." data-en="My excursions last a <strong>maximum of 4 hours</strong>. This is the ideal duration to fully enjoy the scenery without exhausting yourself, while leaving time for breaks, photos and explanations about wildlife, plants and geology.">Mes excursions durent <strong>4 heures maximum</strong>. C'est une durée idéale pour profiter pleinement du paysage sans s'épuiser, tout en laissant du temps pour les pauses, les photos et les explications sur la faune, la flore et la géologie.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-question-text" data-fr="J'ai des problèmes de genoux/dos, puis-je quand même venir ?" data-en="I have knee/back issues, can I still come?">J'ai des problèmes de genoux/dos, puis-je quand même venir ?</div>
+        <div class="faq-icon"></div>
+      </div>
+      <div class="faq-answer"><div class="faq-answer-inner" data-fr="Parlez-m'en avant de réserver. Je connais de nombreux itinéraires <strong>plats ou en faible dénivelé</strong> qui restent magnifiques sans solliciter les articulations. Mieux vaut être transparent en amont pour vous proposer le bon circuit." data-en="Let me know before booking. I know many <strong>flat or low-elevation routes</strong> that are still stunning without straining your joints. It's best to be upfront so I can suggest the right route for you.">Parlez-m'en avant de réserver. Je connais de nombreux itinéraires <strong>plats ou en faible dénivelé</strong> qui restent magnifiques sans solliciter les articulations. Mieux vaut être transparent en amont pour vous proposer le bon circuit.</div></div>
+    </div>
+  </div>
+
+  <div class="faq-group" data-cat="pratique">
+    <div class="faq-group-title">🎒 <span data-fr="Infos pratiques" data-en="Practical Information">Infos pratiques</span></div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-question-text" data-fr="Que se passe-t-il en cas de mauvais temps ?" data-en="What happens in case of bad weather?">Que se passe-t-il en cas de mauvais temps ?</div>
+        <div class="faq-icon"></div>
+      </div>
+      <div class="faq-answer"><div class="faq-answer-inner" data-fr="Je surveille la météo de près. En cas d'orage ou de conditions dangereuses, je vous propose <strong>un report gratuit</strong> ou un itinéraire alternatif plus abrité. Votre sécurité passe toujours avant le programme initial." data-en="I keep a close eye on the weather. In case of storms or dangerous conditions, I offer <strong>a free postponement</strong> or an alternative, more sheltered route. Your safety always comes before the original plan.">Je surveille la météo de près. En cas d'orage ou de conditions dangereuses, je vous propose <strong>un report gratuit</strong> ou un itinéraire alternatif plus abrité. Votre sécurité passe toujours avant le programme initial.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-question-text" data-fr="Quel équipement dois-je prévoir ?" data-en="What equipment should I bring?">Quel équipement dois-je prévoir ?</div>
+        <div class="faq-icon"></div>
+      </div>
+      <div class="faq-answer"><div class="faq-answer-inner" data-fr="Des <strong>chaussures de marche fermées</strong>, de l'eau (au moins 1,5L en été), une casquette ou un chapeau, de la crème solaire et une petite collation. Je vous envoie une liste détaillée et personnalisée par email après la réservation, selon le circuit choisi. Vous pouvez aussi télécharger mon <a href='ebooks.html'>guide gratuit sur la sécurité en randonnée</a>." data-en="<strong>Closed walking shoes</strong>, water (at least 1.5L in summer), a cap or hat, sunscreen and a small snack. I send a detailed, personalised list by email after booking, depending on the chosen route. You can also download my <a href='ebooks.html'>free hiking safety guide</a>.">Des <strong>chaussures de marche fermées</strong>, de l'eau (au moins 1,5L en été), une casquette ou un chapeau, de la crème solaire et une petite collation. Je vous envoie une liste détaillée et personnalisée par email après la réservation, selon le circuit choisi. Vous pouvez aussi télécharger mon <a href="ebooks.html">guide gratuit sur la sécurité en randonnée</a>.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-question-text" data-fr="Où se retrouve-t-on le jour de la sortie ?" data-en="Where do we meet on the day of the outing?">Où se retrouve-t-on le jour de la sortie ?</div>
+        <div class="faq-icon"></div>
+      </div>
+      <div class="faq-answer"><div class="faq-answer-inner" data-fr="Le point de rendez-vous dépend du circuit choisi (Privas, Aubenas, Vallon-Pont-d'Arc, etc.). Je vous l'indique précisément, avec un lien Google Maps, dans l'email ou l'appel de confirmation après votre réservation." data-en="The meeting point depends on the chosen route (Privas, Aubenas, Vallon-Pont-d'Arc, etc.). I'll give you the exact location, with a Google Maps link, in the confirmation email or call after your booking.">Le point de rendez-vous dépend du circuit choisi (Privas, Aubenas, Vallon-Pont-d'Arc, etc.). Je vous l'indique précisément, avec un lien Google Maps, dans l'email ou l'appel de confirmation après votre réservation.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-question-text" data-fr="Parlez-vous anglais ?" data-en="Do you speak English?">Parlez-vous anglais ?</div>
+        <div class="faq-icon"></div>
+      </div>
+      <div class="faq-answer"><div class="faq-answer-inner" data-fr="Oui ! Je peux guider vos sorties en français comme en anglais. N'hésitez pas à le préciser dans votre message de réservation." data-en="Yes! I can guide your outings in French or in English. Feel free to mention this in your booking message.">Oui ! Je peux guider vos sorties en français comme en anglais. N'hésitez pas à le préciser dans votre message de réservation.</div></div>
+    </div>
+  </div>
+
+  <div class="faq-group" data-cat="famille">
+    <div class="faq-group-title">👨‍👩‍👧 <span data-fr="Famille & Groupes" data-en="Family & Groups">Famille & Groupes</span></div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-question-text" data-fr="Proposez-vous des sorties adaptées aux enfants ?" data-en="Do you offer outings suitable for children?">Proposez-vous des sorties adaptées aux enfants ?</div>
+        <div class="faq-icon"></div>
+      </div>
+      <div class="faq-answer"><div class="faq-answer-inner" data-fr="Absolument. J'adapte le rythme, la distance et le contenu pédagogique pour que les enfants restent captivés : petites énigmes nature, anecdotes ludiques sur la géologie et les animaux. Retrouvez plus d'idées sur ma page <a href='enfants.html'>Ardèche en famille</a>." data-en="Absolutely. I adapt the pace, distance and educational content to keep children engaged: small nature riddles, fun facts about geology and animals. Find more ideas on my <a href='enfants.html'>Ardèche with family</a> page.">Absolument. J'adapte le rythme, la distance et le contenu pédagogique pour que les enfants restent captivés : petites énigmes nature, anecdotes ludiques sur la géologie et les animaux. Retrouvez plus d'idées sur ma page <a href="enfants.html">Ardèche en famille</a>.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-question-text" data-fr="Quel est le nombre maximum de personnes par sortie ?" data-en="What's the maximum group size?">Quel est le nombre maximum de personnes par sortie ?</div>
+        <div class="faq-icon"></div>
+      </div>
+      <div class="faq-answer"><div class="faq-answer-inner" data-fr="Les formules standards sont calculées pour 2 à 4 personnes, mais j'accueille aussi des <strong>groupes plus larges</strong> (jusqu'à 12 personnes) sur devis personnalisé, ainsi que des groupes scolaires ou associatifs." data-en="Standard packages are calculated for 2 to 4 people, but I also welcome <strong>larger groups</strong> (up to 12 people) on custom quote, as well as school or association groups.">Les formules standards sont calculées pour 2 à 4 personnes, mais j'accueille aussi des <strong>groupes plus larges</strong> (jusqu'à 12 personnes) sur devis personnalisé, ainsi que des groupes scolaires ou associatifs.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-question-text" data-fr="Avez-vous le Pass saisonnier pour les visiteurs réguliers ?" data-en="Do you have a Season Pass for regular visitors?">Avez-vous le Pass saisonnier pour les visiteurs réguliers ?</div>
+        <div class="faq-icon"></div>
+      </div>
+      <div class="faq-answer"><div class="faq-answer-inner" data-fr="Oui, le <strong>Pass Pierre-François</strong> est valable d'avril à octobre 2026. Il offre -30% sur toutes les sorties, un accès prioritaire aux événements et un carnet de route personnalisé. Détails dans la <a href='index.html#pass'>section Pass</a> de la page d'accueil." data-en="Yes, the <strong>Pierre-François Pass</strong> is valid from April to October 2026. It offers 30% off all outings, priority access to events and a personalised travel journal. Details in the <a href='index.html#pass'>Pass section</a> on the homepage.">Oui, le <strong>Pass Pierre-François</strong> est valable d'avril à octobre 2026. Il offre -30% sur toutes les sorties, un accès prioritaire aux événements et un carnet de route personnalisé. Détails dans la <a href="index.html#pass">section Pass</a> de la page d'accueil.</div></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="faq-cta">
+  <h3 data-fr="Une autre question ?<br><em>Écrivez-moi directement</em>" data-en="Another question?<br><em>Write to me directly</em>">Une autre question ?<br><em>Écrivez-moi directement</em></h3>
+  <p data-fr="Je réponds personnellement à chaque message sous 24h, par téléphone ou par email." data-en="I personally reply to every message within 24h, by phone or email.">Je réponds personnellement à chaque message sous 24h, par téléphone ou par email.</p>
+  <div class="faq-cta-btns">
+    <a href="index.html#contact" class="btn-gold" data-fr="✉ Me contacter" data-en="✉ Contact me">✉ Me contacter</a>
+    <a href="tel:0748169803" class="btn-outline-light" data-fr="📞 07 48 16 98 03" data-en="📞 +33 7 48 16 98 03">📞 07 48 16 98 03</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <a class="footer-logo-img" href="index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" role="img" style="height:38px;width:auto;display:block;"><title>Explora Guide</title><style>.lg{fill:#2d7a3a}.lm{fill:#348a42}.ll{fill:#3a9448}.lt{fill:#45a854}.lh{fill:#52bc62}</style><path d="M340,42 L420,70 L420,180 Q420,250 340,295 Q260,250 260,180 L260,70 Z" class="lg"/><ellipse cx="340" cy="206" rx="38" ry="20" class="lg"/><ellipse cx="340" cy="185" rx="30" ry="18" class="lm"/><ellipse cx="340" cy="165" rx="24" ry="16" class="ll"/><ellipse cx="340" cy="148" rx="16" ry="12" class="lt"/><ellipse cx="340" cy="136" rx="10" ry="9" fill="#52bc62"/><text x="340" y="334" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="38" font-weight="900" letter-spacing="6" fill="#2d7a3a">EXPLORA</text><text x="340" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="400" letter-spacing="14" fill="#4a9458">GUIDE</text></svg>
+      </a>
+      <div class="footer-logo-sub" data-fr="Accompagnateur Touristique · Ardèche 07" data-en="Nature & Tourism Guide · Ardèche 07">Accompagnateur Touristique · Ardèche 07</div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="index.html#about" data-fr="À propos" data-en="About">À propos</a></li>
+      <li><a href="index.html#services" data-fr="Prestations" data-en="Services">Prestations</a></li>
+      <li><a href="index.html#circuits" data-fr="Circuits" data-en="Routes">Circuits</a></li>
+      <li><a href="ebooks.html" data-fr="Guides gratuits" data-en="Free guides">Guides gratuits</a></li>
+      <li><a href="questions-frequentes.html" data-fr="FAQ" data-en="FAQ">FAQ</a></li>
+      <li><a href="index.html#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy" data-fr="© 2026 · Explora Guide · Accompagnateur Touristique Ardèche" data-en="© 2026 · Explora Guide · Nature & Tourism Guide Ardèche">© 2026 · Explora Guide · Accompagnateur Touristique Ardèche</div>
+    <div class="footer-eco" data-fr="🌿 Site éco-conçu · Sans cookies publicitaires" data-en="🌿 Eco-designed · No advertising cookies">🌿 Site éco-conçu · Sans cookies publicitaires</div>
+  </div>
+</footer>
+
+<script>
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobile-menu');
+  const btn = document.getElementById('hamburger');
+  menu.classList.toggle('open');
+  btn.classList.toggle('open');
+  document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+}
+function closeMobileMenu() {
+  document.getElementById('mobile-menu').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function toggleFaq(questionEl) {
+  const item = questionEl.parentElement;
+  const answer = item.querySelector('.faq-answer');
+  const isOpen = item.classList.contains('open');
+  if (isOpen) {
+    item.classList.remove('open');
+    answer.style.maxHeight = null;
+  } else {
+    item.classList.add('open');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  }
+}
+
+function filtrerFaq(cat, btn) {
+  document.querySelectorAll('.faq-cat-pill').forEach(b => b.classList.remove('actif'));
+  btn.classList.add('actif');
+  document.querySelectorAll('.faq-group').forEach(group => {
+    group.style.display = (cat === 'tous' || group.dataset.cat === cat) ? '' : 'none';
+  });
+}
+
+let currentLang = 'fr';
+function switchLang(lang) {
+  currentLang = lang;
+  const btnFr = document.getElementById('btn-fr');
+  const btnEn = document.getElementById('btn-en');
+  if (lang === 'en') {
+    btnFr.classList.remove('active'); btnEn.classList.add('active');
+  } else {
+    btnEn.classList.remove('active'); btnFr.classList.add('active');
+  }
+  document.querySelectorAll('[data-fr]').forEach(el => {
+    const txt = el.getAttribute('data-' + lang);
+    if (txt !== null) el.innerHTML = txt;
+  });
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll('.faq-item.open .faq-answer').forEach(answer => {
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  });
+}
+</script>
+</body>
+</html>
