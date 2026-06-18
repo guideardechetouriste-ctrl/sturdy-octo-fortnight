@@ -15,41 +15,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@200;300;400;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --stone: #0d1410;
-  --earth: #111a14;
-  --clay: #162019;
-  --ochre: #d4a843;
-  --cream: #f0ece0;
-  --mist: #8aab90;
-  --sage: #6a9275;
+  --stone: #0d1410; --earth: #111a14; --clay: #162019;
+  --ochre: #d4a843; --cream: #f0ece0; --mist: #8aab90; --sage: #6a9275;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { font-family: 'Josefin Sans', sans-serif; background: #0d1410; color: #f0ece0; overflow-x: hidden; }
+body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E"); pointer-events: none; z-index: 0; opacity: 0.3; }
 
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.3;
-}
+/* LANG BAR */
+.lang-bar { background: #080f0a; padding: 0.3rem 5%; display: flex; justify-content: flex-end; gap: 0.4rem; align-items: center; position: relative; z-index: 101; border-bottom: 1px solid rgba(212,168,67,0.08); }
+.lang-btn { background: none; border: 1px solid rgba(138,171,144,0.3); color: #8aab90; padding: 0.15rem 0.55rem; font-size: 0.62rem; cursor: pointer; letter-spacing: 0.1em; font-family: 'Josefin Sans', sans-serif; text-transform: uppercase; transition: all 0.2s; }
+.lang-btn.active { background: rgba(212,168,67,0.3); border-color: rgba(212,168,67,0.5); color: #d4a843; }
 
-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 5%;
-  background: rgba(13,20,16,0.97);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(212,168,67,0.15);
-  box-shadow: 0 1px 20px rgba(0,0,0,0.5);
-}
+nav { position: sticky; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 5%; background: rgba(13,20,16,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(212,168,67,0.15); box-shadow: 0 1px 20px rgba(0,0,0,0.5); }
 .nav-logo-img { display: flex; align-items: center; padding: 0; flex-shrink: 0; text-decoration: none; }
 .nav-logo-img svg { transition: opacity 0.3s; opacity: 0.92; }
 .nav-logo-img:hover svg { opacity: 1; }
@@ -67,27 +46,14 @@ nav {
 .mobile-menu a:hover { color: #d4a843; }
 .mobile-menu-cta { margin-top: 1.5rem; background: #d4a843 !important; color: #0d1410 !important; font-family: 'Josefin Sans', sans-serif !important; font-size: 0.85rem !important; font-weight: 600 !important; letter-spacing: 0.2em !important; text-transform: uppercase; border-bottom: none !important; padding: 1rem 2rem !important; width: auto !important; }
 
-.ebooks-hero {
-  padding: 9rem 5% 5rem;
-  position: relative;
-  z-index: 1;
-  border-bottom: 1px solid rgba(212,168,67,0.1);
-  background: linear-gradient(to bottom, #0d1410, #111a14);
-}
+.ebooks-hero { padding: 5rem 5% 5rem; position: relative; z-index: 1; border-bottom: 1px solid rgba(212,168,67,0.1); background: linear-gradient(to bottom, #0d1410, #111a14); }
 .section-label { font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase; color: #d4a843; display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
 .section-label::after { content: ''; flex: 0 0 40px; height: 1px; background: #d4a843; opacity: 0.5; }
 .ebooks-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 300; line-height: 1.1; color: #f0ece0; margin-bottom: 1.2rem; }
 .ebooks-hero h1 em { font-style: italic; color: #d4a843; }
 .ebooks-hero p { font-size: 0.95rem; color: #8aab90; line-height: 1.8; max-width: 560px; }
 
-.procedure {
-  background: #111a14;
-  border: 1px solid rgba(212,168,67,0.15);
-  padding: 2.5rem;
-  margin: 4rem 5% 0;
-  position: relative;
-  z-index: 1;
-}
+.procedure { background: #111a14; border: 1px solid rgba(212,168,67,0.15); padding: 2.5rem; margin: 4rem 5% 0; position: relative; z-index: 1; }
 .procedure-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: #f0ece0; margin-bottom: 0.4rem; }
 .procedure-sub { font-size: 0.78rem; color: #8aab90; margin-bottom: 2rem; }
 .procedure-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; background: rgba(212,168,67,0.05); border: 1px solid rgba(212,168,67,0.08); }
@@ -140,7 +106,7 @@ footer { background: #080f0a; border-top: 1px solid rgba(212,168,67,0.15); paddi
   .nav-links { display: none; }
   .nav-cta { display: none; }
   .hamburger { display: flex; }
-  .ebooks-hero { padding: 7rem 4% 4rem; }
+  .ebooks-hero { padding: 4rem 4% 3rem; }
   .procedure { margin: 3rem 4% 0; padding: 1.75rem; }
   .procedure-steps { grid-template-columns: 1fr 1fr; }
   .step { border-right: none; border-bottom: 1px solid rgba(212,168,67,0.08); }
@@ -152,6 +118,7 @@ footer { background: #080f0a; border-top: 1px solid rgba(212,168,67,0.15); paddi
   .footer-top { flex-direction: column; }
   .footer-links { flex-wrap: wrap; gap: 0.8rem; }
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .lang-bar { padding: 0.3rem 4%; }
 }
 @media (min-width: 769px) {
   .hamburger { display: none; }
@@ -161,201 +128,208 @@ footer { background: #080f0a; border-top: 1px solid rgba(212,168,67,0.15); paddi
 </head>
 <body>
 
+<!-- BARRE LANGUE -->
+<div class="lang-bar">
+  <button class="lang-btn active" id="btn-fr" onclick="switchLang('fr')">FR</button>
+  <button class="lang-btn" id="btn-en" onclick="switchLang('en')">EN</button>
+</div>
+
+<!-- NAV -->
 <nav>
   <a class="nav-logo-img" href="index.html">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" role="img" style="height:52px;width:auto;display:block;"><title>Explora Guide</title><style>.lg{fill:#2d7a3a}.lm{fill:#348a42}.ll{fill:#3a9448}.lt{fill:#45a854}.lh{fill:#52bc62}</style><path d="M340,42 L420,70 L420,180 Q420,250 340,295 Q260,250 260,180 L260,70 Z" class="lg"/><path d="M340,52 L412,78 L412,178 Q412,242 340,284 Q268,242 268,178 L268,78 Z" fill="none" stroke="#5aaa66" stroke-width="2"/><path d="M340,58 L406,84 L406,178 Q406,236 340,276 Q274,236 274,178 L274,84 Z" fill="#1a5228"/><circle cx="340" cy="178" r="80" fill="none" stroke="#2d7a3a" stroke-width="3"/><circle cx="340" cy="178" r="75" fill="none" stroke="#4a9458" stroke-width="1"/><polygon points="340,98 333,116 340,112 347,116" fill="#5aaa66"/><text x="340" y="95" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#c8e8c8" letter-spacing="1">N</text><polygon points="340,258 333,240 340,244 347,240" fill="#4a9458"/><text x="340" y="272" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#c8e8c8" letter-spacing="1">S</text><polygon points="420,178 402,171 406,178 402,185" fill="#4a9458"/><text x="432" y="182" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#c8e8c8" letter-spacing="1">E</text><polygon points="260,178 278,171 274,178 278,185" fill="#4a9458"/><text x="248" y="182" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#c8e8c8" letter-spacing="1">W</text><line x1="340" y1="103" x2="340" y2="110" stroke="#4a9458" stroke-width="1.5"/><line x1="340" y1="246" x2="340" y2="253" stroke="#4a9458" stroke-width="1.5"/><line x1="415" y1="178" x2="408" y2="178" stroke="#4a9458" stroke-width="1.5"/><line x1="265" y1="178" x2="272" y2="178" stroke="#4a9458" stroke-width="1.5"/><line x1="396" y1="134" x2="391" y2="139" stroke="#3a8448" stroke-width="1"/><line x1="284" y1="134" x2="289" y2="139" stroke="#3a8448" stroke-width="1"/><line x1="396" y1="222" x2="391" y2="217" stroke="#3a8448" stroke-width="1"/><line x1="284" y1="222" x2="289" y2="217" stroke="#3a8448" stroke-width="1"/><rect x="334" y="218" width="12" height="28" rx="3" class="lg"/><path d="M334,244 Q322,252 314,248" fill="none" stroke="#2d7a3a" stroke-width="3" stroke-linecap="round"/><path d="M346,244 Q358,252 366,248" fill="none" stroke="#2d7a3a" stroke-width="3" stroke-linecap="round"/><ellipse cx="340" cy="206" rx="38" ry="20" class="lg"/><ellipse cx="306" cy="200" rx="18" ry="13" class="lg"/><ellipse cx="374" cy="200" rx="18" ry="13" class="lg"/><ellipse cx="340" cy="185" rx="30" ry="18" class="lm"/><ellipse cx="315" cy="179" rx="16" ry="12" class="lm"/><ellipse cx="365" cy="179" rx="16" ry="12" class="lm"/><ellipse cx="340" cy="165" rx="24" ry="16" class="ll"/><ellipse cx="322" cy="160" rx="14" ry="10" class="ll"/><ellipse cx="358" cy="160" rx="14" ry="10" class="ll"/><ellipse cx="340" cy="148" rx="16" ry="12" class="lt"/><ellipse cx="328" cy="145" rx="10" ry="8" class="lt"/><ellipse cx="352" cy="145" rx="10" ry="8" class="lt"/><ellipse cx="340" cy="136" rx="10" ry="9" fill="#52bc62"/><ellipse cx="300" cy="194" rx="8" ry="6" class="lh" opacity="0.7"/><ellipse cx="380" cy="194" rx="8" ry="6" class="lh" opacity="0.7"/><ellipse cx="312" cy="172" rx="6" ry="5" class="lh" opacity="0.6"/><ellipse cx="368" cy="172" rx="6" ry="5" class="lh" opacity="0.6"/><ellipse cx="326" cy="154" rx="5" ry="4" class="lh" opacity="0.6"/><ellipse cx="354" cy="154" rx="5" ry="4" class="lh" opacity="0.6"/><ellipse cx="340" cy="129" rx="7" ry="5" fill="#68d478" opacity="0.5"/><text x="340" y="334" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="38" font-weight="900" letter-spacing="6" fill="#2d7a3a">EXPLORA</text><text x="340" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="400" letter-spacing="14" fill="#4a9458">GUIDE</text><line x1="172" y1="376" x2="270" y2="376" stroke="#2d7a3a" stroke-width="1"/><line x1="410" y1="376" x2="508" y2="376" stroke="#2d7a3a" stroke-width="1"/><text x="340" y="380" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" font-weight="400" letter-spacing="3.5" fill="#4a9458">VOTRE PARTENAIRE D'AVENTURE EN CONFIANCE</text></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" role="img" style="height:52px;width:auto;display:block;"><title>Explora Guide</title><style>.lg{fill:#2d7a3a}.lm{fill:#348a42}.ll{fill:#3a9448}.lt{fill:#45a854}.lh{fill:#52bc62}</style><path d="M340,42 L420,70 L420,180 Q420,250 340,295 Q260,250 260,180 L260,70 Z" class="lg"/><path d="M340,52 L412,78 L412,178 Q412,242 340,284 Q268,242 268,178 L268,78 Z" fill="none" stroke="#5aaa66" stroke-width="2"/><path d="M340,58 L406,84 L406,178 Q406,236 340,276 Q274,236 274,178 L274,84 Z" fill="#1a5228"/><circle cx="340" cy="178" r="80" fill="none" stroke="#2d7a3a" stroke-width="3"/><circle cx="340" cy="178" r="75" fill="none" stroke="#4a9458" stroke-width="1"/><polygon points="340,98 333,116 340,112 347,116" fill="#5aaa66"/><text x="340" y="95" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#c8e8c8" letter-spacing="1">N</text><polygon points="340,258 333,240 340,244 347,240" fill="#4a9458"/><text x="340" y="272" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#c8e8c8" letter-spacing="1">S</text><polygon points="420,178 402,171 406,178 402,185" fill="#4a9458"/><text x="432" y="182" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#c8e8c8" letter-spacing="1">E</text><polygon points="260,178 278,171 274,178 278,185" fill="#4a9458"/><text x="248" y="182" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#c8e8c8" letter-spacing="1">W</text><line x1="340" y1="103" x2="340" y2="110" stroke="#4a9458" stroke-width="1.5"/><line x1="340" y1="246" x2="340" y2="253" stroke="#4a9458" stroke-width="1.5"/><line x1="415" y1="178" x2="408" y2="178" stroke="#4a9458" stroke-width="1.5"/><line x1="265" y1="178" x2="272" y2="178" stroke="#4a9458" stroke-width="1.5"/><rect x="334" y="218" width="12" height="28" rx="3" class="lg"/><path d="M334,244 Q322,252 314,248" fill="none" stroke="#2d7a3a" stroke-width="3" stroke-linecap="round"/><path d="M346,244 Q358,252 366,248" fill="none" stroke="#2d7a3a" stroke-width="3" stroke-linecap="round"/><ellipse cx="340" cy="206" rx="38" ry="20" class="lg"/><ellipse cx="306" cy="200" rx="18" ry="13" class="lg"/><ellipse cx="374" cy="200" rx="18" ry="13" class="lg"/><ellipse cx="340" cy="185" rx="30" ry="18" class="lm"/><ellipse cx="315" cy="179" rx="16" ry="12" class="lm"/><ellipse cx="365" cy="179" rx="16" ry="12" class="lm"/><ellipse cx="340" cy="165" rx="24" ry="16" class="ll"/><ellipse cx="322" cy="160" rx="14" ry="10" class="ll"/><ellipse cx="358" cy="160" rx="14" ry="10" class="ll"/><ellipse cx="340" cy="148" rx="16" ry="12" class="lt"/><ellipse cx="328" cy="145" rx="10" ry="8" class="lt"/><ellipse cx="352" cy="145" rx="10" ry="8" class="lt"/><ellipse cx="340" cy="136" rx="10" ry="9" fill="#52bc62"/><ellipse cx="300" cy="194" rx="8" ry="6" class="lh" opacity="0.7"/><ellipse cx="380" cy="194" rx="8" ry="6" class="lh" opacity="0.7"/><ellipse cx="312" cy="172" rx="6" ry="5" class="lh" opacity="0.6"/><ellipse cx="368" cy="172" rx="6" ry="5" class="lh" opacity="0.6"/><ellipse cx="326" cy="154" rx="5" ry="4" class="lh" opacity="0.6"/><ellipse cx="354" cy="154" rx="5" ry="4" class="lh" opacity="0.6"/><ellipse cx="340" cy="129" rx="7" ry="5" fill="#68d478" opacity="0.5"/><text x="340" y="334" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="38" font-weight="900" letter-spacing="6" fill="#2d7a3a">EXPLORA</text><text x="340" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="400" letter-spacing="14" fill="#4a9458">GUIDE</text><line x1="172" y1="376" x2="270" y2="376" stroke="#2d7a3a" stroke-width="1"/><line x1="410" y1="376" x2="508" y2="376" stroke="#2d7a3a" stroke-width="1"/><text x="340" y="380" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" font-weight="400" letter-spacing="3.5" fill="#4a9458">VOTRE PARTENAIRE D'AVENTURE EN CONFIANCE</text></svg>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html#about">À propos</a></li>
-    <li><a href="index.html#ambiances">Ambiances</a></li>
-    <li><a href="index.html#services">Prestations</a></li>
-    <li><a href="index.html#circuits">Circuits</a></li>
-    <li><a href="index.html#agenda">Agenda</a></li>
-    <li><a href="index.html#map-section">Carte</a></li>
-    <li><a href="index.html#pricing">Tarifs</a></li>
-    <li><a href="ebooks.html" class="active">Guides gratuits</a></li>
-    <li><a href="enfants.html">Ardèche en famille</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="index.html#about" data-fr="À propos" data-en="About">À propos</a></li>
+    <li><a href="index.html#ambiances" data-fr="Ambiances" data-en="Landscapes">Ambiances</a></li>
+    <li><a href="index.html#services" data-fr="Prestations" data-en="Services">Prestations</a></li>
+    <li><a href="index.html#circuits" data-fr="Circuits" data-en="Routes">Circuits</a></li>
+    <li><a href="index.html#agenda" data-fr="Agenda" data-en="Schedule">Agenda</a></li>
+    <li><a href="index.html#map-section" data-fr="Carte" data-en="Map">Carte</a></li>
+    <li><a href="index.html#pricing" data-fr="Tarifs" data-en="Pricing">Tarifs</a></li>
+    <li><a href="ebooks.html" class="active" data-fr="Guides gratuits" data-en="Free guides">Guides gratuits</a></li>
+    <li><a href="enfants.html" data-fr="Ardèche en famille" data-en="Family trips">Ardèche en famille</a></li>
+    <li><a href="index.html#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:0.8rem;">
-    <a class="nav-cta" href="tel:0748169803">📞 Réserver</a>
+    <a class="nav-cta" href="tel:0748169803" data-fr="📞 Réserver" data-en="📞 Book now">📞 Réserver</a>
     <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
+<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobile-menu">
-  <a href="index.html#about" onclick="closeMobileMenu()">À propos</a>
-  <a href="index.html#ambiances" onclick="closeMobileMenu()">Ambiances</a>
-  <a href="index.html#services" onclick="closeMobileMenu()">Prestations</a>
-  <a href="index.html#circuits" onclick="closeMobileMenu()">Circuits</a>
-  <a href="index.html#agenda" onclick="closeMobileMenu()">Agenda</a>
-  <a href="index.html#map-section" onclick="closeMobileMenu()">Carte</a>
-  <a href="index.html#pricing" onclick="closeMobileMenu()">Tarifs</a>
-  <a href="ebooks.html" onclick="closeMobileMenu()">Guides gratuits</a>
-  <a href="enfants.html" onclick="closeMobileMenu()">Ardèche en famille</a>
-  <a href="index.html#contact" onclick="closeMobileMenu()">Contact</a>
-  <a href="tel:0748169803" class="mobile-menu-cta">📞 07 48 16 98 03</a>
+  <a href="index.html#about" onclick="closeMobileMenu()" data-fr="À propos" data-en="About">À propos</a>
+  <a href="index.html#ambiances" onclick="closeMobileMenu()" data-fr="Ambiances" data-en="Landscapes">Ambiances</a>
+  <a href="index.html#services" onclick="closeMobileMenu()" data-fr="Prestations" data-en="Services">Prestations</a>
+  <a href="index.html#circuits" onclick="closeMobileMenu()" data-fr="Circuits" data-en="Routes">Circuits</a>
+  <a href="index.html#agenda" onclick="closeMobileMenu()" data-fr="Agenda" data-en="Schedule">Agenda</a>
+  <a href="index.html#map-section" onclick="closeMobileMenu()" data-fr="Carte" data-en="Map">Carte</a>
+  <a href="index.html#pricing" onclick="closeMobileMenu()" data-fr="Tarifs" data-en="Pricing">Tarifs</a>
+  <a href="ebooks.html" onclick="closeMobileMenu()" data-fr="Guides gratuits" data-en="Free guides">Guides gratuits</a>
+  <a href="enfants.html" onclick="closeMobileMenu()" data-fr="Ardèche en famille" data-en="Family trips">Ardèche en famille</a>
+  <a href="index.html#contact" onclick="closeMobileMenu()" data-fr="Contact" data-en="Contact">Contact</a>
+  <a href="tel:0748169803" class="mobile-menu-cta" data-fr="📞 07 48 16 98 03" data-en="📞 +33 7 48 16 98 03">📞 07 48 16 98 03</a>
 </div>
 
+<!-- HERO -->
 <div class="ebooks-hero">
-  <div class="section-label">Ressources gratuites</div>
-  <h1>Guides numériques<br><em>offerts par Explora Guide</em></h1>
-  <p>Préparez votre aventure en Ardèche avec mes guides pratiques. Conçus pour les randonneurs, curieux de nature et amoureux du territoire — téléchargement gratuit, sans inscription.</p>
+  <div class="section-label" data-fr="Ressources gratuites" data-en="Free resources">Ressources gratuites</div>
+  <h1 data-fr="Guides numériques<br><em>offerts par Explora Guide</em>" data-en="Digital guides<br><em>offered by Explora Guide</em>">Guides numériques<br><em>offerts par Explora Guide</em></h1>
+  <p data-fr="Préparez votre aventure en Ardèche avec mes guides pratiques. Conçus pour les randonneurs, curieux de nature et amoureux du territoire — téléchargement gratuit, sans inscription." data-en="Prepare your Ardèche adventure with my practical guides. Designed for hikers, nature enthusiasts and territory lovers — free download, no sign-up required.">Préparez votre aventure en Ardèche avec mes guides pratiques. Conçus pour les randonneurs, curieux de nature et amoureux du territoire — téléchargement gratuit, sans inscription.</p>
 </div>
 
+<!-- PROCÉDURE -->
 <div class="procedure">
-  <div class="procedure-title">Comment télécharger un guide ?</div>
-  <div class="procedure-sub">Simple et gratuit — aucune carte bancaire requise</div>
+  <div class="procedure-title" data-fr="Comment télécharger un guide ?" data-en="How to download a guide?">Comment télécharger un guide ?</div>
+  <div class="procedure-sub" data-fr="Simple et gratuit — aucune carte bancaire requise" data-en="Simple and free — no credit card required">Simple et gratuit — aucune carte bancaire requise</div>
   <div class="procedure-steps">
     <div class="step">
       <div class="step-num">01</div>
       <div class="step-icon">👆</div>
-      <div class="step-title">Cliquer</div>
-      <div class="step-desc">Cliquez sur le bouton <strong>"Télécharger gratuitement"</strong> du guide qui vous intéresse.</div>
+      <div class="step-title" data-fr="Cliquer" data-en="Click">Cliquer</div>
+      <div class="step-desc" data-fr='Cliquez sur le bouton <strong>"Télécharger gratuitement"</strong> du guide qui vous intéresse.' data-en='Click the <strong>"Download for free"</strong> button on the guide you want.'>Cliquez sur le bouton <strong>"Télécharger gratuitement"</strong> du guide qui vous intéresse.</div>
     </div>
     <div class="step">
       <div class="step-num">02</div>
       <div class="step-icon">🛒</div>
-      <div class="step-title">Page Gumroad</div>
-      <div class="step-desc">Vous arrivez sur la page du guide. Cliquez sur <strong>"I want this!"</strong> ou <strong>"Je veux ça !"</strong>.</div>
+      <div class="step-title" data-fr="Page Gumroad" data-en="Gumroad page">Page Gumroad</div>
+      <div class="step-desc" data-fr='Vous arrivez sur la page du guide. Cliquez sur <strong>"I want this!"</strong> ou <strong>"Je veux ça !"</strong>.' data-en='You land on the guide page. Click <strong>"I want this!"</strong>.'>Vous arrivez sur la page du guide. Cliquez sur <strong>"I want this!"</strong> ou <strong>"Je veux ça !"</strong>.</div>
     </div>
     <div class="step">
       <div class="step-num">03</div>
       <div class="step-icon">💶</div>
-      <div class="step-title">Prix libre : 0 €</div>
-      <div class="step-desc">Laissez le prix à <strong>0 €</strong> (ou offrez ce que vous souhaitez). Cliquez sur <strong>"Obtenir"</strong>.</div>
+      <div class="step-title" data-fr="Prix libre : 0 €" data-en="Pay what you want: 0 €">Prix libre : 0 €</div>
+      <div class="step-desc" data-fr='Laissez le prix à <strong>0 €</strong> (ou offrez ce que vous souhaitez). Cliquez sur <strong>"Obtenir"</strong>.' data-en='Leave the price at <strong>€0</strong> (or give what you wish). Click <strong>"Get"</strong>.'>Laissez le prix à <strong>0 €</strong> (ou offrez ce que vous souhaitez). Cliquez sur <strong>"Obtenir"</strong>.</div>
     </div>
     <div class="step">
       <div class="step-num">04</div>
       <div class="step-icon">📥</div>
-      <div class="step-title">Téléchargement</div>
-      <div class="step-desc">Entrez votre email si demandé, puis <strong>téléchargez le PDF</strong> directement sur votre appareil.</div>
+      <div class="step-title" data-fr="Téléchargement" data-en="Download">Téléchargement</div>
+      <div class="step-desc" data-fr="Entrez votre email si demandé, puis <strong>téléchargez le PDF</strong> directement sur votre appareil." data-en="Enter your email if prompted, then <strong>download the PDF</strong> directly to your device.">Entrez votre email si demandé, puis <strong>téléchargez le PDF</strong> directement sur votre appareil.</div>
     </div>
   </div>
 </div>
 
+<!-- EBOOKS GRID -->
 <section class="ebooks-section">
-  <div class="section-label">Bibliothèque</div>
-  <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;color:#f0ece0;">Tous les guides <em style="font-style:italic;color:#d4a843;">disponibles</em></h2>
+  <div class="section-label" data-fr="Bibliothèque" data-en="Library">Bibliothèque</div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;color:#f0ece0;" data-fr="Tous les guides <em style='font-style:italic;color:#d4a843;'>disponibles</em>" data-en="All <em style='font-style:italic;color:#d4a843;'>available</em> guides">Tous les guides <em style="font-style:italic;color:#d4a843;">disponibles</em></h2>
 
   <div class="ebooks-grid">
 
+    <!-- Guide 1 -->
     <div class="ebook-card">
       <div class="ebook-cover">
         <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=80" alt="Randonner en Ardèche en sécurité">
-        <span class="ebook-gratuit-badge">Gratuit</span>
+        <span class="ebook-gratuit-badge" data-fr="Gratuit" data-en="Free">Gratuit</span>
       </div>
       <div class="ebook-body">
-        <div class="ebook-tag">Sécurité · Randonnée</div>
-        <div class="ebook-title">Randonner en Ardèche en Sécurité — Le Guide du Local</div>
-        <div class="ebook-desc">Les signes avant-coureurs d'un orage, les 3 litres d'eau en été, les 6 réflexes qui sauvent. Tout ce que je vérifie avant chaque sortie.</div>
-        <a class="ebook-cta" href="https://neuralpath.gumroad.com/l/joumqd" target="_blank" rel="noopener">
-          Télécharger gratuitement <span class="arrow">→</span>
-        </a>
+        <div class="ebook-tag" data-fr="Sécurité · Randonnée" data-en="Safety · Hiking">Sécurité · Randonnée</div>
+        <div class="ebook-title" data-fr="Randonner en Ardèche en Sécurité — Le Guide du Local" data-en="Hiking in Ardèche Safely — The Local's Guide">Randonner en Ardèche en Sécurité — Le Guide du Local</div>
+        <div class="ebook-desc" data-fr="Les signes avant-coureurs d'un orage, les 3 litres d'eau en été, les 6 réflexes qui sauvent. Tout ce que je vérifie avant chaque sortie." data-en="Warning signs of a storm, 3 litres of water in summer, the 6 reflexes that save lives. Everything I check before every outing.">Les signes avant-coureurs d'un orage, les 3 litres d'eau en été, les 6 réflexes qui sauvent. Tout ce que je vérifie avant chaque sortie.</div>
+        <a class="ebook-cta" href="https://neuralpath.gumroad.com/l/joumqd" target="_blank" rel="noopener" data-fr="Télécharger gratuitement <span class='arrow'>→</span>" data-en="Download for free <span class='arrow'>→</span>">Télécharger gratuitement <span class="arrow">→</span></a>
       </div>
     </div>
 
+    <!-- Guide 2 -->
     <div class="ebook-card">
       <div class="ebook-cover">
         <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80" alt="Champignons d'Ardèche">
-        <span class="ebook-gratuit-badge">Gratuit</span>
+        <span class="ebook-gratuit-badge" data-fr="Gratuit" data-en="Free">Gratuit</span>
       </div>
       <div class="ebook-body">
-        <div class="ebook-tag">Nature · Cueillette</div>
-        <div class="ebook-title">Champignons d'Ardèche : Le mini-guide de poche du cueilleur prudent</div>
-        <div class="ebook-desc">Identifier les champignons comestibles, éviter les confusions dangereuses, et cueillir en respectant le milieu naturel ardéchois.</div>
-        <a class="ebook-cta" href="https://neuralpath.gumroad.com/l/rmbtyc" target="_blank" rel="noopener">
-          Télécharger gratuitement <span class="arrow">→</span>
-        </a>
+        <div class="ebook-tag" data-fr="Nature · Cueillette" data-en="Nature · Foraging">Nature · Cueillette</div>
+        <div class="ebook-title" data-fr="Champignons d'Ardèche : Le mini-guide de poche du cueilleur prudent" data-en="Ardèche Mushrooms : The careful forager's pocket guide">Champignons d'Ardèche : Le mini-guide de poche du cueilleur prudent</div>
+        <div class="ebook-desc" data-fr="Identifier les champignons comestibles, éviter les confusions dangereuses, et cueillir en respectant le milieu naturel ardéchois." data-en="Identify edible mushrooms, avoid dangerous mix-ups, and forage while respecting the Ardèche natural environment.">Identifier les champignons comestibles, éviter les confusions dangereuses, et cueillir en respectant le milieu naturel ardéchois.</div>
+        <a class="ebook-cta" href="https://neuralpath.gumroad.com/l/rmbtyc" target="_blank" rel="noopener" data-fr="Télécharger gratuitement <span class='arrow'>→</span>" data-en="Download for free <span class='arrow'>→</span>">Télécharger gratuitement <span class="arrow">→</span></a>
       </div>
     </div>
 
+    <!-- Guide 3 -->
     <div class="ebook-card">
       <div class="ebook-cover">
         <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80" alt="Plantes dangereuses Ardèche">
-        <span class="ebook-gratuit-badge">Gratuit</span>
+        <span class="ebook-gratuit-badge" data-fr="Gratuit" data-en="Free">Gratuit</span>
       </div>
       <div class="ebook-body">
-        <div class="ebook-tag">Sécurité · Botanique</div>
-        <div class="ebook-title">Venin Vert : Reconnaître et Éviter les Plantes Dangereuses en Ardèche</div>
-        <div class="ebook-desc">Les 10 plantes toxiques les plus présentes sur les sentiers ardéchois. Reconnaître, éviter, réagir. Un guide essentiel pour les familles.</div>
-        <a class="ebook-cta" href="https://neuralpath.gumroad.com/l/bjcxs" target="_blank" rel="noopener">
-          Télécharger gratuitement <span class="arrow">→</span>
-        </a>
+        <div class="ebook-tag" data-fr="Sécurité · Botanique" data-en="Safety · Botany">Sécurité · Botanique</div>
+        <div class="ebook-title" data-fr="Venin Vert : Reconnaître et Éviter les Plantes Dangereuses en Ardèche" data-en="Green Venom : Recognising and Avoiding Dangerous Plants in Ardèche">Venin Vert : Reconnaître et Éviter les Plantes Dangereuses en Ardèche</div>
+        <div class="ebook-desc" data-fr="Les 10 plantes toxiques les plus présentes sur les sentiers ardéchois. Reconnaître, éviter, réagir. Un guide essentiel pour les familles." data-en="The 10 most common toxic plants on Ardèche trails. Recognise, avoid, react. An essential guide for families.">Les 10 plantes toxiques les plus présentes sur les sentiers ardéchois. Reconnaître, éviter, réagir. Un guide essentiel pour les familles.</div>
+        <a class="ebook-cta" href="https://neuralpath.gumroad.com/l/bjcxs" target="_blank" rel="noopener" data-fr="Télécharger gratuitement <span class='arrow'>→</span>" data-en="Download for free <span class='arrow'>→</span>">Télécharger gratuitement <span class="arrow">→</span></a>
       </div>
     </div>
 
+    <!-- Guide 4 -->
     <div class="ebook-card">
       <div class="ebook-cover">
         <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Sentiers sauvages Ardèche">
-        <span class="ebook-gratuit-badge">Gratuit</span>
+        <span class="ebook-gratuit-badge" data-fr="Gratuit" data-en="Free">Gratuit</span>
       </div>
       <div class="ebook-body">
-        <div class="ebook-tag">Randonnée · Territoire</div>
-        <div class="ebook-title">Chaussez vos Bottes, Ouvrez les Yeux : La Montagne Vous Appelle</div>
-        <div class="ebook-desc">Préparez-vous, partez bien équipé, profitez en confiance. Mon guide personnel pour aborder les sentiers sauvages d'Ardèche à tous niveaux.</div>
-        <a class="ebook-cta" href="https://neuralpath.gumroad.com/l/koaatm" target="_blank" rel="noopener">
-          Télécharger gratuitement <span class="arrow">→</span>
-        </a>
+        <div class="ebook-tag" data-fr="Randonnée · Territoire" data-en="Hiking · Territory">Randonnée · Territoire</div>
+        <div class="ebook-title" data-fr="Chaussez vos Bottes, Ouvrez les Yeux : La Montagne Vous Appelle" data-en="Lace Up Your Boots, Open Your Eyes : The Mountain is Calling">Chaussez vos Bottes, Ouvrez les Yeux : La Montagne Vous Appelle</div>
+        <div class="ebook-desc" data-fr="Préparez-vous, partez bien équipé, profitez en confiance. Mon guide personnel pour aborder les sentiers sauvages d'Ardèche à tous niveaux." data-en="Prepare yourself, set off well equipped, enjoy with confidence. My personal guide to tackling the wild trails of Ardèche at every level.">Préparez-vous, partez bien équipé, profitez en confiance. Mon guide personnel pour aborder les sentiers sauvages d'Ardèche à tous niveaux.</div>
+        <a class="ebook-cta" href="https://neuralpath.gumroad.com/l/koaatm" target="_blank" rel="noopener" data-fr="Télécharger gratuitement <span class='arrow'>→</span>" data-en="Download for free <span class='arrow'>→</span>">Télécharger gratuitement <span class="arrow">→</span></a>
       </div>
     </div>
 
-    <!-- NOUVEAU : Fêtes & Festivals 2026 -->
+    <!-- Guide 5 -->
     <div class="ebook-card">
       <div class="ebook-cover" style="background:#0d1a12;">
         <div class="ebook-cover-custom" style="background:linear-gradient(135deg,#0d1a12 0%,#1a3a2a 45%,#2d1a08 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.6rem;padding:1.5rem;height:100%;">
           <div style="font-size:2.5rem;line-height:1;">🗓</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:#f0ece0;text-align:center;font-weight:600;letter-spacing:0.04em;line-height:1.35;">Fêtes &amp; Festivals<br>de l'Ardèche 2026</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:#f0ece0;text-align:center;font-weight:600;letter-spacing:0.04em;line-height:1.35;" data-fr="Fêtes &amp; Festivals<br>de l'Ardèche 2026" data-en="Festivals &amp; Events<br>of Ardèche 2026">Fêtes &amp; Festivals<br>de l'Ardèche 2026</div>
           <div style="width:36px;height:1px;background:#d4a843;opacity:0.7;margin:0.1rem 0;"></div>
-          <div style="font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:#d4a843;text-align:center;">Guide complet · 10 pages</div>
+          <div style="font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:#d4a843;text-align:center;" data-fr="Guide complet · 10 pages" data-en="Complete guide · 10 pages">Guide complet · 10 pages</div>
           <div style="display:flex;gap:0.35rem;margin-top:0.4rem;flex-wrap:wrap;justify-content:center;">
-            <span style="font-size:0.56rem;background:rgba(212,168,67,0.12);border:1px solid rgba(212,168,67,0.28);color:#d4a843;padding:0.12rem 0.45rem;letter-spacing:0.08em;text-transform:uppercase;">Histoire</span>
-            <span style="font-size:0.56rem;background:rgba(212,168,67,0.12);border:1px solid rgba(212,168,67,0.28);color:#d4a843;padding:0.12rem 0.45rem;letter-spacing:0.08em;text-transform:uppercase;">Dates</span>
-            <span style="font-size:0.56rem;background:rgba(212,168,67,0.12);border:1px solid rgba(212,168,67,0.28);color:#d4a843;padding:0.12rem 0.45rem;letter-spacing:0.08em;text-transform:uppercase;">Lieux</span>
+            <span style="font-size:0.56rem;background:rgba(212,168,67,0.12);border:1px solid rgba(212,168,67,0.28);color:#d4a843;padding:0.12rem 0.45rem;letter-spacing:0.08em;text-transform:uppercase;" data-fr="Histoire" data-en="History">Histoire</span>
+            <span style="font-size:0.56rem;background:rgba(212,168,67,0.12);border:1px solid rgba(212,168,67,0.28);color:#d4a843;padding:0.12rem 0.45rem;letter-spacing:0.08em;text-transform:uppercase;" data-fr="Dates" data-en="Dates">Dates</span>
+            <span style="font-size:0.56rem;background:rgba(212,168,67,0.12);border:1px solid rgba(212,168,67,0.28);color:#d4a843;padding:0.12rem 0.45rem;letter-spacing:0.08em;text-transform:uppercase;" data-fr="Lieux" data-en="Venues">Lieux</span>
           </div>
         </div>
-        <span class="ebook-gratuit-badge">Gratuit</span>
+        <span class="ebook-gratuit-badge" data-fr="Gratuit" data-en="Free">Gratuit</span>
       </div>
       <div class="ebook-body">
-        <div class="ebook-tag">Agenda · Territoire · Culture</div>
-        <div class="ebook-title">Fêtes &amp; Festivals de l'Ardèche 2026 — Le Guide Complet</div>
-        <div class="ebook-desc">10 événements incontournables du 07 : L'Ardéchoise, Aluna Festival, Festival Jean Ferrat, Vochora, Humoristes… Histoire, dates confirmées et infos pratiques pour ne rien manquer.</div>
-        <a class="ebook-cta" href="https://neuralpath.gumroad.com/l/bbewq" target="_blank" rel="noopener">
-          Télécharger gratuitement <span class="arrow">→</span>
-        </a>
+        <div class="ebook-tag" data-fr="Agenda · Territoire · Culture" data-en="Calendar · Territory · Culture">Agenda · Territoire · Culture</div>
+        <div class="ebook-title" data-fr="Fêtes &amp; Festivals de l'Ardèche 2026 — Le Guide Complet" data-en="Festivals &amp; Events of Ardèche 2026 — The Complete Guide">Fêtes &amp; Festivals de l'Ardèche 2026 — Le Guide Complet</div>
+        <div class="ebook-desc" data-fr="10 événements incontournables du 07 : L'Ardéchoise, Aluna Festival, Festival Jean Ferrat, Vochora, Humoristes… Histoire, dates confirmées et infos pratiques pour ne rien manquer." data-en="10 must-see events in Ardèche: L'Ardéchoise, Aluna Festival, Jean Ferrat Festival, Vochora, Comedy Festival… History, confirmed dates and practical info so you don't miss a thing.">10 événements incontournables du 07 : L'Ardéchoise, Aluna Festival, Festival Jean Ferrat, Vochora, Humoristes… Histoire, dates confirmées et infos pratiques pour ne rien manquer.</div>
+        <a class="ebook-cta" href="https://neuralpath.gumroad.com/l/bbewq" target="_blank" rel="noopener" data-fr="Télécharger gratuitement <span class='arrow'>→</span>" data-en="Download for free <span class='arrow'>→</span>">Télécharger gratuitement <span class="arrow">→</span></a>
       </div>
     </div>
 
   </div>
 </section>
 
+<!-- NOTE -->
 <div class="ebooks-note">
-  <p>Ces guides sont offerts librement. Si vous les trouvez utiles, <strong>le meilleur remerciement est un avis Google</strong> ou de partager la page à un ami randonneur. Et si vous souhaitez vivre l'Ardèche en vrai, <a href="index.html#contact" style="color:#d4a843;text-decoration:none;">contactez-moi pour organiser une sortie</a> 🌿</p>
+  <p data-fr="Ces guides sont offerts librement. Si vous les trouvez utiles, <strong>le meilleur remerciement est un avis Google</strong> ou de partager la page à un ami randonneur. Et si vous souhaitez vivre l'Ardèche en vrai, <a href='index.html#contact' style='color:#d4a843;text-decoration:none;'>contactez-moi pour organiser une sortie</a> 🌿" data-en="These guides are freely offered. If you find them useful, <strong>the best thank-you is a Google review</strong> or sharing the page with a fellow hiker. And if you want to experience Ardèche for real, <a href='index.html#contact' style='color:#d4a843;text-decoration:none;'>contact me to plan an outing</a> 🌿">Ces guides sont offerts librement. Si vous les trouvez utiles, <strong>le meilleur remerciement est un avis Google</strong> ou de partager la page à un ami randonneur. Et si vous souhaitez vivre l'Ardèche en vrai, <a href="index.html#contact" style="color:#d4a843;text-decoration:none;">contactez-moi pour organiser une sortie</a> 🌿</p>
 </div>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-top">
     <div>
       <a class="footer-logo-img" href="index.html">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" role="img" style="height:38px;width:auto;display:block;"><title>Explora Guide</title><style>.lg{fill:#2d7a3a}.lm{fill:#348a42}.ll{fill:#3a9448}.lt{fill:#45a854}.lh{fill:#52bc62}</style><path d="M340,42 L420,70 L420,180 Q420,250 340,295 Q260,250 260,180 L260,70 Z" class="lg"/><path d="M340,52 L412,78 L412,178 Q412,242 340,284 Q268,242 268,178 L268,78 Z" fill="none" stroke="#5aaa66" stroke-width="2"/><path d="M340,58 L406,84 L406,178 Q406,236 340,276 Q274,236 274,178 L274,84 Z" fill="#1a5228"/><circle cx="340" cy="178" r="80" fill="none" stroke="#2d7a3a" stroke-width="3"/><circle cx="340" cy="178" r="75" fill="none" stroke="#4a9458" stroke-width="1"/><polygon points="340,98 333,116 340,112 347,116" fill="#5aaa66"/><text x="340" y="95" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#c8e8c8" letter-spacing="1">N</text><polygon points="340,258 333,240 340,244 347,240" fill="#4a9458"/><text x="340" y="272" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#c8e8c8" letter-spacing="1">S</text><polygon points="420,178 402,171 406,178 402,185" fill="#4a9458"/><text x="432" y="182" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#c8e8c8" letter-spacing="1">E</text><polygon points="260,178 278,171 274,178 278,185" fill="#4a9458"/><text x="248" y="182" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#c8e8c8" letter-spacing="1">W</text><line x1="340" y1="103" x2="340" y2="110" stroke="#4a9458" stroke-width="1.5"/><line x1="340" y1="246" x2="340" y2="253" stroke="#4a9458" stroke-width="1.5"/><line x1="415" y1="178" x2="408" y2="178" stroke="#4a9458" stroke-width="1.5"/><line x1="265" y1="178" x2="272" y2="178" stroke="#4a9458" stroke-width="1.5"/><rect x="334" y="218" width="12" height="28" rx="3" class="lg"/><path d="M334,244 Q322,252 314,248" fill="none" stroke="#2d7a3a" stroke-width="3" stroke-linecap="round"/><path d="M346,244 Q358,252 366,248" fill="none" stroke="#2d7a3a" stroke-width="3" stroke-linecap="round"/><ellipse cx="340" cy="206" rx="38" ry="20" class="lg"/><ellipse cx="306" cy="200" rx="18" ry="13" class="lg"/><ellipse cx="374" cy="200" rx="18" ry="13" class="lg"/><ellipse cx="340" cy="185" rx="30" ry="18" class="lm"/><ellipse cx="315" cy="179" rx="16" ry="12" class="lm"/><ellipse cx="365" cy="179" rx="16" ry="12" class="lm"/><ellipse cx="340" cy="165" rx="24" ry="16" class="ll"/><ellipse cx="322" cy="160" rx="14" ry="10" class="ll"/><ellipse cx="358" cy="160" rx="14" ry="10" class="ll"/><ellipse cx="340" cy="148" rx="16" ry="12" class="lt"/><ellipse cx="328" cy="145" rx="10" ry="8" class="lt"/><ellipse cx="352" cy="145" rx="10" ry="8" class="lt"/><ellipse cx="340" cy="136" rx="10" ry="9" fill="#52bc62"/><ellipse cx="300" cy="194" rx="8" ry="6" class="lh" opacity="0.7"/><ellipse cx="380" cy="194" rx="8" ry="6" class="lh" opacity="0.7"/><text x="340" y="334" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="38" font-weight="900" letter-spacing="6" fill="#2d7a3a">EXPLORA</text><text x="340" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="400" letter-spacing="14" fill="#4a9458">GUIDE</text><line x1="172" y1="376" x2="270" y2="376" stroke="#2d7a3a" stroke-width="1"/><line x1="410" y1="376" x2="508" y2="376" stroke="#2d7a3a" stroke-width="1"/><text x="340" y="380" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" font-weight="400" letter-spacing="3.5" fill="#4a9458">VOTRE PARTENAIRE D'AVENTURE EN CONFIANCE</text></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" role="img" style="height:38px;width:auto;display:block;"><title>Explora Guide</title><style>.lg{fill:#2d7a3a}.lm{fill:#348a42}.ll{fill:#3a9448}.lt{fill:#45a854}.lh{fill:#52bc62}</style><path d="M340,42 L420,70 L420,180 Q420,250 340,295 Q260,250 260,180 L260,70 Z" class="lg"/><path d="M340,52 L412,78 L412,178 Q412,242 340,284 Q268,242 268,178 L268,78 Z" fill="none" stroke="#5aaa66" stroke-width="2"/><path d="M340,58 L406,84 L406,178 Q406,236 340,276 Q274,236 274,178 L274,84 Z" fill="#1a5228"/><ellipse cx="340" cy="206" rx="38" ry="20" class="lg"/><ellipse cx="306" cy="200" rx="18" ry="13" class="lg"/><ellipse cx="374" cy="200" rx="18" ry="13" class="lg"/><ellipse cx="340" cy="185" rx="30" ry="18" class="lm"/><ellipse cx="315" cy="179" rx="16" ry="12" class="lm"/><ellipse cx="365" cy="179" rx="16" ry="12" class="lm"/><ellipse cx="340" cy="165" rx="24" ry="16" class="ll"/><ellipse cx="340" cy="148" rx="16" ry="12" class="lt"/><ellipse cx="340" cy="136" rx="10" ry="9" fill="#52bc62"/><text x="340" y="334" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="38" font-weight="900" letter-spacing="6" fill="#2d7a3a">EXPLORA</text><text x="340" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="400" letter-spacing="14" fill="#4a9458">GUIDE</text></svg>
       </a>
-      <div class="footer-logo-sub">Accompagnateur Touristique · Ardèche 07</div>
+      <div class="footer-logo-sub" data-fr="Accompagnateur Touristique · Ardèche 07" data-en="Nature & Tourism Guide · Ardèche 07">Accompagnateur Touristique · Ardèche 07</div>
     </div>
     <ul class="footer-links">
-      <li><a href="index.html#about">À propos</a></li>
-      <li><a href="index.html#services">Prestations</a></li>
-      <li><a href="index.html#circuits">Circuits</a></li>
-      <li><a href="index.html#agenda">Agenda</a></li>
-      <li><a href="ebooks.html">Guides gratuits</a></li>
-      <li><a href="enfants.html">Ardèche en famille</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="index.html#about" data-fr="À propos" data-en="About">À propos</a></li>
+      <li><a href="index.html#services" data-fr="Prestations" data-en="Services">Prestations</a></li>
+      <li><a href="index.html#circuits" data-fr="Circuits" data-en="Routes">Circuits</a></li>
+      <li><a href="index.html#agenda" data-fr="Agenda" data-en="Schedule">Agenda</a></li>
+      <li><a href="ebooks.html" data-fr="Guides gratuits" data-en="Free guides">Guides gratuits</a></li>
+      <li><a href="enfants.html" data-fr="Ardèche en famille" data-en="Family trips">Ardèche en famille</a></li>
+      <li><a href="index.html#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
     </ul>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2026 · Explora Guide · Accompagnateur Touristique Ardèche</div>
-    <div class="footer-eco">🌿 Site éco-conçu · Sans cookies publicitaires</div>
+    <div class="footer-copy" data-fr="© 2026 · Explora Guide · Accompagnateur Touristique Ardèche" data-en="© 2026 · Explora Guide · Nature & Tourism Guide Ardèche">© 2026 · Explora Guide · Accompagnateur Touristique Ardèche</div>
+    <div class="footer-eco" data-fr="🌿 Site éco-conçu · Sans cookies publicitaires" data-en="🌿 Eco-designed · No advertising cookies">🌿 Site éco-conçu · Sans cookies publicitaires</div>
   </div>
 </footer>
 
@@ -371,6 +345,24 @@ function closeMobileMenu() {
   document.getElementById('mobile-menu').classList.remove('open');
   document.getElementById('hamburger').classList.remove('open');
   document.body.style.overflow = '';
+}
+
+// ─── SWITCH LANGUE FR/EN ───
+let currentLang = 'fr';
+function switchLang(lang) {
+  currentLang = lang;
+  const btnFr = document.getElementById('btn-fr');
+  const btnEn = document.getElementById('btn-en');
+  if (lang === 'en') {
+    btnFr.classList.remove('active'); btnEn.classList.add('active');
+  } else {
+    btnEn.classList.remove('active'); btnFr.classList.add('active');
+  }
+  document.querySelectorAll('[data-fr]').forEach(el => {
+    const txt = el.getAttribute('data-' + lang);
+    if (txt !== null) el.innerHTML = txt;
+  });
+  document.documentElement.lang = lang;
 }
 </script>
 </body>
