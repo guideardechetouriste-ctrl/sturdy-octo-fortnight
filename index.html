@@ -1993,7 +1993,7 @@ select.resa-input { cursor: pointer; }
   </div>
   <div data-reveal>
     <div class="contact-form-title" data-fr="Écrivez-moi,<br><em>je vous réponds vite</em>" data-en="Write to me,<br><em>I'll reply quickly</em>">Écrivez-moi,<br><em>je vous réponds vite</em></div>
-    <form action="https://formspree.io/f/xjgzbdnj" method="POST">
+    <form action="https://formspree.io/f/xjgzbdnj" method="POST" onsubmit="trackContactForm()">
       <div class="form-row">
         <div class="form-group"><label class="form-label" data-fr="Prénom" data-en="First name">Prénom</label><input class="form-input" type="text" name="prenom" placeholder="Votre prénom" data-placeholder-fr="Votre prénom" data-placeholder-en="Your first name" required></div>
         <div class="form-group"><label class="form-label" data-fr="Nom" data-en="Last name">Nom</label><input class="form-input" type="text" name="nom" placeholder="Votre nom" data-placeholder-fr="Votre nom" data-placeholder-en="Your last name" required></div>
@@ -2114,6 +2114,43 @@ function selectFormule(card) {
   document.getElementById('recap-formule').textContent = f;
 }
 
+// ─── SUIVI ÉVÉNEMENTS CLÉS : téléphone, email, formulaire contact ───
+function trackContactForm() {
+  if (typeof gtag === 'function') {
+    gtag('event', 'contact_envoye', {
+      'event_category': 'engagement',
+      'event_label': 'Formulaire de contact bas de page'
+    });
+  }
+  // Ne pas bloquer l'envoi natif du formulaire
+  return true;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Suivi de tous les clics sur les numéros de téléphone
+  document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+    link.addEventListener('click', function() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'clic_telephone', {
+          'event_category': 'engagement',
+          'event_label': link.href
+        });
+      }
+    });
+  });
+  // Suivi de tous les clics sur les liens email
+  document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+    link.addEventListener('click', function() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'clic_email', {
+          'event_category': 'engagement',
+          'event_label': link.href
+        });
+      }
+    });
+  });
+});
+
 async function handleResa(e) {
   e.preventDefault();
   const btn = document.getElementById('resa-btn');
@@ -2130,6 +2167,13 @@ async function handleResa(e) {
       success.style.display = 'block';
       btn.textContent = currentLang === 'en' ? '✓ Request sent!' : '✓ Demande envoyée !';
       btn.style.background = '#4a7558';
+      // ─── SUIVI ÉVÉNEMENT CLÉ : réservation envoyée ───
+      if (typeof gtag === 'function') {
+        gtag('event', 'reservation_envoyee', {
+          'event_category': 'engagement',
+          'event_label': 'Formulaire de réservation'
+        });
+      }
       e.target.reset();
       setTimeout(() => {
         btn.disabled = false;
