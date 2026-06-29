@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://guideardechetouriste-ctrl.github.io/sturdy-octo-fortnight/sitemap.xml

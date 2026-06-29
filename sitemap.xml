@@ -36,4 +36,40 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://guideardechetouriste-ctrl.github.io/sturdy-octo-fortnight/randonnees/index.html</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://guideardechetouriste-ctrl.github.io/sturdy-octo-fortnight/randonnees/exemple-modele.html</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guideardechetouriste-ctrl.github.io/sturdy-octo-fortnight/villages/index.html</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://guideardechetouriste-ctrl.github.io/sturdy-octo-fortnight/cascades/index.html</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://guideardechetouriste-ctrl.github.io/sturdy-octo-fortnight/producteurs/index.html</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://guideardechetouriste-ctrl.github.io/sturdy-octo-fortnight/blog/index.html</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

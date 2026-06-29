@@ -1,0 +1,25 @@
+{
+  "name": "Explora Guide — Pierre François Passager",
+  "short_name": "Explora Guide",
+  "description": "Accompagnateur touristique en Ardèche. Randonnées guidées, villages secrets, géologie, circuits sur mesure autour de Privas.",
+  "start_url": "/sturdy-octo-fortnight/",
+  "scope": "/sturdy-octo-fortnight/",
+  "display": "standalone",
+  "background_color": "#0d1410",
+  "theme_color": "#d4a843",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
